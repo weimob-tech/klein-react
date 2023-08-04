@@ -1,0 +1,211 @@
+@import '../../style/index';
+@import './base';
+@import './mixin';
+
+//引入依赖样式
+@import '../../grid/style/index';
+@import '../../tooltip/style/index';
+@import '../../popover/style/index';
+
+@form-prefix: ~'@{klein-prefix}-form';
+
+.@{form-prefix} {
+  &-horizontal & {
+    &-item-label {
+      // flex: 0 0 120px;
+      // margin-right: 12px;
+      color: @title-color;
+      line-height: 0;
+      word-break: break-all;
+
+      &-normal {
+        // flex: 0 0 118px;
+        width: 118px;
+      }
+
+      &-content {
+        // width: @form-item-label-width;
+        width: 100%;
+        height: @height-base;
+      }
+
+      // & > label {
+      //   // width: @form-item-label-width;
+      //   width: 100%;
+      //   height: @height-base;
+      // }
+    }
+  }
+
+  &-vertical & {
+    &-item {
+      flex-direction: column;
+
+      &-label {
+        margin-bottom: @margin-md;
+        line-height: @line-height-base;
+
+        &-required::after {
+          display: none;
+        }
+
+        &-content {
+          padding-left: @padding-sm;
+        }
+
+        // & > label {
+        //   padding-left: @padding-sm;
+        // }
+
+        &-required::before {
+          .required-star();
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &-item {
+    margin-bottom: @form-item-margin;
+
+    &-label {
+      // margin-right: 12px;
+
+      &-content {
+        position: relative;
+        display: inline-flex;
+        // align-items: center;
+        justify-content: flex-end;
+        // height: 100%;
+        // padding-right: @padding-sm;
+        padding-right: 20px;
+        text-align: right;
+
+        .@{klein-prefix}-icon {
+          margin-left: @margin-xs;
+          color: @normal-color-6;
+          font-size: @font-size-sm;
+        }
+
+        & > label {
+          line-height: @line-height-base;
+        }
+      }
+
+      &-extra {
+        display: flex;
+        align-items: center;
+      }
+
+      &-required&-extra::after {
+        .required-star();
+        right: 9px;
+      }
+    }
+
+    &-controll {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      flex-grow: 1;
+
+      &-element {
+        display: inline-block;
+      }
+
+      &-content {
+        position: relative;
+        display: flex;
+        flex: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 100%;
+        min-height: @height-base;
+
+        &-child {
+          flex: auto;
+          max-width: 100%;
+
+          &.has-rightExtra {
+            .@{klein-prefix}-form-item-controll-element {
+              margin-right: @margin-md;
+            }
+          }
+        }
+      }
+
+      &-tips {
+        display: block;
+        margin-top: @margin-md;
+        color: @secondary-text-color;
+        line-height: @line-height-base;
+      }
+
+      &-extra {
+        margin-top: @margin-sm;
+        color: @normal-color-7;
+        line-height: @line-height-base;
+      }
+    }
+
+    &-rightExtra {
+      color: @secondary-text-color;
+      line-height: @line-height-base;
+    }
+
+    .form-validate-status();
+  }
+
+  &-inline {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-inline & {
+    &-item {
+      margin-right: @form-item-margin;
+      margin-bottom: 0;
+
+      &-label {
+        &-content {
+          height: @height-base;
+        }
+      }
+    }
+  }
+
+  //垂直状态
+  &:not(&-vertical) &-item {
+    &-label-content > label {
+      padding-top: ((@height-base - @line-height-base) / 2);
+    }
+
+    // &-rightExtra {
+    //   padding-top: (@height-base - @line-height-base) / 2;
+    // }
+  }
+
+  //itemCenter为false
+  & &-item {
+    .@{form-prefix}-item-label.@{form-prefix}-item-no-centered {
+      .@{form-prefix}-item-label-content {
+        height: @line-height-base;
+        line-height: @line-height-base;
+
+        & > label {
+          padding-top: 0;
+        }
+      }
+    }
+
+    .@{form-prefix}-item-controll.@{form-prefix}-item-no-centered {
+      .@{form-prefix}-item-controll-content {
+        min-height: @line-height-base;
+      }
+    }
+
+    .@{form-prefix}-item-rightExtra.@{form-prefix}-item-no-centered {
+      padding-top: 0;
+    }
+  }
+}

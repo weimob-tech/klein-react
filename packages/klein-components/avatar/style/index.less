@@ -1,0 +1,54 @@
+@import '../../style/index';
+
+@avatar-prefix: ~'@{klein-prefix}-avatar';
+
+@avatar-size-base: @height-base;
+@avatar-size-lg: @height-lg;
+@avatar-size-sm: @height-sm;
+
+@avatar-background-color: fade(@brand-color-6, 10);
+@avatar-background-string-color: @disable-color;
+
+.@{avatar-prefix} {
+  position: relative;
+  display: inline-block;
+  width: @avatar-size-base;
+  height: @avatar-size-base;
+  overflow: hidden;
+  color: white;
+  font-size: @font-size-basic;
+  vertical-align: middle;
+  background-color: @avatar-background-color;
+  > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &&-image {
+    background: 0 0;
+  }
+  &&-string {
+    background-color: @avatar-background-string-color;
+  }
+  &&-string &-string-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &&-circle {
+    border-radius: 50%;
+  }
+  &&-square {
+    border-radius: 0;
+  }
+  &&-lg {
+    width: @avatar-size-lg;
+    height: @avatar-size-lg;
+  }
+  &&-sm {
+    width: @avatar-size-sm;
+    height: @avatar-size-sm;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "klein-site",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@types/react-syntax-highlighter": "^15.5.6"
+  }
+}

@@ -1,0 +1,44 @@
+.disabled-brand-color(@type: brand) {
+  color: @white;
+  background: ~'@{@{type}-color-3}';
+  border-color: ~'@{@{type}-color-3}';
+}
+
+.disabled-line-color(@type: brand) {
+  color: ~'@{@{type}-color-3}';
+  background: @white;
+  border-color: ~'@{@{type}-color-3}';
+}
+
+.disabled-normal-color() {
+  color: @text-disable-color;
+  background: @background-disable-color;
+  border-color: @border-disable-color;
+}
+
+.disabled-status(@func) {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    @func();
+    text-shadow: none;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+//常规disabled
+.normal-disabled() {
+  .disabled-status(.disabled-normal-color());
+}
+
+//主题色disabled
+.brand-disabled() {
+  .disabled-status(.disabled-brand-color());
+}
+
+//线条disabled
+.line-disabled() {
+  .disabled-status(.disabled-line-color());
+}

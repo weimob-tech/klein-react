@@ -1,0 +1,227 @@
+@import '../../style/theme/index.less';
+
+@background-color-light: @normal-color-2; // background of header and selected item
+
+// -------- Colors -----------
+@blue-base: @brand-color;
+@green-base: @success-brand-color;
+@red-base: @danger-brand-color;
+@geekblue-base: @brand-active-color;
+@gold-base: @warning-brand-color;
+@gold-6: @gold-base;
+@red-5: @red-base;
+@geekblue-6: @geekblue-base;
+@green-6: @green-base;
+@blue-6: @blue-base;
+@primary-base-color: @blue-6;
+@info-color: @primary-base-color;
+@processing-color: @blue-6;
+@error-color: @red-5;
+@highlight-color: @red-5;
+@warning-color: @gold-6;
+@normal-color: #d9d9d9;
+@white: #fff;
+@black: #000;
+
+// Color used by default to control hover and active backgrounds and for
+// alert info backgrounds.
+@primary-1: @brand-color-1;
+@primary-2: @primary-base-color;
+@primary-5: @primary-base-color;
+@primary-6: @primary-base-color;
+@primary-7: @primary-base-color;
+
+// Background color for `<body>`
+@body-background: #fff;
+// Base background color for most components
+@component-background: #fff;
+// Popover background color
+@popover-background: @component-background;
+@popover-customize-border-color: @border-color-split;
+@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+@code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+  monospace;
+@text-color-base: @title-color;
+@text-color-sub: fade(@black, 45%);
+@text-color-inverse: @white;
+@icon-color: inherit;
+@icon-color-hover: fade(@black, 75%);
+@table-heading-color: @title-color;
+@text-color-dark: fade(@white, 85%);
+@text-color-secondary-dark: fade(@white, 65%);
+@text-selection-bg: @primary-base-color;
+@font-variant-base: tabular-nums;
+@font-feature-settings-base: 'tnum';
+@heading-1-size: ceil(@font-size-basic * 2.71);
+@heading-2-size: ceil(@font-size-basic * 2.14);
+@heading-3-size: ceil(@font-size-basic * 1.71);
+@heading-4-size: ceil(@font-size-basic * 1.42);
+@heading-5-size: ceil(@font-size-basic * 1.14);
+
+@table-border-radius-basic: 2px;
+
+// vertical paddings
+// @padding-lg: 24px; // containers
+// @padding-md: 16px; // small containers and buttons
+// @padding-sm: 12px; // Form controls and items
+// @padding-xs: 8px; // small items
+// @padding-xss: 4px; // more small
+
+// vertical padding for all form controls
+@control-padding-horizontal: @padding-sm;
+@control-padding-horizontal-sm: @padding-xs;
+
+// vertical margins
+// @margin-lg: 24px; // containers
+// @margin-md: 16px; // small containers and buttons
+// @margin-sm: 12px; // Form controls and items
+// @margin-xs: 8px; // small items
+// @margin-xss: 4px; // more small
+
+// height rules
+// @height-base: 32px;
+// @height-lg: 40px;
+// @height-sm: 24px;
+
+// The background colors for active and hover states for things like
+// list items or table cells.
+@item-active-bg: @primary-1;
+@item-hover-bg: #f5f5f5;
+
+// ICONFONT
+@iconfont-css-prefix: anticon;
+
+// LINK
+@table-link-color: @primary-base-color;
+@link-hover-color: @table-link-color;
+@link-active-color: @table-link-color;
+@link-decoration: none;
+@link-hover-decoration: none;
+@link-focus-decoration: none;
+@link-focus-outline: 0;
+
+// Animation
+@ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1);
+@ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7);
+@ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+@ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
+@ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
+@ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46);
+@ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+@ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+@ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+@ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+@ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+@ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+// Border color
+@border-color-basic: hsv(0, 0, 85%); // base border outline a component
+@border-color-split: hsv(0, 0, 94%); // split border inside a component
+@border-color-inverse: @white;
+@border-width-base: 1px; // width of the border for a component
+@border-style-base: solid; // style of a components border
+
+// Outline
+@outline-blur-size: 0;
+@outline-width: 2px;
+@outline-color: @primary-base-color;
+@outline-fade: 20%;
+@background-color-base: hsv(0, 0, 96%); // Default grey background color
+
+// Disabled states
+// @disable-color: fade(#000, 25%);
+@disabled-bg: @background-color-base;
+@disabled-color-dark: fade(#fff, 35%);
+
+// Shadow
+@shadow-color: rgba(0, 0, 0, 0.15);
+@shadow-color-inverse: @component-background;
+@box-shadow-basic: @shadow-2;
+@shadow-1-up: 0 -6px 16px -8px rgba(0, 0, 0, 0.08),
+  0 -9px 28px 0 rgba(0, 0, 0, 0.05), 0 -12px 48px 16px rgba(0, 0, 0, 0.03);
+@shadow-1-down: 0 6px 16px -8px rgba(0, 0, 0, 0.08),
+  0 9px 28px 0 rgba(0, 0, 0, 0.05), 0 12px 48px 16px rgba(0, 0, 0, 0.03);
+@shadow-1-left: -6px 0 16px -8px rgba(0, 0, 0, 0.08),
+  -9px 0 28px 0 rgba(0, 0, 0, 0.05), -12px 0 48px 16px rgba(0, 0, 0, 0.03);
+@shadow-1-right: 6px 0 16px -8px rgba(0, 0, 0, 0.08),
+  9px 0 28px 0 rgba(0, 0, 0, 0.05), 12px 0 48px 16px rgba(0, 0, 0, 0.03);
+// @shadow-2: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+//   0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+// z-index list, order by `z-index`
+// @zindex-badge: auto;
+@zindex-table-fixed: 2;
+// @zindex-affix: 10;
+// @zindex-back-top: 10;
+// @zindex-picker-panel: 10;
+// @zindex-popup-close: 10;
+// @zindex-modal: 1000;
+// @zindex-modal-mask: 1000;
+// @zindex-message: 1010;
+// @zindex-notification: 1010;
+// @zindex-popover: 1030;
+// @zindex-dropdown: 1050;
+// @zindex-picker: 1050;
+// @zindex-popoconfirm: 1060;
+// @zindex-tooltip: 1070;
+// @zindex-image: 1080;
+
+// Animation
+@animation-duration-slow: 0.3s; // Modal
+@animation-duration-base: 0.2s;
+@animation-duration-fast: 0.1s; // Tooltip
+
+//CollapsePanel
+@collapse-panel-border-radius: @table-border-radius-basic;
+
+// Table
+// --
+@table-bg: @component-background;
+@table-header-bg: @background-color-light;
+@table-header-color: @table-heading-color;
+@table-header-sort-bg: @background-color-base;
+@table-body-sort-bg: #fafafa;
+@table-row-hover-bg: @background-color-light;
+@table-selected-row-color: inherit;
+@table-selected-row-bg: @primary-1;
+@table-body-selected-sort-bg: @table-selected-row-bg;
+@table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%);
+@table-expanded-row-bg: #fbfbfb;
+@table-padding-vertical: 17px;
+@table-padding-horizontal: 16px;
+@table-padding-vertical-md: 13px;
+@table-padding-horizontal-md: (@table-padding-horizontal / 2);
+@table-padding-vertical-sm: 9px;
+@table-padding-horizontal-sm: (@table-padding-horizontal / 2);
+// @table-border-color: @border-color-split;
+@table-border-color: @normal-color-4;
+@table-border-radius-base: @table-border-radius-basic;
+@table-footer-bg: @background-color-light;
+@table-footer-color: @table-heading-color;
+@table-header-bg-sm: @table-header-bg;
+@table-font-size: @font-size-basic;
+@table-font-size-md: @table-font-size;
+@table-font-size-sm: @font-size-sm;
+// Sorter
+// Legacy: `table-header-sort-active-bg` is used for hover not real active
+@table-header-sort-active-bg: darken(@table-header-bg, 3%);
+// Filter
+@table-header-filter-active-bg: darken(@table-header-sort-active-bg, 5%);
+@table-filter-btns-bg: inherit;
+@table-filter-dropdown-bg: @component-background;
+@table-expand-icon-bg: @component-background;
+@table-selection-column-width: 32px;
+// Sticky
+@table-sticky-scroll-bar-bg: fade(#000, 35%);
+@table-sticky-scroll-bar-radius: 4px;
+
+// Checkbox
+@checkbox-size: 16px;
+@checkbox-color: @primary-base-color;
+@checkbox-check-color: #fff;
+@checkbox-check-bg: @checkbox-check-color;
+@checkbox-border-width: @border-width-base;
+@checkbox-group-item-margin-right: 8px;

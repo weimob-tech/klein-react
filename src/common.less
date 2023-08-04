@@ -1,0 +1,45 @@
+// 公共变量
+@prefix: klein-pro;
+
+@ui-width: 1920;
+@cont-width: 1200px;
+@max-cont-width: 1000px;
+@min-cont-width: 668px;
+
+.minWidth {
+  min-width: 1200px;
+}
+
+.content-page-wrapper {
+  box-sizing: content-box;
+  min-width: @min-cont-width;
+  max-width: @max-cont-width;
+  padding: 0 40px;
+  margin: auto;
+}
+.klein-headers-center-content {
+  flex: 1;
+  display: flex;
+  min-width: @min-cont-width;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+p {
+  margin: 0 0 0 0;
+}
+
+.transition {
+  transition: all 0.2s ease;
+}
+
+.transition-bg {
+  transition: background 0.2s ease;
+}
+
+.transition-bgc {
+  transition: background-color 0.2s ease;
+}
+
+@font-normal: PingFang SC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue,
+  Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;

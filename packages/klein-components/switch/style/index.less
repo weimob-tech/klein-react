@@ -1,0 +1,262 @@
+@import '../../style/index';
+
+@switch-prefix: ~'@{klein-prefix}-switch';
+
+@switch-duration: 0.2s;
+
+@switch-height: 20px;
+@switch-lg-height: 22px;
+@switch-sm-height: 16px;
+
+@switch-min-width: 36px;
+@switch-lg-min-width: 44px;
+@switch-sm-min-width: 28px;
+
+@switch-color: @success-color-1;
+@switch-bg: @white;
+@switch-shadow-color: fade(#00230b, 20%);
+@switch-padding: 2px;
+
+@switch-inner-margin-min: ceil(@switch-height * 0.2);
+@switch-inner-margin-max: ceil(@switch-height * 0.9);
+@switch-lg-inner-margin-min: ceil(@switch-lg-height * 0.2);
+@switch-lg-inner-margin-max: ceil(@switch-lg-height * 0.9);
+@switch-sm-inner-margin-min: ceil(@switch-sm-height * 0.2);
+@switch-sm-inner-margin-max: ceil(@switch-sm-height * 0.9);
+
+@switch-pin-size: @switch-height - 4px;
+@switch-lg-pin-size: @switch-lg-height - 4px;
+@switch-sm-pin-size: @switch-sm-height - 4px;
+
+@switch-close-loading-color: @icon-close;
+@switch-checked-loading-color: @success-brand-color;
+
+.@{switch-prefix} {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: @switch-min-width;
+  height: @switch-height;
+  line-height: @switch-height;
+  vertical-align: middle;
+  background-color: @normal-color-5;
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all @switch-duration;
+  user-select: none;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px fade(@disable-color, 10%);
+  }
+
+  &-checked:focus {
+    box-shadow: 0 0 0 2px fade(@switch-color, 20%);
+  }
+
+  &:focus:hover {
+    box-shadow: none;
+  }
+
+  &-checked {
+    background-color: @switch-color;
+  }
+
+  &-loading,
+  &-disabled {
+    background-color: @extra-disable-color;
+    cursor: not-allowed;
+
+    .@{switch-prefix}-handle,
+    .@{switch-prefix}-innner {
+      opacity: 0.75;
+    }
+
+    * {
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+  }
+
+  &-disabled&-checked {
+    background-color: @success-color-2;
+  }
+
+  &-disabled&-checked,
+  &-disabled&-loading {
+    .@{switch-prefix}-handle {
+      opacity: 1;
+    }
+  }
+
+  // ========================= Inner ==========================
+  .@{switch-prefix} &-inner {
+    display: block;
+    margin: 0 @switch-inner-margin-min 0 @switch-inner-margin-max;
+    color: @white;
+    font-size: @font-size-basic;
+    line-height: 1;
+    transition: margin @switch-duration;
+  }
+
+  &-checked &-inner {
+    margin: 0 @switch-inner-margin-max 0 @switch-inner-margin-min;
+  }
+
+  // ========================= Handle =========================
+  .@{switch-prefix} &-handle {
+    position: absolute;
+    top: @switch-padding;
+    left: @switch-padding;
+    width: @switch-pin-size;
+    height: @switch-pin-size;
+    transition: all @switch-duration ease-in-out;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: @switch-bg;
+      border-radius: (@switch-pin-size / 2);
+      box-shadow: 0 2px 4px 0 @switch-shadow-color;
+      transition: all @switch-duration ease-in-out;
+      content: '';
+    }
+
+    .@{klein-prefix}-icon-loadingLine {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: @switch-close-loading-color;
+      transform: translate(-50%, -50%);
+    }
+    .icon-loading();
+  }
+
+  &-checked &-handle {
+    left: calc(100% - @switch-pin-size - @switch-padding);
+
+    .@{klein-prefix}-icon-loadingLine {
+      color: @switch-checked-loading-color;
+    }
+  }
+
+  &:not(&-disabled):active {
+    .@{switch-prefix}-handle::before {
+      right: -30%;
+      left: 0;
+    }
+
+    &.@{switch-prefix}-checked {
+      .@{switch-prefix}-handle::before {
+        right: 0;
+        left: -30%;
+      }
+    }
+  }
+
+  // ======================== Loading =========================
+  &-loading-icon {
+    position: relative;
+    top: ((@switch-pin-size - @font-size-basic) / 2);
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+  }
+
+  &-checked &-loading-icon {
+    color: @switch-color;
+  }
+
+  // ========================== Size ==========================
+  &&-lg {
+    min-width: @switch-lg-min-width;
+    height: @switch-lg-height;
+    line-height: @switch-lg-height;
+
+    .@{switch-prefix}-inner {
+      margin: 0 @switch-lg-inner-margin-min 0 @switch-lg-inner-margin-max;
+      font-size: @font-size-basic;
+    }
+
+    .@{switch-prefix}-handle {
+      width: @switch-lg-pin-size;
+      height: @switch-lg-pin-size;
+    }
+
+    .@{switch-prefix}-loading-icon {
+      top: ((@switch-lg-pin-size - 9px) / 2);
+      font-size: 9px;
+    }
+
+    &.@{switch-prefix}-checked {
+      .@{switch-prefix}-inner {
+        margin: 0 @switch-lg-inner-margin-max 0 @switch-lg-inner-margin-min;
+      }
+
+      .@{switch-prefix}-handle {
+        left: calc(100% - @switch-lg-pin-size - @switch-padding);
+      }
+    }
+  }
+
+  &&-sm {
+    min-width: @switch-sm-min-width;
+    height: @switch-sm-height;
+    padding: 0; // fix sm size inner padding
+    line-height: @switch-sm-height;
+
+    .@{switch-prefix}-inner {
+      margin: 0 @switch-sm-inner-margin-min 0 @switch-sm-inner-margin-max;
+      padding: 0 4px;
+      font-size: @font-size-basic;
+    }
+
+    .@{switch-prefix}-handle {
+      width: @switch-sm-pin-size;
+      height: @switch-sm-pin-size;
+      font-size: (@switch-sm-pin-size - 2);
+    }
+
+    .@{switch-prefix}-loading-icon {
+      top: ((@switch-sm-pin-size - 9px) / 2);
+      font-size: 9px;
+    }
+
+    &.@{switch-prefix}-checked {
+      .@{switch-prefix}-inner {
+        margin: 0 @switch-sm-inner-margin-max 0 @switch-sm-inner-margin-min;
+      }
+
+      .@{switch-prefix}-handle {
+        left: calc(100% - @switch-sm-pin-size - @switch-padding);
+      }
+    }
+  }
+}
+
+@keyframes rcSwitchOn {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rcSwitchOff {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

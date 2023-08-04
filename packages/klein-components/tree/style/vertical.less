@@ -1,0 +1,215 @@
+.vertical() {
+  .node-item() {
+    display: flex;
+    align-items: center;
+    height: @tree-node-height-base;
+    font-size: @font-size-basic;
+    background: @white;
+    // padding: (@padding-xss + 1) @padding-md (@padding-xss + 1) 0;
+    cursor: pointer;
+    transition: all 0.2s @ease-in-out;
+  }
+  &-vertical & {
+    &-searching {
+      // color: @brand-color;
+      font-weight: @font-weight-semi;
+    }
+
+    &-search {
+      margin-bottom: @margin-sm;
+    }
+
+    &-searchListPanel {
+      &-item {
+        .node-item();
+        padding: 5px 12px;
+      }
+    }
+
+    &-node {
+      .node-item();
+
+      &-disabled {
+        .@{tree-prefix}-node-title {
+          color: @disable-color;
+          cursor: not-allowed;
+          // pointer-events: none;
+        }
+      }
+
+      // &>div {
+      //   height: 100%;
+      // }
+
+      // hover
+      &-hover-longtest:hover,
+      &-hover-medium:hover,
+      &-hover-shortest:hover {
+        background: @tree-node-hover-bg;
+        border-radius: 1px;
+      }
+      &-hover-shortest:hover {
+        flex: none;
+      }
+
+      &-switcher {
+        width: @tree-vertical-node-switcher-width;
+        // padding: 0 @padding-xs;
+        color: @normal-color-8;
+        // display: inline-flex;
+        // align-items: center;
+        text-align: center;
+        .icon-loading();
+
+        &-placeholder {
+          width: @tree-vertical-node-switcher-width;
+        }
+
+        &-open {
+          svg {
+            transform: rotate(90deg);
+          }
+        }
+
+        &-close {
+          svg {
+            transform: rotate(0);
+          }
+        }
+      }
+
+      &-placeholder {
+        position: relative;
+        width: @tree-vertical-node-placeholder-width;
+        height: 100%;
+
+        .vertical-line {
+          position: absolute;
+          left: 13px;
+          z-index: 3;
+          width: 1px;
+          background-color: @normal-color-3;
+          content: '';
+        }
+
+        .@{tree-prefix}-node-line-top {
+          .vertical-line;
+          top: 0;
+          bottom: @tree-node-height-base / 2;
+        }
+        .@{tree-prefix}-node-line-bottom {
+          .vertical-line;
+          top: @tree-node-height-base / 2;
+          bottom: 0;
+        }
+        .@{tree-prefix}-node-line-horizontal {
+          position: absolute;
+          top: 50%;
+          left: 13px;
+          width: 14px;
+          height: 1px;
+          background-color: @normal-color-3;
+          transform: translateY(-50%);
+        }
+      }
+
+      &-checkbox {
+        margin-right: @margin-md;
+      }
+
+      &-drag {
+        margin-left: @margin-md;
+        // display: inline-flex;
+        // align-items: center;
+        color: @normal-color-5;
+        cursor: move;
+
+        &-offset {
+          .@{tree-prefix}-node-drag-underline,
+          .@{tree-prefix}-node-drag-underline-circle {
+            left: @tree-vertical-drag-underline-offset;
+          }
+          .@{tree-prefix}-node-drag-underline-innerCircle {
+            left: @tree-vertical-drag-underline-offset + 2;
+          }
+        }
+
+        &-bottom {
+          .@{tree-prefix}-node-drag-underline,
+          .@{tree-prefix}-node-drag-underline-innerCircle {
+            bottom: 0;
+          }
+          .@{tree-prefix}-node-drag-underline-circle {
+            bottom: -2px;
+          }
+        }
+
+        &-top {
+          .@{tree-prefix}-node-drag-underline,
+          .@{tree-prefix}-node-drag-underline-innerCircle {
+            top: 0;
+          }
+          .@{tree-prefix}-node-drag-underline-circle {
+            top: -2px;
+          }
+        }
+
+        &-underline {
+          position: absolute;
+          right: 0;
+          left: 0;
+          height: 2px;
+          background-color: @brand-color;
+
+          &-circle {
+            position: absolute;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            width: 7px;
+            height: 7px;
+            background-color: @brand-color;
+            border-radius: 50%;
+            content: '';
+          }
+
+          &-innerCircle {
+            position: absolute;
+            right: 0;
+            left: 2px;
+            z-index: 2;
+            width: 3px;
+            height: 3px;
+            background-color: @white;
+            border-radius: 50%;
+            content: '';
+          }
+        }
+      }
+
+      &-customizeIcon {
+        margin-right: @margin-md;
+      }
+
+      &-title {
+        position: relative;
+        flex: 1;
+        padding-left: @padding-xss;
+        overflow: hidden;
+        line-height: @tree-node-height-base;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &-selected {
+          color: @brand-color;
+        }
+      }
+
+      &-extra {
+        justify-self: end;
+        margin-right: @margin-md;
+        // align-self: end;
+      }
+    }
+  }
+}

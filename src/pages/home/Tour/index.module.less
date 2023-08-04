@@ -1,0 +1,119 @@
+@import '@/common.less';
+
+.Tour {
+  background: linear-gradient(180deg, #deebff 0%, #deebff 0.01%, #ffffff 100%);
+
+  text-align: center;
+  padding: 84px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 56px;
+  }
+
+  .roles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex: 1;
+    max-height: 408px;
+
+    .role {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.48);
+      border: 1px solid #ffffff;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 72px 88px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .avatar {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 32px;
+      }
+
+      .name {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 8px;
+      }
+
+      .desc {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #8a9099;
+        margin-bottom: 32px;
+      }
+
+      .btn {
+        width: 316px;
+        background: #1e2226;
+        color: white;
+        border-color: transparent;
+        border-radius: 6px;
+
+        &:hover {
+          background: rgba(30, 34, 38, 0.88);
+        }
+
+        &.npmBtn {
+          position: relative;
+          padding-right: 50px;
+          background: #1e2226;
+          color: #f0f2f5;
+          border-color: transparent;
+        }
+
+        .img {
+          width: 24px;
+          height: 24px;
+          vertical-align: -6px;
+        }
+
+        .copy {
+          width: 34px;
+          height: 34px;
+          border-radius: 4px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 4px;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .copyIcon {
+            color: #f0f2f5;
+          }
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.08);
+
+            .copyIcon {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

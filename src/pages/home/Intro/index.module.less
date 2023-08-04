@@ -1,0 +1,142 @@
+@import '@/common.less';
+
+.Intro {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  margin-top: -492px;
+  box-shadow: 0px -32px 56px 0px rgba(51, 140, 207, 0.1);
+
+  .wrap {
+    position: relative;
+    height: 492px;
+  }
+
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(193, 224, 255, 0.24) 0%,
+      rgba(235, 243, 255, 0.2) 100%
+    );
+    backdrop-filter: blur(36px);
+  }
+
+  .bg2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url('@/assets/images/home/zase.png');
+    background-blend-mode: screen;
+  }
+
+  .cont {
+    position: relative;
+    padding: calc(100% * 120 / @ui-width) 0;
+    background: url('https://image-c.weimobwmc.com/sass-admin/ba961a6b9d5141e58fd035dfeb50e706.png')
+      no-repeat center top;
+    background-size: 1100px;
+
+    .text {
+      text-align: center;
+
+      .title {
+        font-weight: 600;
+        font-size: 70px;
+        line-height: 98px;
+        margin-bottom: 16px;
+
+        .titleImg {
+          width: 448px;
+        }
+      }
+
+      .desc {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 56px;
+      }
+
+      .btns {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+
+        .btn {
+          border-radius: 6px;
+          height: 50px;
+          width: 136px;
+
+          .arrow {
+            width: 16px;
+            vertical-align: -2px;
+            margin-left: 8px;
+          }
+        }
+
+        .npmBtn {
+          position: relative;
+          background: white;
+          border-color: #f0f2f5;
+          width: 350px;
+          color: #1e2226;
+          padding-left: 24px;
+          padding-right: 12px;
+          text-align: left;
+
+          &:hover {
+            color: inherit;
+          }
+
+          .pkgName {
+            background: linear-gradient(89.97deg, #006aff 44.74%, #00d1d1 70.09%, #a3dc00 99.88%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        .splitline {
+          display: inline-block;
+          width: 1px;
+          height: 24px;
+          background: #e9ecf0;
+          margin: 0 12px;
+          vertical-align: -8px;
+        }
+
+        .copy {
+          width: 36px;
+          height: 36px;
+          border-radius: 4px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 12px;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .copyIcon {
+            color: #8a9099;
+            font-size: 20px;
+          }
+
+          &:hover {
+            background: #f5f7fa;
+
+            .copyIcon {
+              color: #626973;
+            }
+          }
+        }
+      }
+    }
+  }
+}

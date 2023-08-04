@@ -1,0 +1,13 @@
+@status: success, info, error, warning;
+@info-color: @brand-color;
+@success-color: @success-brand-color;
+@error-color: @danger-brand-color;
+@warning-color: @warning-brand-color;
+
+.color-status(@colorType) {
+  each(@status, {
+    &-@{value} {
+      @{colorType}: ~'@{@{value}-color}';
+    }
+  });
+}

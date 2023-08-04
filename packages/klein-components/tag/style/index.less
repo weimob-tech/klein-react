@@ -1,0 +1,197 @@
+@import '../../style/index';
+@import '../style/mixin.less';
+@import '../style/base.less';
+
+//引入依赖样式
+@import '../../image/style/index';
+
+@tag-prefix: ~'@{klein-prefix}-tag';
+
+.@{tag-prefix} {
+  position: relative;
+  text-align: center;
+  /* 存在辅助文案 */
+  &&-has-help {
+    padding: @padding-xs - 1 @padding-lg - 1;
+    // height: auto;
+  }
+
+  &-help {
+    color: @secondary-text-color;
+    font-size: @font-size-sm;
+  }
+
+  /* 当内容为图片的时候 */
+  &&-has-image {
+    padding: @padding-xss - 1;
+  }
+
+  /* tag */
+  &-close-icon {
+    // vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    // margin-left: @margin-xs;
+    font-size: @font-size-md;
+    line-height: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  &-line {
+    .typeMixin();
+  }
+
+  &-fill {
+    .typeMixin(transparent, white, red);
+  }
+
+  &-has-color {
+    color: @white;
+    border-color: transparent;
+  }
+
+  &-icon-node {
+    margin: 0 5px 0 @margin-xs;
+  }
+
+  &-hidden {
+    display: none !important;
+  }
+
+  &-large {
+    .sizeMixin(@height-base, @font-size-lg);
+
+    .@{tag-prefix}-close-icon {
+      font-size: @font-size-lg;
+    }
+
+    .@{tag-prefix}-icon-node {
+      font-size: @font-size-lg;
+    }
+  }
+
+  &-medium {
+    .sizeMixin(@height-sm);
+  }
+
+  &-small {
+    .sizeMixin(@height-sm - 4, @font-size-sm, @padding-horizontal-base - 2);
+  }
+
+  &-xSmall {
+    .sizeMixin(@height-sm - 6, @font-size-sm, @padding-horizontal-base - 4);
+  }
+
+  // 处理内置颜色
+  each(@innerColors, {
+    &-@{value} {
+      .innerColor(@value)
+    }
+  });
+
+  /* checkable-tag */
+  &-check-wrap {
+    @checkedColor: @brand-color;
+    position: relative;
+    display: inline-flex;
+    line-height: 0;
+    cursor: pointer;
+    user-select: none;
+
+    &-icon {
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      visibility: hidden;
+    }
+
+    .@{tag-prefix}-large + &-icon {
+      right: 0;
+      bottom: 0;
+      font-size: @font-size-sm;
+    }
+    .@{tag-prefix}-has-help.@{tag-prefix}-medium + &-icon,
+    .@{tag-prefix}-has-image.@{tag-prefix}-medium + &-icon {
+      right: 1px;
+      bottom: 2px;
+      font-size: @font-size-basic;
+    }
+
+    .@{tag-prefix}-medium + &-icon {
+      right: 0;
+      bottom: 0;
+      font-size: 8px;
+    }
+
+    .@{tag-prefix}-small + &-icon {
+      right: 0;
+      bottom: 0;
+      font-size: 7px;
+    }
+
+    .@{tag-prefix}-xSmall + &-icon {
+      right: 0;
+      bottom: 0;
+      font-size: 6px;
+    }
+
+    .@{tag-prefix}-disabled {
+      .normal-disabled() !important;
+      .@{tag-prefix}-help {
+        color: @text-disable-color;
+      }
+    }
+
+    &.checked {
+      .@{tag-prefix}-line::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: '';
+      }
+      .@{tag-prefix}-has-help.@{tag-prefix}-medium::after,
+      .@{tag-prefix}-has-image.@{tag-prefix}-medium::after {
+        .triangle(20px, @checkedColor);
+      }
+      .@{tag-prefix}-large::after {
+        .triangle(11px, @checkedColor);
+      }
+
+      .@{tag-prefix}-medium::after {
+        .triangle(7px, @checkedColor);
+      }
+
+      .@{tag-prefix}-small::after {
+        .triangle(6px, @checkedColor);
+      }
+
+      .@{tag-prefix}-xSmall::after {
+        .triangle(5px, @checkedColor);
+      }
+
+      .@{tag-prefix}-line {
+        color: @checkedColor !important;
+        background: @brand-active-bg-color !important;
+        border: 1px solid @checkedColor !important;
+        border-radius: 2px !important;
+      }
+
+      .@{tag-prefix}-check-wrap-icon {
+        visibility: visible;
+      }
+
+      .@{tag-prefix}-disabled {
+        .line-disabled() !important;
+        .@{tag-prefix}-help {
+          color: @text-disable-color;
+        }
+      }
+
+      .@{tag-prefix}-disabled.@{tag-prefix}-has-help.@{tag-prefix}-medium::after {
+        border-bottom-color: @brand-color-3;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

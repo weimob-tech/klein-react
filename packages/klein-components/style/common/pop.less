@@ -1,0 +1,150 @@
+//popconfirm tootletip popover triangle css
+@triangle-arrow-border-size: 5px;
+@triangle-arrow-horizontal-locate: 13px;
+@triangle-arrow-vertical-locate: 5px;
+@overlay-content-padding-bottom: 6px;
+@triangle-arrow-locate-size: @overlay-content-padding-bottom -
+  @triangle-arrow-border-size;
+
+.triangle-arrow(@border-size: @triangle-arrow-border-size) {
+  display: inline-block;
+  border-top: @border-size solid;
+  border-right: @border-size solid transparent;
+  border-left: @border-size solid transparent;
+}
+
+.triangle-locate(@horizontal-locate: @triangle-arrow-horizontal-locate,
+  @vertical-locate: @triangle-arrow-vertical-locate) {
+  &-arrow-content {
+    position: absolute;
+    .triangle-arrow();
+    box-shadow: @shadow-2;
+  }
+
+  &-placement-top,
+  &-placement-topLeft,
+  &-placement-topRight &-content {
+    padding-bottom: @overlay-content-padding-bottom;
+  }
+
+  &-placement-top &-arrow-content {
+    bottom: @triangle-arrow-locate-size;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-placement-topLeft &-arrow-content {
+    bottom: @triangle-arrow-locate-size;
+    left: @horizontal-locate;
+  }
+
+  &-placement-topRight &-arrow-content {
+    right: @horizontal-locate;
+    bottom: @triangle-arrow-locate-size;
+    // bottom: -@arrow-square-locate-size;
+  }
+
+  &-placement-bottom,
+  &-placement-bottomLeft,
+  &-placement-bottomRight &-content {
+    padding-top: @overlay-content-padding-bottom;
+  }
+
+  &-placement-bottom &-arrow-content {
+    top: @triangle-arrow-locate-size;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  &-placement-bottomLeft &-arrow-content {
+    top: @triangle-arrow-locate-size;
+    left: @horizontal-locate;
+    transform: rotate(180deg);
+  }
+
+  &-placement-bottomRight &-arrow-content {
+    top: @triangle-arrow-locate-size;
+    right: @horizontal-locate;
+    transform: rotate(180deg);
+  }
+
+  &-placement-left,
+  &-placement-leftTop,
+  &-placement-leftBottom &-content {
+    padding-right: @overlay-content-padding-bottom;
+  }
+
+  &-placement-left &-arrow-content {
+    top: 50%;
+    right: -@triangle-arrow-locate-size;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+
+  &-placement-leftTop &-arrow-content {
+    top: @vertical-locate;
+    right: -@triangle-arrow-locate-size;
+    transform: rotate(-90deg);
+  }
+
+  &-placement-leftBottom &-arrow-content {
+    right: -@triangle-arrow-locate-size;
+    bottom: @vertical-locate;
+    transform: rotate(-90deg);
+  }
+
+  &-placement-right,
+  &-placement-rightTop,
+  &-placement-rightBottom &-content {
+    padding-left: @overlay-content-padding-bottom;
+  }
+
+  &-placement-right &-arrow-content {
+    top: 50%;
+    left: -@triangle-arrow-locate-size;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  &-placement-rightTop &-arrow-content {
+    top: @vertical-locate;
+    left: -@triangle-arrow-locate-size;
+    transform: rotate(90deg);
+  }
+
+  &-placement-rightBottom &-arrow-content {
+    bottom: @vertical-locate;
+    left: -@triangle-arrow-locate-size;
+    transform: rotate(90deg);
+  }
+}
+
+.pop-animation() {
+  &-zoom {
+    .animation(@ease-in-out-circ, popZoom);
+
+    @keyframes popZoomIn {
+      0% {
+        transform: scale(0);
+        transform-origin: 50% 50%;
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        opacity: 1;
+      }
+    }
+
+    @keyframes popZoomOut {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+  }
+}

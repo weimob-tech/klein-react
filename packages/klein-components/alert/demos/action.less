@@ -1,0 +1,29 @@
+/* stylelint-disable selector-pseudo-class-no-unknown */
+
+@import '../../style/theme/default.less';
+
+.alert-action-btn(@normal, @hover, @active) {
+  color: @normal;
+  border-color: @normal;
+  &:hover {
+    color: @hover;
+    border-color: @hover;
+  }
+  &:active {
+    color: @active;
+    border-color: @active;
+  }
+}
+
+.actionAlert {
+  :global {
+    .klein-alert-action {
+      .klein-btn-primary.klein-btn-ghost {
+        .alert-action-btn(@success-color-1, @success-color-4, @success-color-5);
+      }
+      .klein-btn-danger.klein-btn-ghost {
+        .alert-action-btn(@danger-color-1, @danger-color-4, @danger-color-5);
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.animate {
+    animation:fadeIn 0.5s ease-out both 0.5s;
+    transition: none;
+}
+
+.animate-enter {
+    animation-name: fadeIn;
+}
+
+.animate-outer {
+    animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}

@@ -1,0 +1,186 @@
+@btn-font-weight: @font-weight-base;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+@btn-transparent: transparent;
+
+//small
+@btn-min-width-small: 56px;
+@btn-font-size-small: @font-size-sm;
+@btn-height-small: @height-sm;
+// @btn-border-radius-small: @border-radius-sm;
+@btn-horizontal-padding-small: @padding-xs - @btn-border-width;
+@btn-line-height-small: @line-height-base;
+@btn-vertical-padding-small: (
+  (@btn-height-small - 2 * @btn-border-width - @btn-line-height-small) / 2
+);
+
+//medium
+@btn-min-width-medium: 72px;
+@btn-font-size-medium: @font-size-basic;
+@btn-height-medium: @height-base;
+// @btn-border-radius-medium: @border-radius-basic;
+@btn-horizontal-padding-medium: @padding-md - @btn-border-width;
+@btn-line-height-medium: @line-height-base;
+@btn-vertical-padding-medium: (
+  (@btn-height-medium - 2 * @btn-border-width - @btn-line-height-medium) / 2
+);
+
+//large
+@btn-min-width-large: 96px;
+@btn-font-size-large: @font-size-lg;
+@btn-height-large: @height-lg;
+// @btn-border-radius-large: @border-radius-basic + 2px;
+@btn-horizontal-padding-large: @padding-md - @btn-border-width;
+@btn-line-height-large: @line-height-lg;
+@btn-vertical-padding-large: (
+  (@btn-height-large - 2 * @btn-border-width - @btn-line-height-large) / 2
+);
+
+//priamry color
+@btn-text-color-primary: @white;
+@btn-bg-primary: @brand-color;
+@btn-border-color-primary: @brand-color;
+@btn-externalight-color-primary: @brand-externalight-color;
+
+//default color
+@btn-text-color-default: @primary-text-color;
+@btn-bg-default: @white;
+@btn-border-color-default: @border-color;
+@btn-externalight-color-primary: @brand-externalight-color;
+
+// //diabled color
+// @btn-text-color-disabled: @disable-color;
+// @btn-bg-disabled: @background-disable-color;
+// @btn-border-color-disabled: @border-color;
+
+// //primary-diabled color
+// @btn-text-color-disabled-primary: @white;
+// @btn-bg-disabled-primary: @brand-border-color;
+// @btn-border-color-disabled-primary: @brand-border-color;
+
+//link-diabled color
+@btn-text-color-disabled-link: @brand-border-color;
+@btn-bg-disabled-link: @btn-transparent;
+@btn-border-color-disabled-link: @btn-transparent;
+
+//primary-hover color
+@btn-bg-primary-hover: @brand-hover-color;
+@btn-border-color-primary-hover: @brand-hover-color;
+@btn-text-color-primary-hover: @white;
+
+//primary-active color
+@btn-bg-primary-active: @brand-active-color;
+@btn-border-color-primary-active: @brand-active-color;
+@btn-text-color-primary-active: @white;
+
+//default-hover color
+@btn-bg-default-hover: @white;
+@btn-border-color-default-hover: @brand-hover-color;
+@btn-text-color-default-hover: @brand-hover-color;
+
+//default-active color
+@btn-bg-default-active: @white;
+@btn-border-color-default-active: @brand-active-color;
+@btn-text-color-default-active: @brand-active-color;
+
+//primary-danger color
+@btn-text-color-primary-danger: @btn-text-color-primary;
+@btn-bg-primary-danger: @danger-brand-color;
+@btn-border-color-primary-danger: @danger-brand-color;
+
+//primary-danger-hover color
+@btn-text-color-primary-danger-hover: @btn-text-color-primary;
+@btn-bg-primary-danger-hover: @danger-hover-bg-color;
+@btn-border-color-primary-danger-hover: @danger-hover-bg-color;
+
+//primary-danger-active color
+@btn-text-color-primary-danger-active: @btn-text-color-primary;
+@btn-bg-primary-danger-active: @danger-active-bg-color;
+@btn-border-color-primary-danger-active: @danger-active-bg-color;
+
+//default-danger color
+@btn-text-color-default-danger: @danger-brand-color;
+@btn-bg-default-danger: @btn-text-color-primary;
+@btn-border-color-default-danger: @danger-brand-color;
+
+//default-danger-hover color
+@btn-text-color-default-danger-hover: @danger-hover-bg-color;
+@btn-bg-default-danger-hover: @white;
+@btn-border-color-default-danger-hover: @danger-hover-bg-color;
+
+//default-danger-active color
+@btn-text-color-default-danger-active: @danger-active-bg-color;
+@btn-bg-default-danger-active: @white;
+@btn-border-color-default-danger-active: @danger-active-bg-color;
+
+//ghost-danger color
+@btn-text-color-ghost-danger: @danger-brand-color;
+@btn-bg-ghost-danger: @btn-transparent;
+@btn-border-color-ghost-danger: @danger-brand-color;
+
+//ghost-success color
+@btn-text-color-ghost-success: @success-brand-color;
+@btn-bg-ghost-success: @btn-transparent;
+@btn-border-color-ghost-success: @success-brand-color;
+
+//ghost-warning color
+@btn-text-color-ghost-warning: @warning-brand-color;
+@btn-bg-ghost-warning: @btn-transparent;
+@btn-border-color-ghost-warning: @warning-brand-color;
+
+//primary-ghost color
+@btn-text-color-primary-ghost: @brand-color;
+@btn-bg-primary-ghost: @btn-transparent;
+@btn-border-color-primary-ghost: @brand-color;
+
+//default-ghost color
+@btn-text-color-default-ghost: @white;
+@btn-bg-default-ghost: @btn-transparent;
+@btn-border-color-default-ghost: @white;
+
+//ghost-hover color
+@btn-text-color-ghost-hover: @brand-hover-color;
+@btn-bg-ghost-hover: @btn-transparent;
+@btn-border-color-ghost-hover: @brand-hover-color;
+
+//ghost-active color
+@btn-text-color-ghost-active: @brand-active-color;
+@btn-bg-ghost-active: @btn-transparent;
+@btn-border-color-ghost-active: @brand-active-color;
+
+//ghost-danger-hover color
+@btn-text-color-ghost-danger-hover: @danger-hover-bg-color;
+@btn-bg-ghost-danger-hover: @btn-transparent;
+@btn-border-color-ghost-danger-hover: @danger-hover-bg-color;
+
+//ghost-danger-active color
+@btn-text-color-ghost-danger-active: @danger-active-bg-color;
+@btn-bg-ghost-danger-active: @btn-transparent;
+@btn-border-color-ghost-danger-active: @danger-active-bg-color;
+
+//ghost-success-hover color
+@btn-text-color-ghost-success-hover: @success-hover-bg-color;
+@btn-bg-ghost-success-hover: @btn-transparent;
+@btn-border-color-ghost-success-hover: @success-hover-bg-color;
+
+//ghost-success-active color
+@btn-text-color-ghost-success-active: @success-active-bg-color;
+@btn-bg-ghost-success-active: @btn-transparent;
+@btn-border-color-ghost-success-active: @success-active-bg-color;
+
+//ghost-warning-hover color
+@btn-text-color-ghost-warning-hover: @warning-hover-bg-color;
+@btn-bg-ghost-warning-hover: @btn-transparent;
+@btn-border-color-ghost-warning-hover: @warning-hover-bg-color;
+
+//ghost-warning-active color
+@btn-text-color-ghost-warning-active: @warning-active-bg-color;
+@btn-bg-ghost-warning-active: @btn-transparent;
+@btn-border-color-ghost-warning-active: @warning-active-bg-color;
+
+//default-ghost color
+
+//danger externalight
+// @btn-externalight-color-danger: @danger-externalight-color;
+
+//loading

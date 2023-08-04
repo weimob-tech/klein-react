@@ -1,0 +1,159 @@
+.Navigation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .github {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: #f5f7fa;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .menus {
+    display: flex;
+    align-items: center;
+
+    .menuWrap {
+      display: flex;
+      align-items: center;
+      height: 64px;
+      padding: 0 5px;
+
+      &:hover {
+        .menu {
+          background: #f5f7fa;
+
+          .arrow {
+            transform: rotateZ(180deg);
+          }
+        }
+
+        .dropdown {
+          height: 172px;
+
+          &.design {
+            height: 228px;
+          }
+        }
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 16px;
+      gap: 8px;
+      height: 30px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  }
+
+  .mask {
+    position: fixed;
+    left: 0;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 34, 38, 0.6);
+    // z-index: 11;
+  }
+
+  .dropdown {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    height: 0;
+    // z-index: 12;
+
+    .cont {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 0;
+      width: 1104px;
+      margin: auto;
+      background: #ffffff;
+      backdrop-filter: blur(20px);
+
+      .wrap {
+        flex: 1;
+      }
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 32px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+
+      .link {
+        width: 252px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border-radius: 4px;
+        padding: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: #f5f7fa;
+        }
+
+        .icon {
+          width: 32px;
+          height: 32px;
+          border-radius: 4px;
+          overflow: hidden;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: 0 0;
+        }
+
+        .name {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .waiting {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          color: #626973;
+          width: 60px;
+          height: 20px;
+          background: #f0f2f5;
+          border-radius: 2px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

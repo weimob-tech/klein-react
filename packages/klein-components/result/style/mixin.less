@@ -1,0 +1,9 @@
+@status: success, info, error, warning;
+
+.result-status() {
+  each(@status, {
+    &-@{value}  &-icon > .@{icon-prefix} {
+      color: ~'@{result-@{value}-color}';
+    }
+  });
+}

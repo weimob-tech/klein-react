@@ -1,0 +1,24 @@
+.reset-component() {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: @text-color-base;
+  font-size: @font-size-basic;
+  // font-variant: 'tabular-nums';
+  line-height: @line-height-base;
+  list-style: none;
+  // font-feature-settings: "tnum";
+}
+
+.clearfix() {
+  &::before {
+    display: table;
+    content: '';
+  }
+
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}

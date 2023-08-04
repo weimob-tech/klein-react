@@ -1,0 +1,25 @@
+@import '../../style/index';
+
+@select-prefix-cls: ~'@{klein-prefix}-select';
+@autocomplete-prefix-cls: ~'@{select-prefix-cls}-auto-complete';
+
+.@{autocomplete-prefix-cls} {
+  input {
+    &::-webkit-search-cancel-button {
+      display: none;
+      -webkit-appearance: none;
+    }
+  }
+  .@{klein-prefix}-btn-large {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  .@{klein-prefix}-btn-medium {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .@{klein-prefix}-btn-small {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}

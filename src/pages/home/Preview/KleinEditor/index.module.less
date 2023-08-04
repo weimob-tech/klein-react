@@ -1,0 +1,60 @@
+.KleinEditor {
+  flex: 1;
+  // background: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(16px);
+  display: flex;
+  position: relative;
+  .tabs {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: 48px;
+    z-index: 1;
+    transform: translate3d(-50%, 0, 0);
+    border-radius: 24px;
+    background: rgba(245, 247, 250, 0.48);
+    backdrop-filter: blur(25px);
+    padding: 4px;
+
+    .tab {
+      font-size: 16px;
+      line-height: 28px;
+      width: 130px;
+      height: 40px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      opacity: 0.5;
+
+      &:hover,
+      &.active {
+        opacity: 1;
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(6px);
+      }
+
+      .icon {
+        width: 20px;
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    backdrop-filter: blur(16px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(22.766916275024414px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+  }
+}

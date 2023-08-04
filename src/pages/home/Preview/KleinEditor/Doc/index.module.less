@@ -1,0 +1,33 @@
+.Doc {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  :global {
+    .klein-editor {
+      height: 100%;
+      border-radius: 20px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      overflow: hidden;
+      border: 1px solid white;
+      border-bottom: none;
+    }
+    .k-e-text-container.k-e-h5 [data-slate-editor] {
+      width: 892px;
+    }
+    .k-e-toolbar {
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      padding: 17px 24px;
+      justify-content: center;
+
+      .k-e-bar-item:last-of-type {
+        display: none;
+      }
+    }
+  }
+}

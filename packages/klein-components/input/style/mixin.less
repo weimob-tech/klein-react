@@ -1,0 +1,125 @@
+@import '../../style/index';
+@import './base';
+
+@input-prefix: ~'@{klein-prefix}-input';
+
+.input-placeholder() {
+  // Firefox
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+
+  &::placeholder {
+    color: @disable-color;
+  }
+
+  &:placeholder-shown {
+    text-overflow: ellipsis;
+  }
+}
+
+.input-size() {
+  // height: @height-base;
+  padding: @padding-xss 0;
+  font-size: @font-size-basic;
+  line-height: @line-height-base;
+
+  &&-sm {
+    // height: @height-sm;
+    padding: 0;
+    font-size: @font-size-sm;
+    line-height: @line-height-sm + 2;
+  }
+
+  &&-lg {
+    // height: @height-lg;
+    padding: @padding-xs - 1 0;
+    font-size: @font-size-lg;
+    line-height: @line-height-lg;
+  }
+}
+
+.input-native() {
+  display: inline-block;
+  width: 100%;
+  padding: 0 @padding-sm - 1;
+  color: inherit;
+  line-height: inherit;
+  background: transparent;
+  border: none;
+  outline: 0;
+  cursor: inherit;
+}
+
+.input-inline-flex() {
+  display: inline-flex;
+  align-items: center;
+  // vertical-align: top;
+}
+
+.input-font() {
+  color: @primary-text-color;
+  font-size: @font-size-basic;
+}
+
+.input-background() {
+  background-color: @white;
+  background-image: none;
+}
+
+.input-border() {
+  border: @border-width-base @border-style-base @border-color;
+  border-radius: @border-radius-sm;
+  outline: 0;
+  transition: border 0.3s @ease-in-out;
+
+  &:hover,
+  &:focus,
+  &-focused {
+    .hover();
+  }
+
+  &:focus,
+  &-focused {
+    .active();
+  }
+}
+
+.hover() {
+  border-color: @brand-color-6;
+}
+
+.active() {
+  box-shadow: 0 0 4px rgba(37, 137, 255, 0.3);
+}
+
+.input-disabled() {
+  &-disabled,
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus {
+      color: @disable-color;
+      background: @background-disable-color;
+      border-color: @border-color;
+      cursor: not-allowed;
+      resize: none;
+      // 兼容safari
+      -webkit-text-fill-color: @disable-color;
+    }
+  }
+}
+
+.textarea-size() {
+  &&-small {
+    width: @textarea-width-small;
+  }
+
+  &&-medium {
+    width: @textarea-width-medium;
+  }
+
+  &&-large {
+    width: @textarea-width-large;
+  }
+}

@@ -1,0 +1,477 @@
+@import '../../style/index';
+@import './status';
+@dropdown-prefix-cls: ~'@{klein-prefix}-dropdown';
+@text-color-base: fade(@black, 85%);
+@zindex-dropdown: 1050;
+@popover-distance: 10px;
+@popover-arrow-width: 6px;
+@popover-bg: @white;
+@dropdown-menu-bg: @white;
+@dropdown-vertical-padding: 5px;
+@dropdown-edge-child-vertical-padding: 4px;
+@dropdown-font-size: @font-size-basic;
+@dropdown-line-height: 22px;
+@shadow-2: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+  0 9px 28px 8px rgba(0, 0, 0, 0.05);
+@box-shadow-basic: @shadow-2;
+@disable-color: #bfbfbf;
+@control-padding-horizontal: 12px;
+@control-padding-horizontal-sm: 8px;
+@item-active-bg: #f5f5f5;
+@text-color-sub: fade(@black, 45%);
+@dropdown-menu-submenu-disabled-bg: @white;
+@primary-base-color: @brand-color;
+@border-color-basic: hsv(0, 0, 85%); // base border outline a component
+@border-color-split: hsv(0, 0, 94%); // split border inside a component
+@border-color-inverse: @white;
+@border-width-base: 1px; // width of the border for a component
+@border-style-base: solid; // style of a components border
+@menu-dark-bg: #001529;
+@text-color-secondary-dark: fade(@white, 65%);
+@text-color-inverse: @white;
+@font-size-sm: 12px;
+
+.anticon {
+  display: inline-block;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@iconfont-css-prefix: anticon;
+
+.@{dropdown-prefix-cls} {
+  position: absolute;
+  z-index: 1050;
+  display: block;
+  box-sizing: border-box;
+  //min-width: 96px !important;
+  // min-height: 120px;
+  //padding: 0 12px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.5715;
+  list-style: none;
+  //background: @white;
+  border-radius: 2px;
+
+  //box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+  &-trigger {
+    cursor: pointer;
+  }
+
+  .@{klein-prefix}-icon&-menu-submenu-arrowicon {
+    display: none;
+  }
+
+  //&::before {
+  //  position: absolute;
+  //  top: -@popover-distance + @popover-arrow-width;
+  //  right: 0;
+  //  bottom: -@popover-distance + @popover-arrow-width;
+  //  left: -7px;
+  //  z-index: -9999;
+  //  opacity: 0.0001;
+  //  content: ' ';
+  //}
+
+  // &-menu {
+  //   position: relative;
+  //   //max-width: 96px;
+  //   margin: 0;
+  //   padding: 4px 0;
+  //   text-align: left;
+  //   list-style-type: none;
+  //   background-color: @white;
+  //   background-clip: padding-box;
+  //   border-radius: 2px;
+  //   outline: none;
+  //   box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
+  //     0 9px 28px 8px rgb(0 0 0 / 5%);
+  // }
+
+  &-wrap {
+    position: relative;
+
+    .@{klein-prefix}-btn > .@{iconfont-css-prefix}-down {
+      font-size: 10px;
+    }
+
+    .@{iconfont-css-prefix}-down::before {
+      transition: transform 0.2s;
+    }
+  }
+
+  &-wrap-open {
+    .@{iconfont-css-prefix}-down::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-hidden,
+  &-menu-hidden {
+    display: none;
+  }
+
+  // Offset the popover to account for the dropdown arrow
+  &-show-arrow&-placement-topCenter,
+  &-show-arrow&-placement-topLeft,
+  &-show-arrow&-placement-topRight {
+    margin-top: 9px;
+    padding-bottom: 5px;
+  }
+
+  &-show-arrow&-placement-bottomCenter,
+  &-show-arrow&-placement-bottomLeft,
+  &-show-arrow&-placement-bottomRight {
+    padding-top: 5px;
+  }
+
+  &-arrow {
+    position: absolute;
+    z-index: 1; // lift it up so the menu wouldn't cask shadow on it
+    display: block;
+    border-style: solid;
+  }
+
+  &-placement-topCenter > &-arrow,
+  &-placement-topLeft > &-arrow,
+  &-placement-topRight > &-arrow {
+    bottom: -9px;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top-color: white;
+  }
+
+  &-placement-topCenter > &-arrow {
+    left: 48%;
+  }
+
+  &-placement-topLeft > &-arrow {
+    left: 12px;
+  }
+
+  &-placement-topRight > &-arrow {
+    right: 12px;
+  }
+
+  &-placement-bottomCenter > &-arrow,
+  &-placement-bottomLeft > &-arrow,
+  &-placement-bottomRight > &-arrow {
+    top: -9px;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top-color: white;
+    transform: rotate(180deg);
+
+    //box-shadow: -2px -2px 5px fade(@black, 6%);
+  }
+
+  &-placement-bottomCenter > &-arrow {
+    left: 48%;
+    //transform: translateX(-50%) rotate(45deg);
+  }
+
+  &-placement-bottomLeft > &-arrow {
+    left: 12px;
+  }
+
+  &-placement-bottomRight > &-arrow {
+    right: 12px;
+  }
+
+  &-menu {
+    position: relative;
+    margin: 0;
+    padding: 4px 0;
+    //height: 32px;
+    line-height: 32px;
+    text-align: left;
+    list-style-type: none;
+    background-color: @dropdown-menu-bg;
+    background-clip: padding-box;
+    border-radius: @border-radius-basic;
+    outline: none;
+    box-shadow: @box-shadow-basic;
+
+    &-item-group-title {
+      padding: 5px @control-padding-horizontal;
+      color: @text-color-sub;
+      transition: all 0.3s;
+    }
+
+    &-submenu-popup {
+      position: absolute;
+      z-index: @zindex-dropdown;
+      background: transparent;
+      box-shadow: none;
+      transform-origin: 0 0;
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      ul {
+        margin-top: -8px;
+        margin-right: 0.3em;
+        margin-left: -4px;
+      }
+    }
+
+    &-item,
+    &-submenu-title {
+      clear: both;
+      margin: 0;
+      padding: @dropdown-vertical-padding @control-padding-horizontal;
+      color: @text-color-base;
+      font-weight: normal;
+      font-size: @dropdown-font-size;
+      line-height: @dropdown-line-height;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      > .@{iconfont-css-prefix}:first-child,
+      > a > .@{iconfont-css-prefix}:first-child,
+      > span > .@{iconfont-css-prefix}:first-child {
+        min-width: 12px;
+        margin-right: 8px;
+        font-size: @font-size-sm;
+        vertical-align: -0.1em;
+      }
+
+      > a {
+        display: block;
+        margin: -5px -@control-padding-horizontal;
+        padding: 5px @control-padding-horizontal;
+        color: @text-color-base;
+        transition: all 0.3s;
+
+        &:hover {
+          color: @text-color-base;
+        }
+      }
+
+      > .@{iconfont-css-prefix} + span > a {
+        color: @text-color-base;
+        transition: all 0.3s;
+
+        &:hover {
+          color: @text-color-base;
+        }
+      }
+
+      &:first-child {
+        & when (@dropdown-edge-child-vertical-padding =0) {
+          border-radius: @border-radius-basic @border-radius-basic 0 0;
+        }
+      }
+
+      &:last-child {
+        & when (@dropdown-edge-child-vertical-padding =0) {
+          border-radius: 0 0 @border-radius-basic @border-radius-basic;
+        }
+      }
+
+      &-selected,
+      &-selected > a {
+        color: @primary-text-color;
+        background-color: @item-active-bg;
+      }
+
+      &:hover {
+        background-color: #f2f2f6;
+      }
+
+      &-disabled {
+        color: @disable-color;
+        cursor: not-allowed;
+
+        &:hover {
+          color: @disable-color;
+          background-color: @dropdown-menu-submenu-disabled-bg;
+          cursor: not-allowed;
+        }
+
+        > .@{iconfont-css-prefix} + span > a,
+        > a {
+          position: relative;
+          color: @disable-color;
+          pointer-events: none;
+
+          &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: not-allowed;
+            content: '';
+          }
+        }
+      }
+
+      &-divider {
+        height: 1px;
+        margin: 4px 0;
+        overflow: hidden;
+        line-height: 0;
+        background-color: @border-color-split;
+      }
+
+      .@{dropdown-prefix-cls}-menu-submenu-expand-icon {
+        position: absolute;
+        top: 50%;
+        right: @padding-xs;
+        line-height: 1;
+        transform: translateY(-50%);
+
+        .@{dropdown-prefix-cls}-menu-submenu-arrow-icon {
+          margin-right: 0 !important;
+          color: #262626;
+          font-size: @font-size-lg;
+          font-style: normal;
+        }
+      }
+    }
+
+    &-item-group-list {
+      margin: 0 8px;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-submenu-title {
+      padding-right: @control-padding-horizontal + @font-size-sm;
+    }
+
+    &-submenu-vertical {
+      position: relative;
+      width: 108px;
+    }
+
+    &-submenu-vertical > & {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 100%;
+      margin-left: 4px;
+      transform-origin: 0 0;
+    }
+
+    &-submenu&-submenu-disabled .@{dropdown-prefix-cls}-menu-submenu-title {
+      &,
+      .@{dropdown-prefix-cls}-menu-submenu-arrow-icon {
+        color: @disable-color;
+        background-color: @dropdown-menu-submenu-disabled-bg;
+        cursor: not-allowed;
+      }
+    }
+
+    // https://github.com/ant-design/ant-design/issues/19264
+    &-submenu-selected &-submenu-title {
+      color: @primary-base-color;
+    }
+  }
+
+  &.slide-down-enter.slide-down-enter-active&-placement-bottomLeft,
+  &.slide-down-appear.slide-down-appear-active&-placement-bottomLeft,
+  &.slide-down-enter.slide-down-enter-active&-placement-bottomCenter,
+  &.slide-down-appear.slide-down-appear-active&-placement-bottomCenter,
+  &.slide-down-enter.slide-down-enter-active&-placement-bottomRight,
+  &.slide-down-appear.slide-down-appear-active&-placement-bottomRight {
+    animation-name: antSlideUpIn;
+  }
+
+  &.slide-up-enter.slide-up-enter-active&-placement-topLeft,
+  &.slide-up-appear.slide-up-appear-active&-placement-topLeft,
+  &.slide-up-enter.slide-up-enter-active&-placement-topCenter,
+  &.slide-up-appear.slide-up-appear-active&-placement-topCenter,
+  &.slide-up-enter.slide-up-enter-active&-placement-topRight,
+  &.slide-up-appear.slide-up-appear-active&-placement-topRight {
+    animation-name: antSlideDownIn;
+  }
+
+  &.slide-down-leave.slide-down-leave-active&-placement-bottomLeft,
+  &.slide-down-leave.slide-down-leave-active&-placement-bottomCenter,
+  &.slide-down-leave.slide-down-leave-active&-placement-bottomRight {
+    animation-name: antSlideUpOut;
+  }
+
+  &.slide-up-leave.slide-up-leave-active&-placement-topLeft,
+  &.slide-up-leave.slide-up-leave-active&-placement-topCenter,
+  &.slide-up-leave.slide-up-leave-active&-placement-topRight {
+    animation-name: antSlideDownOut;
+  }
+}
+
+&-placement-topLeft,
+&-placement-topCenter,
+&-placement-topRight {
+  margin-bottom: 100px;
+}
+
+.@{dropdown-prefix-cls}-trigger,
+.@{dropdown-prefix-cls}-link,
+.@{dropdown-prefix-cls}-button {
+  > .@{iconfont-css-prefix}.@{iconfont-css-prefix}-down {
+    font-size: 10px;
+    vertical-align: baseline;
+  }
+}
+
+.@{dropdown-prefix-cls}-button {
+  white-space: nowrap;
+
+  &.@{klein-prefix}-btn-group
+    > .@{klein-prefix}-btn:last-child:not(:first-child):not(.@{klein-prefix}-btn-icon-only) {
+    padding-right: @padding-xs;
+    padding-left: @padding-xs;
+  }
+}
+
+.@{dropdown-prefix-cls}-menu-item {
+  font-size: 14px;
+}
+
+// https://github.com/ant-design/ant-design/issues/4903
+.@{dropdown-prefix-cls}-menu-dark {
+  &,
+  .@{dropdown-prefix-cls}-menu {
+    background: @menu-dark-bg;
+  }
+
+  .@{dropdown-prefix-cls}-menu-item,
+  .@{dropdown-prefix-cls}-menu-submenu-title,
+  .@{dropdown-prefix-cls}-menu-item > a,
+  .@{dropdown-prefix-cls}-menu-item > .@{iconfont-css-prefix} + span > a {
+    color: @text-color-secondary-dark;
+
+    .@{dropdown-prefix-cls}-menu-submenu-arrow::after {
+      color: @text-color-secondary-dark;
+    }
+
+    &:hover {
+      color: @text-color-inverse;
+      background: transparent;
+    }
+  }
+
+  .@{dropdown-prefix-cls}-menu-item-selected {
+    &,
+    &:hover,
+    > a {
+      color: @text-color-inverse;
+      background: @primary-base-color;
+    }
+  }
+}

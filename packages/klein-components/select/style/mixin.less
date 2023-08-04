@@ -1,0 +1,60 @@
+.iconfont-mixin() {
+  display: inline-block;
+  color: @icon-color;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em; // for SVG icon, see https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  > * {
+    line-height: 1;
+  }
+
+  svg {
+    display: inline-block;
+  }
+
+  &::before {
+    display: none; // dont display old icon.
+  }
+
+  & &-icon {
+    display: block;
+  }
+}
+
+.reset-component() {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: @text-color-base;
+  font-size: @font-size-basic;
+  font-variant: @font-variant-base;
+  line-height: @line-height-base;
+  list-style: none;
+  font-feature-settings: @font-feature-settings-base;
+}
+
+.active(@color: @outline-color) {
+  & when (@theme =dark) {
+    border-color: @color;
+  }
+
+  & when not (@theme =dark) {
+    border-color: @select-hover-border-color;
+  }
+
+  border-right-width: @border-width-base !important;
+  outline: 0;
+  box-shadow: 0 0 4px 0 #a1d6ff;
+}
+
+// == when hoverd
+.hover(@color: @select-hover-border-color) {
+  border-color: @color;
+  border-right-width: @border-width-base !important;
+}

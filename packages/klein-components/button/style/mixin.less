@@ -1,0 +1,81 @@
+.btn-size(@size) {
+  min-width: ~'@{btn-min-width-@{size}}';
+  height: ~'@{btn-height-@{size}}';
+  padding: ~'@{btn-vertical-padding-@{size}}' ~'@{btn-horizontal-padding-@{size}}';
+  font-size: ~'@{btn-font-size-@{size}}';
+  // border-radius: ~'@{btn-border-radius-@{size}}';
+  line-height: ~'@{btn-line-height-@{size}}';
+}
+
+.btn-color(@type) {
+  color: ~'@{btn-text-color-@{type}}';
+  background: ~'@{btn-bg-@{type}}';
+  border-color: ~'@{btn-border-color-@{type}}';
+}
+
+.btn-link(@type) {
+  color: ~'@{btn-bg-@{type}}';
+  border: none;
+}
+
+.btn() {
+  position: relative;
+  display: inline-block;
+  font-weight: @btn-font-weight;
+  white-space: nowrap;
+  text-align: center;
+  // background: @white;
+  border: @btn-border-width @btn-border-style transparent;
+  border-radius: @border-radius-sm;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.2s @ease-in-out;
+}
+
+// .disabled-status(@func) {
+//   &[disabled] {
+//     &,
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       @func();
+//       text-shadow: none;
+//       box-shadow: none;
+//       cursor: not-allowed;
+//     }
+//   }
+// }
+
+//常规按钮disabled
+.btn-disabled() {
+  // .disabled-status(.btn-color(disabled));
+  &[disabled] {
+    .normal-disabled();
+  }
+}
+
+//primary按钮disabled
+.btn-primary-disabled() {
+  // .disabled-status(.btn-color(disabled-primary));
+  &[disabled] {
+    .brand-disabled();
+  }
+}
+
+//link按钮disabled
+.btn-link-disabled() {
+  &[disabled] {
+    .disabled-status(.btn-color(disabled-link));
+  }
+}
+
+.ghost-disabled {
+  .disable-bg() {
+    background: @btn-transparent;
+  }
+
+  .btn-disabled();
+  &[disabled] {
+    .disabled-status(.disable-bg());
+  }
+}

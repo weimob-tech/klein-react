@@ -1,0 +1,31 @@
+@animation-duration-base: 0.2s;
+
+.animation-effect(@duration, @timingFunction) {
+  animation-duration: @duration;
+  animation-play-state: paused;
+  animation-timing-function: @timingFunction;
+  animation-fill-mode: both;
+}
+
+.animation(@timingFunction, @keyframeName, @duration: @animation-duration-base) {
+  &-enter,
+  &-appear {
+    opacity: 0;
+    .animation-effect(@duration, @timingFunction);
+  }
+
+  &-leave {
+    .animation-effect(@duration, @timingFunction);
+  }
+
+  &-enter&-enter-active,
+  &-appear&-appear-active {
+    animation-name: ~'@{keyframeName}In';
+    animation-play-state: running;
+  }
+  &-leave&-leave-active {
+    animation-name: ~'@{keyframeName}Out';
+    animation-play-state: running;
+    pointer-events: none;
+  }
+}

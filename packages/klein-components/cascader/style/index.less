@@ -1,0 +1,326 @@
+@import '../../style/index';
+
+//引入依赖样式
+@import '../../tree/style/index';
+@import '../../select/style/index';
+
+@cascader-prefix-cls: ~'@{klein-prefix}-cascader';
+
+@component-background: @white;
+@cascader-dropdown-vertical-padding: 4px;
+@cascader-dropdown-line-height: 22px;
+@cascader-height: 20px;
+@input-clear-btn-bg-hover: #a2a2a2;
+
+.@{cascader-prefix-cls} {
+  //&-input {
+  //  width: 232px;
+  //}
+  &-no-data {
+    margin: 0 auto;
+    color: @disable-color;
+    text-align: center;
+  }
+
+  &-footer {
+    margin-top: @margin-sm;
+    padding: 5px @padding-sm;
+    border-top: 1px solid @divider-color;
+  }
+
+  &-picker {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: @font-size-md;
+    font-variant: tabular-nums;
+    background-color: @component-background;
+    border-radius: @border-radius-sm;
+    outline: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &-label-mutiple {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90px;
+      height: @line-height-lg;
+      margin-right: @margin-sm;
+      padding: 0 (@padding-xs - 1);
+      color: @primary-text-color;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background-color: @background-area-color;
+      border: 1px solid @border-color;
+      border-radius: @border-radius-sm;
+    }
+
+    &-with-value &-label {
+      color: transparent;
+    }
+
+    &-small {
+      font-size: @font-size-sm;
+    }
+
+    &-medium {
+      font-size: @font-size-basic;
+    }
+
+    &-large {
+      font-size: @font-size-lg;
+    }
+
+    &-disabled {
+      color: fade(#000, 25%);
+      background: hsv(0, 0, 96%);
+      cursor: not-allowed;
+
+      .@{cascader-prefix-cls}-input {
+        cursor: not-allowed;
+      }
+
+      .@{cascader-prefix-cls}-picker-arrow {
+        color: @disable-color;
+      }
+    }
+
+    &:focus .@{cascader-prefix-cls}-input {
+      //.active();
+    }
+
+    &-borderless .@{cascader-prefix-cls}-input {
+      border-color: transparent !important;
+      box-shadow: none !important;
+    }
+
+    &-show-search&-focused {
+      color: fade(#000, 25%);
+    }
+
+    &-label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      // height: @cascader-height;
+      // margin-top: -10px;
+      padding: 0 35px 0 @padding-sm - 1;
+      overflow: hidden;
+      // line-height: @cascader-height;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    &-clear {
+      position: absolute;
+      top: 50%;
+      right: @padding-sm;
+      z-index: 2;
+      font-size: @font-size-lg;
+      transform: translateY(-50%);
+      visibility: hidden;
+      cursor: pointer;
+      transition: color 0.3s ease, visibility 0.15s ease;
+      .close-btn-style();
+
+      &:hover {
+        visibility: visible;
+      }
+    }
+
+    &:hover &-clear {
+      visibility: visible;
+    }
+
+    &-disabled:hover &-clear {
+      visibility: hidden;
+
+      &:hover {
+        visibility: hidden;
+      }
+    }
+
+    // arrow
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      right: @padding-sm;
+      z-index: 1;
+      width: @margin-lg;
+      height: @margin-lg;
+      margin-top: -8px;
+      color: @primary-text-color;
+      font-size: @font-size-lg;
+      line-height: @padding-sm;
+    }
+  }
+
+  &-picker-label:hover + &-input {
+    &:not(.@{cascader-prefix-cls}-picker-disabled &) {
+      //.hover();
+    }
+  }
+
+  &-picker-small &-picker-clear,
+  &-picker-small &-picker-arrow {
+    right: 4px;
+  }
+
+  &-menus {
+    position: absolute;
+    z-index: @zindex-dropdown;
+    overflow: hidden;
+    font-size: @font-size-basic;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: @white;
+    border-radius: @border-radius-sm;
+    box-shadow: @shadow-1;
+
+    // 级联多选
+    .@{klein-prefix}-tree-horizontal {
+      height: 180px;
+      .@{klein-prefix}-tree-nodes {
+        overflow-y: auto;
+      }
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      list-style: none;
+    }
+
+    &-empty,
+    &-hidden {
+      display: none;
+    }
+
+    &.slide-up-enter.slide-up-enter-active&-placement-bottomLeft,
+    &.slide-up-appear.slide-up-appear-active&-placement-bottomLeft {
+      animation-name: antSlideUpIn;
+    }
+
+    &.slide-up-enter.slide-up-enter-active&-placement-topLeft,
+    &.slide-up-appear.slide-up-appear-active&-placement-topLeft {
+      animation-name: antSlideDownIn;
+    }
+
+    &.slide-up-leave.slide-up-leave-active&-placement-bottomLeft {
+      animation-name: antSlideUpOut;
+    }
+
+    &.slide-up-leave.slide-up-leave-active&-placement-topLeft {
+      animation-name: antSlideDownOut;
+    }
+  }
+
+  &-menu {
+    display: inline-block;
+    min-width: 111px;
+    height: 180px;
+    margin: 0;
+    padding: 4px 0;
+    overflow: auto;
+    vertical-align: top;
+    list-style: none;
+    border-right: @border-width-base @border-style-base hsv(0, 0, 94%);
+    -ms-overflow-style: -ms-autohiding-scrollbar; // https://github.com/ant-design/ant-design/issues/11857
+
+    &:first-child {
+      border-radius: @border-radius-basic 0 0 @border-radius-basic;
+    }
+
+    &:last-child {
+      // margin-right: -1px;
+      border-right-color: transparent;
+      border-radius: 0 @border-radius-basic @border-radius-basic 0;
+    }
+
+    &:only-child {
+      border-radius: @border-radius-basic;
+    }
+  }
+
+  &-menu-item {
+    padding: @cascader-dropdown-vertical-padding @padding-sm;
+    overflow: hidden;
+    color: @primary-text-color;
+    line-height: @cascader-dropdown-line-height;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: @background-page-color;
+    }
+
+    &-disabled {
+      color: @disable-color;
+      cursor: not-allowed;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    .@{cascader-prefix-cls}-menu-empty & {
+      color: @disable-color;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &-active:not(&-disabled) {
+      &,
+      &:hover {
+        color: @brand-color-6;
+        // font-weight: @font-weight-medium;
+        font-size: @font-size-basic;
+        // background-color: @brand-color-1;
+      }
+
+      .@{cascader-prefix-cls}-menu-item-expand-icon {
+        color: @brand-color-6;
+      }
+    }
+
+    &-expand {
+      position: relative;
+      padding-right: @padding-lg + @padding-sm;
+    }
+
+    &-expand &-expand-icon,
+    &-loading-icon {
+      position: absolute;
+      right: @padding-sm;
+      color: @secondary-text-color;
+      font-size: @font-size-lg;
+
+      .@{cascader-prefix-cls}-menu-item-disabled& {
+        color: @disable-color;
+      }
+    }
+
+    & &-keyword {
+      color: @brand-color-6;
+    }
+  }
+
+  &-menu-empty {
+    .@{cascader-prefix-cls}-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 62px;
+    }
+  }
+}

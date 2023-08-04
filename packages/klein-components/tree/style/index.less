@@ -1,0 +1,12 @@
+@import './base.less';
+@import '../../style/index';
+@import './horizontal.less';
+@import './vertical.less';
+
+@tree-prefix: ~'@{klein-prefix}-tree';
+@treeNode-line-height: @tree-node-height-base - ((@padding-xss + 1) * 2);
+
+.@{tree-prefix} {
+  .horizontal();
+  .vertical();
+}

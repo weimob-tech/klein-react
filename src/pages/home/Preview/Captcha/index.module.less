@@ -1,0 +1,52 @@
+:global {
+  #verify_weimob-safe-captcha {
+    box-sizing: content-box;
+  }
+}
+
+.Captcha {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.24);
+
+  .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 60px;
+
+    .tab {
+      width: 130px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 16px;
+      line-height: 28px;
+      opacity: 0.48;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        opacity: 1;
+        font-weight: 600;
+        background: linear-gradient(
+          99.57deg,
+          rgba(0, 106, 255, 0.2) -63.55%,
+          rgba(101, 107, 255, 0.2) 53.53%
+        );
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

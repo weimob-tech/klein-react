@@ -1,0 +1,66 @@
+.klein-headers {
+  position: relative;
+
+  &-headers {
+    display: flex;
+    height: 64px;
+    align-items: center;
+
+    .DocSearch-Button {
+      background: #f5f7fa;
+    }
+
+    &:hover {
+      background: white;
+
+      .DocSearch-Button {
+        background: #f5f7fa;
+      }
+    }
+
+    &-home {
+      .DocSearch-Button {
+        backdrop-filter: blur(40px);
+        background: rgba(255, 255, 255, 0.24);
+      }
+    }
+  }
+  &-logo-wrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-width: 218px;
+    cursor: pointer;
+
+    .logo-icon {
+      width: 154px;
+    }
+    .logo-klein {
+      margin: 0;
+      margin-left: 10px;
+      font-size: 22px;
+    }
+  }
+
+  &-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(36px);
+  }
+
+  &-cont {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 28px;
+  }
+
+  .flex1 {
+    flex: 1;
+  }
+}

@@ -1,0 +1,51 @@
+@import '../../style/index';
+
+@rate-prefix: ~'@{klein-prefix}-rate';
+
+.@{rate-prefix} {
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-star {
+    position: relative;
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: 12px;
+    }
+
+    &-background {
+      color: @normal-color-4;
+    }
+
+    &-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      color: transparent;
+    }
+
+    &-half,
+    &-full {
+      .@{rate-prefix}-star-content {
+        color: @warning-color-1;
+      }
+    }
+
+    &-half {
+      .@{rate-prefix}-star-content {
+        width: 50%;
+      }
+    }
+  }
+
+  &-disabled {
+    cursor: default;
+  }
+}

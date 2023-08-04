@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3.2 图标按钮/fill/Unfold</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.120000 0 0 0 0 0.125000 0 0 0 0 0.150000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="3.2-图标按钮/fill/Unfold" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-2">
+            <g id="编组" fill="#FFFFFF" stroke="#E1E2E6">
+                <rect id="Rectangle" x="0.5" y="0.5" width="15" height="15" rx="2"></rect>
+            </g>
+            <g id="3.2-图标按钮/line/Plus" transform="translate(2.000000, 2.000000)" filter="url(#filter-1)">
+                <g id="编组-17备份">
+                    <rect id="矩形" x="0" y="0" width="12" height="12"></rect>
+                    <polygon id="形状结合" fill="#1F2026" points="6.375 1.5 6.375 5.625 10.5 5.625 10.5 6.375 6.375 6.375 6.375 10.5 5.625 10.5 5.625 6.375 1.5 6.375 1.5 5.625 5.625 5.625 5.625 1.5"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

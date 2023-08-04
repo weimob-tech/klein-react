@@ -1,0 +1,34 @@
+@ripple: ~"[@{klein-prefix}-ripple-animation='true']";
+
+@{ripple} {
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    border-radius: inherit;
+    animation: rippleWaveEffect 0.4s @ease-out-circ,
+      rippleFadeEffect 2s @ease-out-circ;
+    animation-fill-mode: forwards;
+    content: '';
+    pointer-events: none;
+  }
+}
+
+@keyframes rippleWaveEffect {
+  0% {
+    box-shadow: 0 0 0 0 var(--klein-ripple-shadow-color);
+  }
+  100% {
+    box-shadow: 0 0 0 @brand-externalight-width var(--klein-ripple-shadow-color); //外发光;
+    opacity: 0.2;
+  }
+}
+
+@keyframes rippleFadeEffect {
+  100% {
+    opacity: 0;
+  }
+}

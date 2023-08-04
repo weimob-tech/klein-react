@@ -1,0 +1,33 @@
+.dialog() {
+  position: relative;
+  margin: 0 auto;
+
+  .screen-fill {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @zindex-modal;
+  }
+
+  &-close {
+    padding: 0;
+    line-height: 0;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &-mask {
+    .screen-fill;
+    background-color: @background-mask-color;
+  }
+
+  &-wrap {
+    .screen-fill;
+    overflow: auto;
+    outline: none;
+  }
+}

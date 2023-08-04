@@ -1,0 +1,2 @@
+export default DownFill;
+declare const DownFill: "<svg class=\"k-e-svg-down-fill\" width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3.58785 5.46581L1.59671 2.79915C1.35049 2.4694 1.58581 2 1.99735 2L5.99734 2C6.40985 2 6.64491 2.47136 6.39671 2.80085L4.38785 5.46751C4.18729 5.73376 3.78729 5.73291 3.58785 5.46581Z\" fill=\"currentColor\"/></svg>";

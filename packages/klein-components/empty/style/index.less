@@ -1,0 +1,30 @@
+@import '../../style/index';
+@import './mixin';
+
+@empty-prefix-cls: ~'@{klein-prefix}-empty';
+@empty-img-prefix-cls: ~'@{klein-prefix}-empty-img';
+
+.@{empty-prefix-cls} {
+  margin: 0 8px;
+  padding: 10px 0;
+  color: @normal-color-8;
+  font-size: @font-size-md;
+  line-height: @line-height-md;
+  text-align: center;
+
+  &-middle {
+    .@{empty-prefix-cls}-image {
+      .imageStyle(160px);
+    }
+  }
+
+  &-small {
+    .@{empty-prefix-cls}-image {
+      .smallImageStyle(80px);
+    }
+  }
+
+  &-footer {
+    margin-top: 16px;
+  }
+}

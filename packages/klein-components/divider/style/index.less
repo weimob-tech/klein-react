@@ -1,0 +1,28 @@
+@import '../../style/index';
+@divider-prefix: ~'@{klein-prefix}-divider';
+
+.@{divider-prefix} {
+  font-size: @font-size-basic;
+
+  &-row&-dashed {
+    border-bottom: 1px dashed @divider-color;
+  }
+
+  &-row {
+    width: 100%;
+    margin-top: @margin-sp-1;
+    margin-bottom: @margin-sp-1;
+    border-bottom: 1px solid @divider-color;
+  }
+
+  &-col {
+    position: relative;
+    top: 0.1em;
+    display: inline-block;
+    width: 1px;
+    height: 0.9em;
+    margin-right: @margin-sp-2;
+    margin-left: @margin-sp-2;
+    background: @divider-color;
+  }
+}

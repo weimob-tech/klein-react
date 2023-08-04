@@ -1,0 +1,151 @@
+@import '../../style/index';
+@import '../../style/common/status.less';
+@import '../../style/common/close';
+@import './base.less';
+@import './mixin.less';
+
+@notification-prefix: ~'@{klein-prefix}-notification';
+
+.@{notification-prefix} {
+  position: fixed;
+  z-index: @zindex-notification;
+
+  &-notice {
+    position: relative;
+    width: @notification-width;
+    margin-bottom: @notification-margin-bottom;
+    padding: @padding-md @padding-lg;
+    background-color: @white;
+    border-radius: @border-radius-basic;
+    box-shadow: @shadow-default;
+
+    &-close {
+      position: absolute;
+      top: 20px;
+      right: 26px;
+      font-size: @font-size-lg;
+      line-height: 0;
+      outline: none;
+      cursor: pointer;
+      .close-btn-style();
+    }
+  }
+
+  &-color-border {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: @notification-color-border-width;
+    border-top-left-radius: @border-radius-basic;
+    border-bottom-left-radius: @border-radius-basic;
+  }
+
+  &-color-border&-color {
+    .color-status(background);
+  }
+
+  &-content-status&-color {
+    .color-status(color);
+  }
+
+  &-content {
+    position: relative;
+    overflow: hidden;
+    &-status {
+      position: absolute;
+      left: 1.5px;
+      display: inline-block;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    &-reset {
+      border-style: none;
+    }
+
+    &-message {
+      overflow: hidden;
+      color: @title-color;
+      font-weight: @font-weight-base + 100;
+      font-size: @font-size-lg;
+      line-height: @line-height-lg;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &-desc {
+      margin-top: @margin-md;
+      margin-bottom: @margin-sm;
+      color: @primary-text-color;
+      font-size: @font-size-md;
+      line-height: @line-height-md;
+    }
+
+    &-btns {
+      float: right;
+      padding-top: @notification-btns-padding-top;
+      &-cancel {
+        margin-right: @margin-md;
+      }
+    }
+  }
+
+  &-fade {
+    .animation(@ease-in-out, Notification);
+  }
+
+  &-topRight&-fade {
+    .reset-animation-name(NotificationRightIn);
+  }
+
+  &-topLeft&-fade {
+    .reset-animation-name(NotificationLeftIn);
+  }
+
+  &-bottomLeft&-fade {
+    .reset-animation-name(NotificationLeftIn);
+  }
+
+  &-bottomRight&-fade {
+    .reset-animation-name(NotificationRightIn);
+  }
+
+  @keyframes NotificationRightIn {
+    0% {
+      left: @notification-width;
+      opacity: 0;
+    }
+    100% {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes NotificationLeftIn {
+    0% {
+      right: @notification-width;
+      opacity: 0;
+    }
+    100% {
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes NotificationOut {
+    0% {
+      margin-bottom: @notification-margin-bottom;
+      padding-top: @padding-md;
+      padding-bottom: @padding-md;
+      opacity: 1;
+    }
+    100% {
+      height: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      opacity: 0;
+    }
+  }
+}

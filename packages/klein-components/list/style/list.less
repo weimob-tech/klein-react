@@ -1,0 +1,37 @@
+@import '../../style/index';
+
+@list-prefix: ~'@{klein-prefix}-list';
+
+.@{list-prefix} {
+  &-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+
+    &.vertical {
+      flex-direction: column;
+    }
+  }
+
+  &-pagination {
+    float: right;
+    margin-top: 24px;
+  }
+
+  &-load-more {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  &-empty {
+    padding: 16px;
+    color: @secondary-text-color;
+    font-size: 14px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,173 @@
+@import '../../style/index';
+@import '../../style/common/index';
+@import './base';
+@import './mixin';
+
+@btn-prefix: ~'@{klein-prefix}-btn';
+@icon-prefix: ~'@{klein-prefix}-icon';
+
+.@{btn-prefix} {
+  .btn();
+
+  .pseudo(@type) {
+    &:hover {
+      .btn-color('@{type}-hover');
+    }
+
+    &:active {
+      .btn-color('@{type}-active');
+    }
+  }
+
+  .base-btn(@type) {
+    .btn-color(@type);
+    .btn-disabled();
+    .pseudo(@type);
+  }
+
+  .linkCom(@type) {
+    .btn-link(@type);
+    // .btn-disabled();
+    // link disabled表现修改
+    .btn-link-disabled();
+
+    &:hover {
+      .btn-link('@{type}-hover');
+    }
+
+    &:active {
+      .btn-link('@{type}-active');
+    }
+  }
+
+  &-default {
+    .base-btn(default);
+  }
+
+  &-dashed {
+    .base-btn(default);
+    border-style: dashed;
+  }
+
+  &-primary {
+    //主按钮disabled样式修改
+    // .base-btn(primary);
+    .btn-color(primary);
+    .btn-primary-disabled();
+    .pseudo(primary);
+  }
+
+  &-primary&-danger {
+    .base-btn(primary-danger);
+  }
+
+  &-default&-danger {
+    .base-btn(default-danger);
+  }
+
+  &-dashed&-danger {
+    .base-btn(default-danger);
+  }
+
+  &-primary&-ghost {
+    .btn-color(primary-ghost);
+    .pseudo(ghost);
+    .ghost-disabled();
+  }
+
+  &-default&-ghost {
+    .btn-color(default-ghost);
+    .pseudo(ghost);
+    .ghost-disabled();
+  }
+
+  &-dashed&-ghost {
+    .btn-color(default-ghost);
+    .pseudo(ghost);
+    .ghost-disabled();
+  }
+
+  &-ghost&-danger {
+    .btn-color(ghost-danger);
+    .pseudo(ghost-danger);
+    .ghost-disabled();
+  }
+
+  &-ghost&-success {
+    .btn-color(ghost-success);
+    .pseudo(ghost-success);
+    .ghost-disabled();
+  }
+
+  &-ghost&-warning {
+    .btn-color(ghost-warning);
+    .pseudo(ghost-warning);
+    .ghost-disabled();
+  }
+
+  &-link,
+  &-a {
+    text-decoration: none;
+  }
+
+  &-link&-danger {
+    .linkCom(primary-danger);
+  }
+
+  // &&-link[disabled] {
+  //   background-color: @btn-transparent;
+  //   border-color: @btn-transparent;
+  // }
+
+  &-small&-link,
+  &-medium&-link,
+  &-large&-link {
+    min-width: auto;
+  }
+
+  &-medium {
+    .btn-size(medium);
+  }
+
+  &-small {
+    .btn-size(small);
+  }
+
+  &-large {
+    .btn-size(large);
+  }
+
+  &-link {
+    .linkCom(primary);
+    height: auto;
+    padding: 0;
+    line-height: normal;
+  }
+
+  &-small > &-icon {
+    margin-right: 4px;
+    font-size: @font-size-basic;
+  }
+
+  &-medium > &-icon {
+    margin-right: 6px;
+    font-size: @font-size-lg;
+  }
+
+  &-large > &-icon {
+    margin-right: 8px;
+    font-size: @font-size-lg + 2;
+  }
+
+  & > span {
+    display: inline-block;
+  }
+
+  &-icon {
+    vertical-align: -1px;
+  }
+
+  &-loading {
+    .icon-loading();
+  }
+}

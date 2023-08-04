@@ -1,0 +1,135 @@
+.Preview {
+  background: url('https://image-c.weimobwmc.com/sass-admin/2b3146c701ba43558334857eb0368739.png')
+    no-repeat center;
+  background-size: cover;
+
+  .wrapper {
+    padding: 84px 0 0;
+    height: 100vh;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 28px;
+    color: #8a9099;
+    margin-bottom: 56px;
+    text-align: center;
+  }
+
+  .cont {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .left {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 48px;
+
+      .side {
+        width: 200px;
+        height: 54px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 26px;
+        cursor: pointer;
+
+        background: rgba(255, 255, 255, 0.24);
+        border: 1px solid rgba(255, 255, 255, 0.84);
+
+        &:hover,
+        &.active {
+          background: rgba(255, 255, 255, 0.84);
+
+          .sideDesc {
+            color: inherit;
+          }
+        }
+
+        .finger {
+          margin-right: 5px;
+        }
+
+        .sideTitle {
+          font-weight: 600;
+          line-height: 28px;
+          margin-bottom: 4px;
+        }
+
+        .sideDesc {
+          font-size: 16px;
+          line-height: 24px;
+          color: #8a9099;
+        }
+      }
+    }
+
+    .right {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      // border: 1px solid rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(16px);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      transition: none;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-height: 1080px) {
+  .Preview {
+    .wrapper {
+      padding: 0;
+    }
+
+    .cont {
+      flex: 0 0 708px;
+
+      .right {
+        max-height: 708px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    }
+  }
+}
+
+@media (min-height: 840px) and (max-height: 998px) {
+  .Preview {
+    .title {
+      font-size: 32px;
+    }
+    .desc {
+      margin-bottom: 48px;
+    }
+
+    .cont {
+      .left {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media (max-height: 839px) {
+  .Preview {
+    .wrapper {
+      height: 1080px;
+    }
+  }
+}

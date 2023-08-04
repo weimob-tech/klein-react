@@ -1,0 +1,35 @@
+.common() {
+  color: #262626;
+  font-weight: 400;
+}
+.tag-demo-with-text {
+  .small {
+    margin-left: 3px;
+    font-size: 12px;
+    line-height: 18px;
+    .common();
+  }
+  .middle {
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    .common();
+  }
+  .large {
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    .common();
+  }
+  .item {
+    & > * {
+      float: left;
+    }
+    &::after {
+      display: block;
+      clear: both;
+      visibility: hidden;
+      content: '';
+    }
+  }
+}

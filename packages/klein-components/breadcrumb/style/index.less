@@ -1,0 +1,70 @@
+@import '../../style/index';
+@import './base.less';
+
+@bread-crumb-prefix: ~'@{klein-prefix}-bread-crumb';
+@bread-height: @font-size-lg-1;
+@bread-width: @font-size-lg-2 * 2 + @font-size-md;
+
+.@{bread-crumb-prefix} {
+  font-size: @font-size-basic;
+
+  &-link {
+    width: @bread-width;
+    height: @bread-height;
+    //display: inline-block;
+    text-decoration: none;
+    .baseFont();
+
+    &:hover {
+      color: @brand-color !important;
+      cursor: pointer;
+    }
+  }
+
+  & > span:last-child &-link:hover {
+    color: @primary-text-color !important;
+  }
+
+  &-separator {
+    margin: 0 @margin-md;
+    .baseFont();
+    color: @grey-7;
+  }
+
+  & > span:last-child &-separator {
+    display: none !important;
+  }
+
+  & > span:last-child &-link {
+    color: @primary-text-color;
+    // font-weight: bold;
+  }
+
+  & > span &-link {
+    color: @grey-7;
+
+    a {
+      color: @grey-7;
+      text-decoration: none;
+
+      &:hover {
+        color: #268bff;
+      }
+    }
+  }
+
+  & > a {
+    text-decoration: none;
+  }
+
+  &-first {
+    margin: 0 @margin-sp-1;
+    color: @grey-7;
+    font-weight: @font-weight-base;
+    line-height: @line-height-base;
+  }
+
+  .@{klein-prefix}-icon {
+    font-size: 16px;
+  }
+}

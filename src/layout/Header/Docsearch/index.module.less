@@ -1,0 +1,118 @@
+@import '@/common.less';
+
+.Docsearch {
+  margin-right: 23px;
+}
+:global {
+  :root {
+    --docsearch-highlight-color: none;
+    --docsearch-modal-background: white;
+    --docsearch-hit-active-color: #1e2226;
+    --docsearch-muted-color: #1e2226;
+  }
+
+  .DocSearch-Button {
+    margin-left: 100px;
+    width: 172px;
+    height: 32px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    .DocSearch-Search-Icon {
+      width: 16px;
+    }
+  }
+
+  .DocSearch-Button:active,
+  .DocSearch-Button:focus,
+  .DocSearch-Button:hover {
+    box-shadow: none;
+    background: #f0f2f5 !important;
+  }
+
+  .DocSearch-Footer {
+    display: none;
+  }
+  .DocSearch-Search-Icon {
+    width: 16px;
+    height: 16px;
+  }
+  .DocSearch-Button-Placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #8a9099;
+    padding-left: 8px;
+  }
+  .DocSearch-Button-Keys {
+    gap: 2px;
+    min-width: auto;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 14px;
+      background: rgba(30, 34, 38, 0.12);
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: -8px;
+    }
+  }
+  .DocSearch-Button-Key {
+    box-sizing: border-box;
+    width: 12px;
+    height: 22px;
+    border-radius: 2px;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    position: unset;
+    font-family: @font-normal;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #8a9099;
+    background: transparent;
+  }
+
+  .DocSearch-Form {
+    box-shadow: none;
+    border-bottom: 1px solid #e9ecf0;
+  }
+
+  .DocSearch-Hit a {
+    box-shadow: none;
+  }
+  .DocSearch-Hit[aria-selected='true'] a {
+    background-color: #f5f7fa;
+  }
+  .DocSearch-MagnifierLabel {
+    width: 16px;
+    height: 16px;
+  }
+  .DocSearch-SearchBar {
+    margin-bottom: 16px;
+  }
+
+  .DocSearch-NoResults-Prefill-List {
+    display: none;
+  }
+
+  .DocSearch-Hit-Select-Icon {
+    color: #1e2226;
+    width: 24px;
+    height: 24px;
+    background: #e9ecf0;
+    padding: 4px;
+    border-radius: 2px;
+  }
+  .DocSearch-Hit-Tree,
+  .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-Tree,
+  .DocSearch-Hit-icon,
+  .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-icon {
+    color: #dfe2e6 !important;
+  }
+}

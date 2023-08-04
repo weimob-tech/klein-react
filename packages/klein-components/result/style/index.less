@@ -1,0 +1,48 @@
+@import '../../style/index';
+@import './base';
+@import './mixin';
+
+@result-prefix: ~'@{klein-prefix}-result';
+@icon-prefix: ~'@{klein-prefix}-icon';
+
+.@{result-prefix} {
+  // status color
+  .result-status();
+
+  &-icon {
+    margin-bottom: @margin-lg-1;
+    text-align: center;
+
+    > .@{icon-prefix} {
+      font-size: @result-icon-font-size;
+    }
+  }
+
+  &-title {
+    color: @title-color;
+    font-weight: @font-weight-semi;
+    font-size: @font-size-lg-2;
+    line-height: @line-height-lg-2;
+    text-align: center;
+  }
+
+  &-subTitle {
+    margin-top: @margin-md;
+    color: @secondary-text-color;
+    font-weight: @font-weight-base;
+    font-size: @font-size-md;
+    line-height: @line-height-lg;
+    text-align: center;
+  }
+
+  &-extra {
+    margin: @result-extra-margin;
+    text-align: center;
+    > * {
+      margin-right: @margin-lg;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

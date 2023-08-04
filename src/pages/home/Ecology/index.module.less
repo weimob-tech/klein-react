@@ -1,0 +1,164 @@
+@import '@/common.less';
+
+.Ecology {
+  background: #fff;
+
+  .wrapper {
+    padding: 84px 0 20px;
+    height: 100vh;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #1e2226;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 28px;
+    color: #8a9099;
+    margin-bottom: 56px;
+    text-align: center;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 48px;
+
+    .tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 24px;
+      gap: 12px;
+      width: 220px;
+      height: 72px;
+      background: #fff;
+      border: 1px solid #f5f7fa;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        background: linear-gradient(96.52deg, #f5fbff 1.47%, #e3edff 116.83%);
+        border: none;
+      }
+
+      .tabIcon {
+        width: 24px;
+        height: 24px;
+
+        .tabIconImg {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .cont {
+    box-sizing: border-box;
+    max-height: 626px;
+    aspect-ratio: 626 / 1080;
+    border-radius: 20px;
+    padding: 96px 48px 24px;
+    overflow: hidden;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center right, 0 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .bg {
+      max-width: 820px;
+      aspect-ratio: 820 / 518;
+      right: 28px;
+      top: 20px;
+      bottom: 20px;
+      background-repeat: no-repeat;
+      background-position: center right, 0 0;
+      position: absolute;
+      background-size: 100%;
+    }
+
+    .info {
+      width: calc(100% * 280 / 1200);
+
+      .infoTitle {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 24px;
+      }
+
+      .infoDesc {
+        font-size: 14px;
+        line-height: 24px;
+        color: #626973;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        border-radius: 6px;
+        height: 50px;
+        width: 136px;
+
+        .arrow {
+          width: 0px;
+          opacity: 0;
+          vertical-align: -2px;
+          margin-left: 8px;
+          transition: all 0.3s cubic-bezier(0.8, 0.02, 0.39, 0.99);
+          transform: translateX(-10px);
+
+          &.disable {
+            display: none;
+          }
+        }
+
+        &:hover {
+          .arrow {
+            opacity: 1;
+            transform: translateX(0px);
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-height: 840px) and (max-height: 998px) {
+  .Ecology {
+    .title {
+      font-size: 32px;
+    }
+
+    .desc {
+      margin-bottom: 48px;
+    }
+
+    .tabs {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media (max-height: 839px) {
+  .Ecology {
+    .wrapper {
+      padding: 184px 0 120px;
+      height: 1080px;
+    }
+  }
+}

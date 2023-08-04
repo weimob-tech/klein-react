@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gird should render col 1`] = `
+<DocumentFragment>
+  <div
+    class="klein-col"
+  />
+</DocumentFragment>
+`;
+
+exports[`Gird should render row 1`] = `
+<DocumentFragment>
+  <div
+    class="klein-row klein-row-start"
+  />
+</DocumentFragment>
+`;
+
+exports[`Gird should render wrapped row correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="klein-row klein-row-start"
+  >
+    <div>
+      <div
+        class="klein-col"
+        style="padding-left: 0px; padding-right: 0px;"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

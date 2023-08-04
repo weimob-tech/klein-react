@@ -1,0 +1,266 @@
+//classname前缀
+@klein-prefix: klein;
+@white: #ffffff;
+@black: #000000;
+
+//brand(defalut: #006aff)
+@brand-color-1: #f2f7ff;
+@brand-color-2: #d9e9ff;
+@brand-color-3: #bfdaff;
+@brand-color-4: #599eff;
+@brand-color-5: #2681ff;
+@brand-color-6: #006aff;
+@brand-color-7: #0055cc;
+@brand-color-8: #004099;
+@brand-color-9: #002b66;
+@brand-color-10: #001533;
+
+//warning(default: #faad14)
+@warning-color-1: #ffa200;
+@warning-color-2: #ffd58c;
+@warning-color-3: #fffaf2;
+@warning-color-5: #ffb026;
+@warning-color-7: #cc8200;
+
+//success(default: #52c41a)
+@success-color-1: #00c261;
+@success-color-2: #7be0ae;
+@success-color-3: #edfaf4;
+@success-color-4: #1fcc75;
+@success-color-5: #389e0d;
+
+//danger(default: #ff4c50)
+@danger-color-1: #ff2626;
+@danger-color-2: #ffbfbf;
+@danger-color-3: #fff2f2;
+@danger-color-4: #ff5959;
+@danger-color-5: #cc1f1f;
+
+//文字，线条，背景，失效等颜色
+@normal-color-1: @white;
+@normal-color-2: #f5f7fa;
+@normal-color-3: #f0f2f5;
+@normal-color-4: #e9ecf0;
+@normal-color-5: #dfe2e6;
+@normal-color-6: #b6babf;
+@normal-color-7: #8a9099;
+@normal-color-8: #626973;
+@normal-color-9: #1e2226;
+@normal-color-10: @black;
+
+//text
+@title-color: @normal-color-9;
+// @primary-text-color: @normal-color-8;
+@primary-text-color: @normal-color-9;
+@secondary-text-color: @normal-color-7;
+// @help-color: @normal-color-7;
+@disable-color: @normal-color-6;
+
+//icon-close
+@icon-close: @normal-color-7;
+@icon-close-hover: @normal-color-9;
+
+//disable 开关 分割线 边框 背景 文字
+@extra-disable-color: @normal-color-4;
+@extra-disable-active-color: @normal-color-5;
+@background-disable-color: @normal-color-3;
+@border-disable-color: @normal-color-5;
+@text-disable-color: @normal-color-6;
+
+//bg
+@background-page-color: @normal-color-3; //page container
+@background-area-color: @normal-color-3; //small containers
+@background-tip-color: @black; //tooltip
+@background-mask-color: fade(@black, 45%); //tooltip
+// @bg-filling-color: #fbfbfb;
+// @bg-icon-disabled-color: #e6e6e6; //icon background
+// @bg-disabled-color: #f7f7f7; //background
+// @bg-brand-color: @brand-6;
+
+//line
+@border-color: @normal-color-5; //border
+@divider-color: @normal-color-4; //divide
+@border-width-base: 1px; //border
+@border-style-base: solid; //border
+
+//icon
+// @icon-color: @black;
+// @icon-disable-color: @black;
+// background
+
+@link-text-color: @brand-color-6;
+
+//font
+@font-size-lg: 16px;
+@font-size-lg-1: 20px;
+@font-size-lg-2: 24px;
+@font-size-md: 14px;
+@font-size-sm: 12px;
+@font-size-basic: 14px;
+@font-family: PingFang SC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji,
+  segoe ui emoji, Segoe UI Symbol, noto color emoji;
+
+//line-height
+@font-line-height-gap: 8px;
+@line-height-lg: @font-size-lg + @font-line-height-gap;
+@line-height-lg-1: @font-size-lg-1 + @font-line-height-gap;
+@line-height-lg-2: @font-size-lg-2 + @font-line-height-gap;
+@line-height-md: @font-size-md + @font-line-height-gap;
+@line-height-base: @font-size-basic + @font-line-height-gap;
+@line-height-sm: @font-size-sm + @font-line-height-gap;
+
+//font-weight
+@font-weight-base: 400;
+@font-weight-medium: 500;
+@font-weight-semi: 600;
+
+//radius
+@border-radius-basic: 4px;
+@border-radius-sm: 2px;
+
+//margin
+@margin-xs: 2px;
+@margin-sm: 4px;
+@margin-md: 8px;
+@margin-lg: 16px;
+@margin-lg-1: 24px; //formItem
+@margin-lg-max: 32px;
+@margin-sp-1: 10px; //uploading
+@margin-sp-2: 12px; //anchor, notification btns
+@margin-sp-3: 14px; //pagination
+
+//paddings
+@padding-lg: 24px; // containers
+@padding-md: 16px; // small containers and buttons
+@padding-sm: 12px; // Form controls and items
+@padding-xs: 8px; // small items
+@padding-xss: 4px; // more small
+
+//height
+@height-base: 32px;
+@height-lg: 40px;
+@height-sm: 24px;
+
+//shadow
+@shadow-1: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+@shadow-2: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+@shadow-3: 0 6px 36px 0 rgba(0, 0, 0, 0.08);
+@shadow-4: 0 4px 16px 0 rgba(0, 0, 0, 0.16);
+@shadow-5: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+@shadow-6: 0 0 4px 0 @brand-border-color;
+@shadow-default: @shadow-2;
+@shadow-brand: @shadow-6;
+
+// //low-level
+// @shadow-1-up: 0 -1px 2px -2px rgba(0, 0, 0, 0.16),
+//   0 -3px 6px 0 rgba(0, 0, 0, 0.12), 0 -5px 12px 4px rgba(0, 0, 0, 0.09);
+// @shadow-1-down: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
+//   0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+// @shadow-1-left: -1px 0 2px -2px rgba(12, 7, 7, 0.16),
+//   -3px 0 6px 0 rgba(0, 0, 0, 0.12), -5px 0 12px 4px rgba(0, 0, 0, 0.09);
+// @shadow-1-right: 1px 0 2px -2px rgba(0, 0, 0, 0.16),
+//   3px 0 6px 0 rgba(0, 0, 0, 0.12), 5px 0 12px 4px rgba(0, 0, 0, 0.09);
+
+// //mid-level
+// @shadow-2-up: 0 -3px 6px -4px rgba(0, 0, 0, 0.12),
+//   0 -6px 16px 0 rgba(0, 0, 0, 0.08), 0 -9px 28px 8px rgba(0, 0, 0, 0.05);
+// @shadow-2-down: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+//   0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+// @shadow-2-left: -3px 0 6px -4px rgba(12, 7, 7, 0.12),
+//   -6px 0 16px 0 rgba(0, 0, 0, 0.08), -9px 0 28px 8px rgba(0, 0, 0, 0.05);
+// @shadow-2-right: 3px 0 6px -4px rgba(0, 0, 0, 0.12),
+//   6px 0 16px 0 rgba(0, 0, 0, 0.08), 9px 0 28px 8px rgba(0, 0, 0, 0.05);
+
+// //hight-level
+// @shadow-3-up: 0 -6px 16px -8px rgba(0, 0, 0, 0.08),
+//   0 -9px 28px 0 rgba(0, 0, 0, 0.05), 0 -12px 48px 16px rgba(0, 0, 0, 0.03);
+// @shadow-3-down: 0 6px 16px -8px rgba(0, 0, 0, 0.08),
+//   0 9px 28px 0 rgba(0, 0, 0, 0.05), 0 12px 48px 16px rgba(0, 0, 0, 0.03);
+// @shadow-3-left: -6px 0 16px -8px rgba(0, 0, 0, 0.08),
+//   -9px 0 28px 0 rgba(0, 0, 0, 0.05), -12px 0 48px 16px rgba(0, 0, 0, 0.03);
+// @shadow-3-right: 6px 0 16px -8px rgba(0, 0, 0, 0.08),
+//   9px 0 28px 0 rgba(0, 0, 0, 0.05), 12px 0 48px 16px rgba(0, 0, 0, 0.03);
+
+//animation
+@ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+@ease-out-back: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+@ease-in-back: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+@ease-in-out-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+@ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+@ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+@ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+@ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+@ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+@ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+
+//z-index
+// @zindex-badge: auto;
+// @zindex-table-fixed: auto;
+// @zindex-affix: 10;
+// @zindex-back-top: 10;
+// @zindex-picker-panel: 10;
+// @zindex-popup-close: 10;
+@zindex-modal: 1000;
+@zindex-modal-mask: 1000;
+@zindex-message: 1010;
+@zindex-notification: 1010;
+@zindex-popover: 1030;
+@zindex-dropdown: 1050;
+@zindex-picker: 1050;
+@zindex-popoconfirm: 1060;
+@zindex-tooltip: 1070;
+
+//brand
+@brand-color: @brand-color-6;
+@brand-link-color: @brand-color-6;
+@brand-hover-color: @brand-color-5;
+@brand-active-color: @brand-color-7;
+@brand-border-color: @brand-color-3;
+@brand-externalight-color: @brand-color-2;
+@brand-active-bg-color: @brand-color-1;
+@brand-externalight-width: 6px;
+
+//warnings
+@warning-brand-color: @warning-color-1;
+@warning-border-color: @warning-color-2;
+@warning-active-bg-color: @warning-color-7;
+@warning-hover-bg-color: @warning-color-5;
+
+//success
+@success-brand-color: @success-color-1;
+@success-border-color: @success-color-2;
+@success-active-bg-color: @success-color-5;
+@success-hover-bg-color: @success-color-4;
+
+//danger
+@danger-brand-color: @danger-color-1;
+@danger-border-color: @danger-color-2;
+@danger-active-bg-color: @danger-color-5;
+@danger-hover-bg-color: @danger-color-4;
+
+//grid
+@grid-columns: 24;
+
+//5种基础宽度
+@width-gap: 120px;
+@width-base: 352px;
+@width-xs: @width-base - 2 * @width-gap;
+@width-sm: @width-base - @width-gap;
+@width-m: @width-base;
+@width-l: @width-base + @width-gap;
+@width-xl: @width-base + 2 * @width-gap;
+
+//grey
+@grey-1: #ffffff;
+@grey-2: #f7f8fa;
+@grey-3: #f2f3f7;
+@grey-4: #edeef2;
+@grey-5: #e1e2e6;
+@grey-6: #bdbfc7;
+@grey-7: #8a8c99;
+@grey-8: #575966;
+@grey-9: #23242b;
+@grey-10: #000000;

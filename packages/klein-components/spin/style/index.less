@@ -1,0 +1,106 @@
+@import '../../style/index';
+@spin-prefix: ~'@{klein-prefix}-spin';
+
+.@{spin-prefix} {
+  &-show-text {
+    margin-top: @font-size-md / 2;
+    font-size: @font-size-md;
+  }
+
+  &-flex {
+    display: flex;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  &-small {
+    //font-size: @font-size-md;
+  }
+
+  color: @brand-color-6;
+
+  &-default {
+    //font-size: @font-size-lg-1;
+  }
+
+  &-large {
+    //font-size: @font-size-lg-1 + @font-size-basic;
+  }
+
+  &-row {
+    margin-top: 6px;
+    font-size: @font-size-md;
+  }
+
+  &-col {
+    display: flex;
+    margin-left: 8px;
+    font-size: @font-size-md;
+  }
+
+  &-cen {
+    width: 100%;
+    // min-width: @height-lg + @margin-xs;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+
+  &-child-spin {
+    position: absolute;
+    top: 50%;
+    //right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 100;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  &-spinning {
+    position: static;
+    display: inline-block;
+    opacity: 1;
+  }
+
+  &-container {
+    position: relative;
+    height: 100%;
+    // min-height: 200px;
+    transition: opacity 0.3s;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      //display: ~'none';
+      width: 100%;
+      height: 100%;
+      line-height: 100%;
+      text-align: center;
+      // background: #fafafa;
+      transition: all 0.3s;
+      content: '';
+      pointer-events: none;
+    }
+  }
+
+  &-blur {
+    clear: both;
+    overflow: hidden;
+    opacity: 0.3;
+    user-select: none;
+    pointer-events: none;
+
+    &::after {
+      opacity: 0.2;
+      pointer-events: auto;
+    }
+  }
+}

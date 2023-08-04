@@ -1,0 +1,57 @@
+@import '../../style/index';
+
+@popconfirm-prefix: ~'@{klein-prefix}-popconfirm';
+@popconfirm-edge-distance: @padding-md;
+.@{popconfirm-prefix} {
+  .klein-tooltip-content {
+    .klein-tooltip-inner {
+      padding: 0;
+      box-shadow: @shadow-2;
+    }
+  }
+  &-wrapper {
+    &.with-title {
+      max-width: 320px;
+      .@{popconfirm-prefix}-icon {
+        font-size: @font-size-lg-1 + 2;
+      }
+    }
+    max-width: 240px;
+    padding: @padding-md;
+    color: @primary-text-color;
+    font-size: @font-size-basic;
+    line-height: @line-height-base;
+    background-color: @white;
+    border-radius: @border-radius-sm;
+  }
+  &-content {
+    min-width: 120px;
+  }
+  &-title {
+    margin-bottom: 4px;
+    color: @title-color;
+    font-weight: @font-weight-semi;
+    font-size: @font-size-lg;
+    line-height: @line-height-lg;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: @margin-lg;
+    .btn-cancel {
+      margin-right: 8px;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    top: @popconfirm-edge-distance + 1;
+    left: @popconfirm-edge-distance;
+    font-size: @font-size-lg + 2;
+  }
+
+  &-iconExit {
+    margin-left: @margin-lg-1;
+  }
+}

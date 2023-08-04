@@ -1,0 +1,2 @@
+export default ALineFill;
+declare const ALineFill: "<svg class=\"k-e-svg-a-line-fill\" width=\"12\" height=\"2\" viewBox=\"0 0 12 2\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.865875 0.999999C0.865875 1.16568 1.00019 1.3 1.16588 1.3H10.8341C10.9998 1.3 11.1341 1.16568 11.1341 0.999999V0.3C11.1341 0.134315 10.9998 0 10.8341 0H1.16588C1.00019 0 0.865875 0.134315 0.865875 0.3V0.999999Z\" fill=\"currentColor\"/></svg>";

@@ -1,0 +1,40 @@
+// sizeMixin ;
+.sizeMixin(@height: @height-sm + 2, @fontSize: @font-size-basic, @padding-horizontal: @padding-horizontal-base) {
+  display: inline-block;
+  // height: @height;
+  padding: 0 @padding-horizontal;
+  font-size: @fontSize;
+  line-height: calc(@height - 2px);
+  white-space: nowrap;
+  border-radius: @border-radius-sm;
+
+  .@{tag-prefix}-close-icon {
+    right: @padding-horizontal;
+  }
+
+  &.@{tag-prefix}-closable {
+    padding-right: @padding-horizontal-base + @font-size-basic + 2;
+  }
+  // transition: all 0.3s;
+}
+
+.triangle(@width, @color) {
+  width: 0;
+  height: 0;
+  border: @width solid transparent;
+  border-bottom: @width solid @color;
+  transform: translate(@width, @width) rotateZ(135deg);
+}
+
+// typeMixin
+.typeMixin(@borderC: @border-color, @textC: @primary-text-color, @bgColor: @white) {
+  color: @textC;
+  background: @bgColor;
+  border: @border-width-base @border-style-base @borderC;
+}
+
+.innerColor(@color) {
+  color: ~'@{tag-color-@{color}}';
+  background: ~'@{tag-bg-@{color}}';
+  border-color: ~'@{tag-border-@{color}}';
+}

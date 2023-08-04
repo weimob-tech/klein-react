@@ -1,0 +1,112 @@
+.@{tabs-prefix}-card {
+  &.@{tabs-prefix}-lg {
+    > .@{tabs-prefix}-nav {
+      .@{tabs-prefix}-tab {
+        padding: 7px 15px 8px;
+      }
+
+      .@{tabs-prefix}-nav-add {
+        padding-top: 7px;
+        padding-bottom: 8px;
+        font-size: @font-size-lg;
+        line-height: @line-height-lg;
+      }
+    }
+  }
+
+  &.@{tabs-prefix}-sm {
+    > .@{tabs-prefix}-nav {
+      .@{tabs-prefix}-tab {
+        padding: 7px 15px 6px;
+        font-size: @font-size-sm + 2;
+        line-height: @line-height-sm + 2;
+      }
+
+      .@{tabs-prefix}-nav-add {
+        padding-top: 7px;
+        padding-bottom: 6px;
+        font-size: @font-size-sm + 2;
+        line-height: @line-height-sm + 2;
+      }
+    }
+  }
+
+  > .@{tabs-prefix}-nav {
+    position: relative;
+
+    // border-bottom: 1px solid @normal-color-5;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      border-bottom: 1px solid @normal-color-5;
+      content: '';
+    }
+
+    .@{tabs-prefix}-nav-more {
+      padding: 5px 12px;
+    }
+
+    // .@{tabs-prefix}-nav-list {
+    .@{tabs-prefix}-nav-add {
+      margin: 0;
+      padding-top: 8px;
+      padding-bottom: 9px;
+      font-size: @font-size-basic;
+      line-height: @line-height-base;
+      cursor: pointer;
+
+      &:hover {
+        color: @tabs-active-hover;
+      }
+    }
+
+    .@{tabs-prefix}-tab {
+      margin: 0 2px 0 0;
+      padding: 8px 15px 9px;
+    }
+
+    .@{tabs-prefix}-tab,
+    .@{tabs-prefix}-nav-add {
+      background: @normal-color-2;
+      border: 1px solid @normal-color-5;
+      border-bottom: none;
+      border-top-left-radius: @border-radius-sm;
+      border-top-right-radius: @border-radius-sm;
+
+      &-active {
+        z-index: 2;
+        color: @tabs-active-hover;
+        background: @white;
+        border-bottom-color: @white;
+      }
+
+      &-tab-disabled {
+        border-color: @tabs-disabled-remove-color;
+      }
+    }
+
+    .@{tabs-prefix}-ink-bar {
+      visibility: hidden;
+    }
+
+    // }
+  }
+
+  &-ink-bar {
+    position: absolute;
+    height: @tabs-height;
+    background: @tabs-bg-color;
+    pointer-events: none;
+  }
+
+  &-active {
+    color: @tabs-active-hover;
+  }
+
+  // .@{tabs-prefix}-tab.@{tabs-prefix}-tab-active .@{tabs-prefix}-tab-btn {
+  //   font-weight: normal;
+  // }
+}

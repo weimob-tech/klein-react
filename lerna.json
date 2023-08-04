@@ -1,0 +1,15 @@
+{
+  "command": {
+    "version": {
+      "exact": true,
+      "conventionalCommits": true,
+      "message": "build: release version %v"
+    }
+  },
+  "version": "independent",
+  "npmClient": "yarn",
+  "ignoreChanges": [
+    "**/*.md",
+    "**/dist/**"
+  ]
+}

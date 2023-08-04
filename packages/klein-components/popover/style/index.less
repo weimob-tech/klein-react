@@ -1,0 +1,70 @@
+@import '../../style/index';
+@import './base';
+
+@popover-prefix: ~'@{klein-prefix}-popover';
+
+.@{popover-prefix} {
+  position: absolute;
+  z-index: @zindex-popover;
+
+  &-hidden {
+    display: none;
+  }
+
+  &-inner {
+    min-width: @popover-min-width;
+    // width: @popover-width;
+    max-width: @popover-max-width;
+    border-radius: @border-radius-sm;
+    box-shadow: @shadow-2;
+  }
+
+  &-customOverlay {
+    &-title {
+      padding: 6px @padding-md;
+      font-weight: @font-weight-semi;
+      font-size: @font-size-lg;
+      border-bottom: 1px solid @popover-customOverlay-title-border-bottom-color;
+
+      & > span {
+        display: inline-block;
+        line-height: @line-height-lg;
+      }
+    }
+
+    &-content {
+      padding: 12px 16px;
+      color: @primary-text-color;
+      font-size: @font-size-basic;
+      // line-height: @line-height-base;
+
+      & > span {
+        display: inline-block;
+        line-height: @line-height-base;
+      }
+    }
+  }
+
+  &-large &-inner {
+    min-width: @popover-large-min-width;
+    // width: @popover-large-width;
+    max-width: @popover-large-max-width;
+  }
+
+  &-large &-customOverlay {
+    padding: @padding-md;
+
+    &-title {
+      margin-bottom: @margin-md;
+      padding: 0;
+      border-bottom: none;
+    }
+
+    &-content {
+      padding: 0;
+    }
+  }
+
+  .triangle-locate(14px);
+  .pop-animation();
+}

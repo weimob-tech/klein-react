@@ -1,0 +1,224 @@
+@import './index';
+
+@select-overflow-prefix-cls: ~'@{select-prefix-cls}-selection-overflow';
+@select-multiple-item-border-width: 1px;
+
+// =========================== Overflow ===========================
+.@{select-overflow-prefix-cls} {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  max-width: 100%;
+
+  &-item {
+    flex: none;
+    align-self: center;
+    max-width: 100%;
+    margin: 2px 0;
+  }
+}
+
+.@{select-prefix-cls} {
+  &-sm&-multiple {
+    .@{select-prefix-cls}-selector::after {
+      margin: 0;
+    }
+  }
+
+  &-multiple {
+    // ========================= Selector =========================
+    .@{select-prefix-cls}-selector {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      max-height: 100%;
+      padding: 1px 4px;
+      // overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 0 !important;
+      }
+
+      .@{select-prefix-cls}-show-search& {
+        cursor: text;
+      }
+
+      .@{select-prefix-cls}-disabled& {
+        background: @select-multiple-disabled-background;
+        cursor: not-allowed;
+      }
+
+      &::after {
+        display: inline-block;
+        width: 0;
+        margin: @select-multiple-item-spacing-half 0;
+        line-height: @select-multiple-item-height;
+        content: '\a0';
+      }
+    }
+
+    &.@{select-prefix-cls}-show-arrow .@{select-prefix-cls}-selector,
+    &.@{select-prefix-cls}-allow-clear .@{select-prefix-cls}-selector {
+      padding-right: @font-size-md + @control-padding-horizontal;
+    }
+
+    // ======================== Selections ========================
+    .@{select-prefix-cls}-selection-item {
+      position: relative;
+      display: flex;
+      flex: none;
+      box-sizing: border-box;
+      max-width: 100%;
+
+      height: @select-multiple-item-height;
+      // margin-top: @select-multiple-item-spacing-half;
+      // margin-bottom: @select-multiple-item-spacing-half;
+      line-height: @select-multiple-item-height -
+        @select-multiple-item-border-width * 2;
+      background-color: @grey-3;
+      // background: @select-selection-item-bg;
+      border: 1px solid @grey-5;
+      border-radius: @border-radius-sm;
+      cursor: default;
+      transition: font-size 0.3s, line-height 0.3s, height 0.3s;
+      user-select: none;
+      margin-inline-end: @input-padding-vertical-base;
+      padding-inline-start: @padding-xs;
+      padding-inline-end: @padding-xs;
+
+      .@{select-prefix-cls}-disabled& {
+        color: @select-multiple-item-disabled-color;
+        border-color: @select-multiple-item-disabled-border-color;
+        cursor: not-allowed;
+      }
+
+      &-content {
+        display: inline-block;
+        margin-right: (@padding-xs / 2);
+        overflow: hidden;
+        white-space: pre;
+        text-overflow: ellipsis;
+      }
+
+      &-remove {
+        .iconfont-mixin();
+        display: inline-block;
+        color: @text-color-sub;
+        font-weight: bold;
+        font-size: @font-size-basic;
+        line-height: inherit;
+        cursor: pointer;
+
+        > .@{iconfont-css-prefix} {
+          vertical-align: -0.2em;
+        }
+
+        &:hover {
+          color: @icon-color-hover;
+        }
+      }
+    }
+
+    // ========================== Input ==========================
+    .@{select-overflow-prefix-cls}-item + .@{select-overflow-prefix-cls}-item {
+      .@{select-prefix-cls}-selection-search {
+        margin-inline-start: 0;
+      }
+    }
+
+    .@{select-prefix-cls}-selection-search {
+      position: relative;
+      max-width: 100%;
+      margin-inline-start: @input-padding-horizontal-base -
+        @input-padding-vertical-base;
+
+      &-input,
+      &-mirror {
+        height: @select-multiple-item-height;
+        // font-family: @font-family;
+        line-height: @select-multiple-item-height;
+        transition: all 0.3s;
+      }
+
+      &-input {
+        width: 100%;
+        min-width: 4.1px;
+      }
+
+      &-mirror {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        white-space: pre;
+        visibility: hidden;
+      }
+    }
+
+    // ======================= Placeholder =======================
+    .@{select-prefix-cls}-selection-placeholder {
+      position: absolute;
+      top: 50%;
+      right: @input-padding-horizontal;
+      left: @input-padding-horizontal;
+      transform: translateY(-50%);
+      transition: all 0.3s;
+    }
+
+    // ============================================================
+    // ==                          Size                          ==
+    // ============================================================
+    .select-size(@suffix, @input-height, @input-padding-vertical) {
+      @merged-cls: ~'@{select-prefix-cls}-@{suffix}';
+
+      &.@{merged-cls} {
+        @select-selection-height: @input-height - @input-padding-vertical * 2;
+        @select-height-without-border: @input-height - @border-width-base * 2;
+
+        .@{select-prefix-cls}-selector::after {
+          line-height: @select-selection-height;
+        }
+
+        .@{select-prefix-cls}-selection-item {
+          height: @select-selection-height;
+          line-height: @select-selection-height - @border-width-base * 2;
+        }
+
+        .@{select-prefix-cls}-selection-search {
+          height: @select-selection-height;
+          line-height: @select-selection-height;
+
+          &-input,
+          &-mirror {
+            height: @select-selection-height;
+            line-height: @select-selection-height - @border-width-base * 2;
+          }
+        }
+      }
+    }
+
+    .select-size('lg', @input-height-lg, @input-padding-vertical-base);
+    .select-size('sm', @input-height-sm, 2);
+
+    &.@{select-prefix-cls}-sm {
+      .@{select-prefix-cls}-selection-placeholder {
+        left: @input-padding-horizontal-sm;
+      }
+
+      .@{select-prefix-cls}-selection-search {
+        margin-inline-start: 3px;
+      }
+
+      .@{select-overflow-prefix-cls} {
+        &-item {
+          margin: 1px 0;
+        }
+      }
+    }
+  }
+
+  &-disabled .@{select-prefix-cls}-selection-item-remove {
+    display: none;
+  }
+}

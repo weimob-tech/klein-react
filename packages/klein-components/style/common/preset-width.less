@@ -1,0 +1,9 @@
+@w-sizes: xs, sm, m, l, xl;
+
+.width-size() {
+  each(@w-sizes, {
+    &&-width-@{value} {
+      width: ~'@{width-@{value}}';
+    }
+  });
+}

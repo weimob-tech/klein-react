@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "react",
+    "allowJs": false,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@wemo-ui/klein": ["./components/index.ts"],
+      "@/*": ["src/*"],
+      "@@/*": ["src/.umi/*"]
+    },
+    "module": "ESNext",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    "docs-dist/**",
+    "typings",
+    "**/__test__",
+    "test"
+  ]
+}

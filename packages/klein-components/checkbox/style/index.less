@@ -1,0 +1,262 @@
+@import '../../style/index';
+
+//引入依赖样式
+@import '../../grid/style/index';
+
+@checkbox-prefix-cls: ~'@{klein-prefix}-checkbox';
+@checkbox-inner-prefix-cls: ~'@{checkbox-prefix-cls}-inner';
+
+// Checkbox
+@checkbox-border-radius-base: 2px;
+@checkbox-border-radius-sm: 1px;
+@checkbox-check-color: @white;
+@checkbox-text-color: @disable-color;
+@checkbox-line-height: 20px;
+@checkbox-size: 16px;
+@checkbox-size-base: @font-size-basic;
+@checkbox-color-base: @primary-text-color;
+@checkbox-color: @brand-color-6;
+@checkbox-check-bg: @checkbox-check-color;
+@checkbox-border-width: @border-width-base;
+@checkbox-group-item-margin-right: 8px;
+@checkbox-disable-inner: @disable-color;
+
+// 一般状态
+.@{checkbox-prefix-cls} {
+  position: relative;
+  top: 0.2em;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+
+  &-wrapper:not(&-wrapper-disabled):hover &-inner,
+  &:not(&-disabled):hover &-inner,
+  &-input:focus + &-inner {
+    border-color: @checkbox-color;
+  }
+
+  &-checked::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid @checkbox-color;
+    border-radius: @checkbox-border-radius-base;
+    visibility: hidden;
+    animation: checkboxEffect 0.36s @ease-in-out;
+    animation-fill-mode: backwards;
+    content: '';
+  }
+
+  @keyframes checkboxEffect {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  &:hover::after,
+  .@{checkbox-prefix-cls}-wrapper:hover &::after {
+    visibility: visible;
+  }
+
+  &-inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: @checkbox-size;
+    height: @checkbox-size;
+    background-color: @checkbox-check-bg;
+    border: @checkbox-border-width @border-style-base @border-color;
+    border-radius: @checkbox-border-radius-base;
+    // Fix IE checked style
+    // https://github.com/ant-design/ant-design/issues/12597
+    border-collapse: separate;
+
+    &::after {
+      @check-width: (@checkbox-size / 14) * 5px;
+      @check-height: (@checkbox-size / 14) * 8px;
+
+      position: absolute;
+      top: 50%;
+      left: 21%;
+      display: table;
+      width: @check-width;
+      height: @check-height;
+      border: 2px solid @checkbox-check-color;
+      border-top: 0;
+      border-left: 0;
+      opacity: 0;
+      content: ' ';
+    }
+  }
+
+  &-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+  }
+}
+
+// 选中状态
+.@{checkbox-prefix-cls}-checked .@{checkbox-inner-prefix-cls}::after {
+  position: absolute;
+  display: table;
+  border: 2px solid @checkbox-check-color;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  opacity: 1;
+  content: ' ';
+}
+
+.@{checkbox-prefix-cls}-checked {
+  .@{checkbox-inner-prefix-cls} {
+    background-color: @checkbox-color;
+    border-color: @checkbox-color;
+  }
+}
+
+&.@{checkbox-prefix-cls}-disabled {
+  cursor: not-allowed;
+
+  &.@{checkbox-prefix-cls}-checked {
+    .@{checkbox-inner-prefix-cls} {
+      .brand-disabled();
+      &::after {
+        animation-name: none;
+      }
+    }
+  }
+
+  .@{checkbox-inner-prefix-cls} {
+    .normal-disabled();
+
+    &::after {
+      border-color: @background-disable-color;
+      border-collapse: separate;
+      animation-name: none;
+    }
+  }
+
+  .@{checkbox-prefix-cls}-input {
+    cursor: not-allowed;
+  }
+
+  & + span {
+    color: @checkbox-text-color;
+    cursor: not-allowed;
+  }
+
+  // Not show highlight border of checkbox when disabled
+  &:hover::after,
+  .@{checkbox-prefix-cls}-wrapper:hover &::after {
+    visibility: hidden;
+  }
+}
+
+.@{checkbox-prefix-cls}-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+  color: @checkbox-color-base;
+  font-size: @checkbox-size-base;
+  line-height: unset;
+  cursor: pointer;
+
+  &.@{checkbox-prefix-cls}-wrapper-disabled {
+    cursor: not-allowed;
+  }
+
+  & + & {
+    margin-left: 8px;
+  }
+  &::after {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    line-height: 1.5;
+    content: '\a0';
+  }
+}
+
+.@{checkbox-prefix-cls} + span {
+  // display: inline-block;
+  // height: @checkbox-line-height;
+  // padding-right: 8px;
+  padding-left: 8px;
+  line-height: @checkbox-line-height;
+
+  .@{klein-prefix}-input {
+    width: auto;
+  }
+}
+
+.@{checkbox-prefix-cls}-group {
+  display: inline-block;
+
+  &-item {
+    // display: inline-block;
+    margin-right: @checkbox-group-item-margin-right;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-item + &-item {
+    margin-left: 0;
+  }
+
+  &-row-vertical {
+    flex-direction: column;
+  }
+
+  .@{klein-prefix}-col {
+    line-height: 1;
+  }
+}
+
+// 半选状态
+.@{checkbox-prefix-cls}-indeterminate {
+  .@{checkbox-inner-prefix-cls} {
+    background-color: @checkbox-check-bg;
+    border-color: @border-color;
+  }
+
+  .@{checkbox-inner-prefix-cls}::after {
+    @indeterminate-width: @checkbox-size - 8px;
+    @indeterminate-height: @checkbox-size - 8px;
+
+    top: 50%;
+    left: 50%;
+    width: @indeterminate-width;
+    height: @indeterminate-height;
+    background-color: @checkbox-color;
+    border: 0;
+    border-radius: @checkbox-border-radius-sm;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    content: ' ';
+  }
+
+  &.@{checkbox-prefix-cls}-disabled .@{checkbox-inner-prefix-cls}::after {
+    .disabled-brand-color();
+  }
+}

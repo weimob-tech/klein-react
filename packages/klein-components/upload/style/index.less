@@ -1,0 +1,305 @@
+@import '../../style/index';
+@import './base';
+@import './mixin';
+
+//引入相关组件样式
+@import '../../image/style/index.less';
+
+@upload-prefix: ~'@{klein-prefix}-upload';
+
+.@{upload-prefix} {
+  display: inline-block;
+  outline: none;
+
+  &-drag {
+    width: @upload-darg-width;
+    // min-width: @upload-darg-min-width;
+  }
+
+  &-imageBtn {
+    display: inline-block;
+    width: @upload-image-item-size;
+    height: @upload-image-item-size;
+    // margin-bottom: @upload-image-item-margin-bottom;
+    padding: @upload-imageBtn-padding;
+    color: @secondary-text-color;
+    text-align: center;
+    background: @upload-imageBtn-bg-color;
+    border: 1px dashed @upload-imageBtn-color;
+    border-radius: @border-radius-sm;
+    cursor: pointer;
+
+    .hover();
+
+    &-icon {
+      font-size: @font-size-lg-1;
+      // color: @primary-text-color;
+    }
+
+    &-text {
+      margin-top: @margin-sm;
+      font-size: @font-size-basic;
+      line-height: @line-height-base;
+    }
+  }
+
+  &-disabled &-imageBtn,
+  &-disabled &-imageBtn.bgWhite {
+    color: @disable-color;
+    background: @background-disable-color;
+    border: 1px solid @upload-imageBtn-border-disabled-color;
+    cursor: not-allowed;
+  }
+
+  &-imageBtn.bgWhite {
+    background: @white;
+    border: 1px dashed @border-color;
+    .hover();
+  }
+
+  &-picture-card {
+    display: inline-block;
+    vertical-align: top;
+
+    &-tips {
+      // .tips(-4px);
+      .tips(4px);
+    }
+  }
+
+  &-text {
+    &-tips {
+      .tips(@margin-md);
+    }
+  }
+
+  &-dragBtn {
+    display: table;
+    width: 100%;
+    height: @upload-dargBtn-height;
+    color: @secondary-text-color;
+    font-size: 30px;
+    text-align: center;
+    background: @white;
+    border: @upload-dargBtn-border-size dashed @border-color;
+    border-radius: @border-radius-basic;
+    cursor: pointer;
+
+    &-content {
+      display: table-cell;
+      color: @upload-dargBtn-icon-color;
+      vertical-align: middle;
+      .@{klein-prefix}-icon {
+        color: @grey-6;
+      }
+    }
+
+    &-icon {
+      color: @brand-color;
+      font-size: 48px;
+      line-height: 0;
+    }
+
+    &-info {
+      margin-top: @margin-lg;
+      color: @title-color;
+      font-size: @font-size-lg;
+      line-height: @line-height-md;
+    }
+
+    &-tip {
+      margin-top: @margin-sm;
+      color: @title-color;
+      font-size: @font-size-md;
+      line-height: @line-height-base;
+    }
+  }
+
+  &-fileList {
+    .text-drag-item-common(text);
+
+    .text-drag-item-common(drag);
+
+    &-drag {
+      padding-right: 2px;
+      padding-left: 2px;
+      background: @white;
+      &:hover {
+        background: @white;
+      }
+    }
+
+    &-text {
+      padding-right: @padding-sm;
+      padding-left: @padding-sm;
+      &-first-child {
+        margin-top: @margin-md;
+      }
+
+      &:hover &-close {
+        display: block;
+      }
+      &-close {
+        display: none;
+      }
+    }
+
+    &-picture-card {
+      position: relative;
+      display: inline-block;
+      width: @upload-image-item-size;
+      height: @upload-image-item-size;
+      margin-right: @upload-image-item-margin-right;
+      margin-bottom: @upload-image-item-margin-bottom;
+      border-radius: @border-radius-sm;
+      cursor: pointer;
+
+      &-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: @border-radius-sm;
+      }
+
+      &-img {
+        .bg-img(cover);
+        transition: all 0.25s @ease-in-out;
+      }
+
+      &-mainImgTip {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 20px;
+        color: @white;
+        line-height: @line-height-base;
+        text-align: center;
+        background-color: @upload-imageList-item-mask-bg-color;
+        border-bottom-right-radius: @border-radius-sm;
+        border-bottom-left-radius: @border-radius-sm;
+      }
+
+      &-close {
+        position: absolute;
+        top: @upload-imageList-item-close-position;
+        right: @upload-imageList-item-close-position;
+        z-index: 100;
+        display: none;
+        font-size: @upload-imageList-item-close-size;
+        cursor: pointer;
+      }
+
+      &:hover & {
+        &-close {
+          display: block;
+        }
+      }
+
+      &-error:hover,
+      &-done:hover {
+        .@{upload-prefix}-fileList-picture-card-mask {
+          display: block;
+        }
+      }
+
+      &-done:hover {
+        .@{upload-prefix}-fileList-picture-card-img {
+          transform: scale(1.1);
+        }
+      }
+
+      &-error &-mask {
+        font-size: @font-size-basic;
+      }
+
+      &-done &-mask {
+        display: none;
+        font-size: @font-size-lg-1;
+      }
+
+      &-mask.mask-white {
+        background-color: transparent;
+      }
+
+      &-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        background-color: @upload-imageList-item-mask-bg-color;
+        border-radius: @border-radius-sm;
+
+        &-child {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          color: @white;
+          line-height: @upload-image-item-size;
+          text-align: center;
+          border-radius: @border-radius-sm;
+        }
+      }
+    }
+  }
+
+  &-preset {
+    display: inline-block;
+    &-change-fileList {
+      display: inline-block;
+    }
+    &-img {
+      position: relative;
+      display: inline-block;
+      width: @upload-preset-img-width;
+      height: @upload-preset-img-height;
+      &:hover & {
+        &-mask {
+          display: block;
+        }
+      }
+      &-single {
+        .bg-img(cover);
+      }
+      &-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        line-height: @upload-preset-img-height;
+        text-align: center;
+        background: @upload-preset-mask-bg-color;
+      }
+      &-reset {
+        margin-left: @margin-sp-1;
+      }
+    }
+
+    &-action {
+      margin-top: @margin-sp-1;
+      color: @brand-color;
+      line-height: @line-height-base;
+      cursor: pointer;
+      &:hover {
+        color: @brand-hover-color;
+      }
+      &:active {
+        color: @brand-active-color;
+      }
+    }
+
+    &-tips {
+      .tips(@margin-xs);
+    }
+
+    &:hover {
+      &-mask {
+        display: block;
+      }
+    }
+  }
+}

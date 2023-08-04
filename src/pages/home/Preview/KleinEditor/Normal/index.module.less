@@ -1,0 +1,32 @@
+.Normal {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  :global {
+    .klein-editor {
+      border-radius: 20px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      overflow: hidden;
+      flex: 1;
+    }
+    .k-e-text-container {
+      border-left: none;
+      border-right: none;
+    }
+    .k-e-toolbar {
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      padding: 17px 14px;
+      justify-content: center;
+
+      .k-e-bar-item:last-of-type {
+        display: none;
+      }
+    }
+  }
+}

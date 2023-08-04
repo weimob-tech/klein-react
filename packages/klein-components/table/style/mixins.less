@@ -1,0 +1,39 @@
+.clearfix() {
+  &::before {
+    display: table;
+    content: '';
+  }
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+.operation-unit() {
+  color: @table-link-color;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:focus,
+  &:hover {
+    color: @link-hover-color;
+  }
+
+  &:active {
+    color: @link-active-color;
+  }
+}
+
+.reset-component() {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: @text-color-base;
+  font-size: @font-size-basic;
+  font-variant: @font-variant-base;
+  line-height: @line-height-base;
+  list-style: none;
+  font-feature-settings: @font-feature-settings-base;
+}

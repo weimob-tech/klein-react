@@ -1,0 +1,60 @@
+.form-validate-status() {
+  transition: all 0.25s @ease-in-out;
+
+  .error-perform() {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: @danger-brand-color;
+      box-shadow: none;
+    }
+  }
+
+  &-error {
+    //输入框的表现
+    .@{klein-prefix}-input {
+      .error-perform();
+    }
+
+    //iniputNumber输入框的表现
+    .@{klein-prefix}-input-number {
+      .error-perform();
+    }
+
+    //select的表现
+    .@{klein-prefix}-select-selector {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: @danger-brand-color !important;
+        box-shadow: none;
+      }
+    }
+
+    .@{klein-prefix}-input-group {
+      .@{klein-prefix}-input-group-addon-text {
+        .error-perform();
+      }
+    }
+
+    //datePicker的表现
+    .@{klein-prefix}-picker {
+      .error-perform();
+    }
+
+    &-tips {
+      margin-top: @margin-sm;
+      color: @danger-brand-color;
+      line-height: @line-height-base;
+    }
+  }
+}
+
+.required-star() {
+  position: absolute;
+  margin-top: 4px;
+  color: @danger-brand-color;
+  content: '*';
+}

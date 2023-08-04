@@ -1,0 +1,61 @@
+.horizontal() {
+  &-horizontal {
+    display: flex;
+  }
+  &-horizontal & {
+    &-nodes {
+      // flex-basis: 286px;
+      // width: 286px;
+      padding: @padding-xss 0;
+      background: @white;
+
+      &:not(:first-child) {
+        border-left: 1px solid @normal-color-4;
+      }
+    }
+
+    &-node-selected {
+      .@{tree-prefix}-node-title {
+        color: @brand-color;
+      }
+      .@{tree-prefix}-node-hSwitcher {
+        color: @brand-color;
+      }
+    }
+
+    &-node {
+      position: relative;
+      height: @tree-node-height-base;
+      padding: (@padding-xss + 1) 36px (@padding-xss + 1) @padding-sm;
+      line-height: @treeNode-line-height;
+      cursor: pointer;
+      transition: all 0.2s @ease-in-out;
+      &:hover {
+        background: @normal-color-3;
+      }
+
+      // &-border {
+
+      // }
+
+      &-icon {
+        margin-right: @margin-md;
+        font-size: @font-size-md;
+        vertical-align: bottom;
+      }
+
+      &-checkbox {
+        margin-right: @margin-md;
+      }
+
+      &-hSwitcher {
+        position: absolute;
+        top: 50%;
+        right: @padding-sm;
+        transform: translateY(-50%);
+
+        .icon-loading();
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.text-drag-item-common(@listType) {
+  &-@{listType}&-@{listType}-done &-@{listType} {
+    // &-icon,
+    &-fileName {
+      color: @normal-color-8;
+    }
+    &-icon {
+      color: @success-brand-color;
+    }
+  }
+
+  &-@{listType}&-@{listType}-uploading &-@{listType} {
+    &-icon {
+      color: @icon-close;
+    }
+    &-fileName {
+      color: @title-color;
+    }
+  }
+
+  &-@{listType}&-@{listType}-error &-@{listType} {
+    &-icon,
+    &-fileName {
+      color: @danger-brand-color;
+    }
+    // &-close {
+    //   color: @danger-brand-color;
+    // }
+    &-close {
+      display: block;
+    }
+  }
+
+  &-@{listType} {
+    display: flex;
+    align-items: center;
+    // height: @line-height-lg-1;
+    margin-top: @margin-sm;
+    line-height: @line-height-lg-2;
+    .right-icon {
+      color: @upload-text-icon-color;
+      font-size: @font-size-lg;
+      cursor: pointer;
+    }
+    &:hover {
+      background: @upload-text-hover-color;
+    }
+    &-fileName {
+      display: flex;
+      flex: auto;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      .@{klein-prefix}-icon-attachmentLine {
+        margin-left: @margin-sm;
+        color: @icon-close;
+        font-size: @font-size-lg;
+      }
+    }
+    &-icon {
+      margin-right: 4px;
+      font-size: @font-size-lg;
+      .@{klein-prefix}-icon-loadingLine {
+        font-size: @font-size-lg;
+        // transform: rotate(180deg);
+      }
+      .icon-loading();
+    }
+    &-close {
+      .right-icon;
+      &:hover {
+        color: @icon-close-hover;
+      }
+    }
+    &-reload {
+      .right-icon;
+      // margin-right: @margin-sp-1;
+    }
+  }
+}
+
+.bg-img(@bgSize) {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: @bgSize;
+  border-radius: @border-radius-sm;
+}
+.tips(@marginTop) {
+  margin-top: @marginTop;
+  color: @secondary-text-color;
+  line-height: @line-height-base;
+}
+
+.hover() {
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @brand-color;
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../style/index';
+@badge-height: 20px;
+@badge-height-padding: 6px;
+@badge-prefix: ~'@{klein-prefix}-badge';
+
+.@{badge-prefix} {
+  &-child {
+    position: relative;
+    display: inline-block;
+  }
+
+  &-hasc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+  &-count&-small {
+    height: 16px;
+    padding: 0 3.222222px;
+    // width: 16px;
+    line-height: 14px;
+    border-radius: 8px;
+  }
+  &-count {
+    display: inline-block;
+    height: @badge-height;
+    padding: 0 5.222222px;
+    color: @white;
+    font-size: @font-size-sm;
+    line-height: @badge-height - 2;
+    text-align: center;
+    background: @danger-color-1;
+    border: 1px solid @white;
+    border-radius: @margin-sp-1;
+  }
+
+  &-noText {
+    display: inline-block;
+    width: @badge-height-padding;
+    height: @badge-height-padding;
+    background: @danger-color-1;
+    border-radius: @margin-sp-1;
+  }
+}

@@ -1,0 +1,13 @@
+//loadingLine svg旋转代码
+
+.icon-loading() {
+  .@{icon-prefix}-loadingLine > svg {
+    animation: loadingAnimation 1s linear infinite;
+  }
+}
+
+@keyframes loadingAnimation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
