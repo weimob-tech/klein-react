@@ -10,7 +10,7 @@ docs-cdn
 docs-dist.zip
 es
 lib
-
+/dist
 # misc
 .DS_Store
 .eslintcache
