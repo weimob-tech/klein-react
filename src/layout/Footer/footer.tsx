@@ -75,7 +75,7 @@ const Footer: React.FC<FooterProps> = ({
               )}
             </section>
 
-            {isHome ? (
+            {/* {isHome ? (
               <div className={`${prefixCls}-group`}>
                 <img
                   className={`${prefixCls}-group-img`}
@@ -87,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({
                   扫码进入 Klein Design 企业微信用户群
                 </div>
               </div>
-            ) : null}
+            ) : null} */}
           </>
         )}
       </section>
