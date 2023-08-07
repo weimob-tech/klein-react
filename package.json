@@ -71,7 +71,6 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@docsearch/react": "3",
-    "@fullpage/react-fullpage": "^0.1.40",
     "@svgr/core": "5.5.0",
     "@testing-library/dom": "^7.28.1",
     "@testing-library/jest-dom": "^5.11.6",

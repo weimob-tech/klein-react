@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import cx from 'classnames'
 import { throttle } from 'lodash'
-import ReactFullpage from '@fullpage/react-fullpage'
+import Slider from 'slider'
 import styles from './index.module.less'
 import Intro from './Intro'
 import Ecology from './Ecology'
@@ -171,10 +171,10 @@ const Home: React.FC<HomeProps> = (props) => {
         {isNormal ? (
           renderNormalCont()
         ) : (
-          <ReactFullpage
+          <Slider
             onLeave={() => {}}
             render={({ state }) => {
-              return <ReactFullpage.Wrapper>{renderNormalCont(state)}</ReactFullpage.Wrapper>
+              return <Slider.Wrapper>{renderNormalCont(state)}</Slider.Wrapper>
             }}
           />
         )}

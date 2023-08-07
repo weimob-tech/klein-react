@@ -1559,7 +1559,7 @@ const EDITOR_HIGHLIGHT = path.resolve(process.cwd(), 'src/components/editor/code
 const EDITOR_LIST = path.resolve(process.cwd(), 'src/components/editor/list-module/dist/index.esm.js');
 const EDITOR_ICONS = path.resolve(process.cwd(), 'src/components/editor/icons/dist/index.esm.js');
 const CAPTCHA = path.resolve(process.cwd(), 'src/components/captcha-pc/dist/index.esm.js');
-const FULLPAGE = path.resolve(process.cwd(), 'packages/@fullpage/react-fullpage');
+const SLIDER = path.resolve(process.cwd(), 'packages/slider');
 const chainWebpack = async (webpackChainConfig) => {
     webpackChainConfig.resolve.alias.set('@wemo-ui/klein', KLEIN_PATH);
     webpackChainConfig.resolve.alias.set('@klein-design/klein-editor', kLEIN_EDITOR);
@@ -1573,7 +1573,7 @@ const chainWebpack = async (webpackChainConfig) => {
     webpackChainConfig.resolve.alias.set('@klein-editor/list-module', EDITOR_LIST);
     webpackChainConfig.resolve.alias.set('@klein-editor/icons', EDITOR_ICONS);
     webpackChainConfig.resolve.alias.set('@weimobfe/captcha-pc', CAPTCHA);
-    webpackChainConfig.resolve.alias.set('@fullpage/react-fullpage', FULLPAGE);
+    webpackChainConfig.resolve.alias.set('slider', SLIDER);
     // webpackChainConfig.resolve.alias.set('@wemo-ui/klein', KLEIN_PATH);
     const babelInKrakenKit = webpackChainConfig.module
         .rule('compileJs')
