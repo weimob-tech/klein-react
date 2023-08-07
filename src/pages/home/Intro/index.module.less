@@ -4,12 +4,12 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
-  margin-top: -492px;
-  box-shadow: 0px -32px 56px 0px rgba(51, 140, 207, 0.1);
+  margin-top: -412px;
+  box-shadow: 0px -32px 60px 0px rgba(105, 173, 224, 0.13);
 
   .wrap {
     position: relative;
-    height: 492px;
+    height: 410px;
   }
 
   .bg {
@@ -18,12 +18,8 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(193, 224, 255, 0.24) 0%,
-      rgba(235, 243, 255, 0.2) 100%
-    );
-    backdrop-filter: blur(36px);
+    background: linear-gradient(180deg, rgba(220, 241, 255, 0.01) 0%, rgba(245, 247, 250, 1) 100%);
+    backdrop-filter: blur(40px);
   }
 
   .bg2 {
@@ -36,25 +32,31 @@
     background-blend-mode: screen;
   }
 
+  .bg3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://image-c.weimobwmc.com/sass-admin/d97d17dd477d4ea0897a5a9bcef8cb7a.png')
+      no-repeat center top;
+    background-size: contain;
+  }
+
+  .wrapper {
+    justify-content: flex-start;
+  }
+
   .cont {
     position: relative;
-    padding: calc(100% * 120 / @ui-width) 0;
-    background: url('https://image-c.weimobwmc.com/sass-admin/ba961a6b9d5141e58fd035dfeb50e706.png')
-      no-repeat center top;
-    background-size: 1100px;
+    padding-top: 100px;
+    height: 100%;
 
     .text {
       text-align: center;
 
       .title {
-        font-weight: 600;
-        font-size: 70px;
-        line-height: 98px;
-        margin-bottom: 16px;
-
-        .titleImg {
-          width: 448px;
-        }
+        margin-bottom: 24px;
       }
 
       .desc {

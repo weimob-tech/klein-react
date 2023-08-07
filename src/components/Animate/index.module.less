@@ -1,35 +1,50 @@
 .animate {
-    animation:fadeIn 0.5s ease-out both 0.5s;
-    transition: none;
+  animation: 0.5s ease-out both 0.5s;
+  animation-name: fadeIn, move;
+  transition: none;
+
+  &.fadeInOnly {
+    animation-name: fadeIn;
+  }
 }
 
 .animate-enter {
-    animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
 .animate-outer {
-    animation-name: fadeOut;
+  animation-name: fadeOut;
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
+  0% {
+    opacity: 0;
+    // transform: translateY(50px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+  100% {
+    opacity: 1;
+    // transform: translateY(0px);
+  }
 }
 
 @keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }

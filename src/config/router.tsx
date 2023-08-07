@@ -85,11 +85,11 @@ const Routes: RouteProps[] = [
         path: '/design',
         bg: 'https://image-c.weimobwmc.com/sass-admin/ebd2955eccb64b55bb36207af727f477.png',
         routes: [
-          {
-            name: 'Klein Design 简介',
-            path: 'intro',
-            element: Intro,
-          },
+          // {
+          //   name: 'Klein Design 简介',
+          //   path: 'intro',
+          //   element: Intro,
+          // },
           {
             name: '设计原则',
             path: 'design',

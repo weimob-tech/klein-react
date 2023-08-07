@@ -40,7 +40,7 @@ const TABS = [
     },
   },
   {
-    icon: 'https://image-c.weimobwmc.com/sass-admin/1a7f659f8fc344cd94647161c76cfac6.png',
+    icon: KLEIN_DESIGN_LOGO,
     name: 'Klein Pro',
     children: {
       title: 'Klein Pro',
@@ -117,7 +117,7 @@ const Ecology: React.FC<EcologyProps> = (props) => {
           <div className={styles.title}>丰富全面的设计系统</div>
         </Animate>
         <Animate root={isNormal ? undefined : getRoot} animate={{ extraDelay: 100 }}>
-          <div className={styles.desc}>为企业提供了一套丰富灵活的生态平台，为开发者提供高效愉悦的开发体验</div>
+          <div className={styles.desc}>为企业构建丰富灵活的生态平台，为开发者提供高效愉悦的开发体验</div>
         </Animate>
 
         <Animate
@@ -147,36 +147,41 @@ const Ecology: React.FC<EcologyProps> = (props) => {
           animate={{ extraDelay: 300 }}
           root={isNormal ? undefined : getRoot}
         >
-          <Animate once={false} animate={{ delay: 0 }} visible={curTab} className={styles.info}>
-            <div className={styles.infoTitle}>{curTabData.children.title}</div>
-            <div className={styles.infoDesc}>{curTabData.children.desc}</div>
-
-            <Button
-              className={styles.btn}
-              size='large'
-              type='primary'
-              disabled={!curTabData.children.link}
-              onClick={() => {
-                handleJump(curTabData.children.link, false)
-              }}
-            >
-              {curTabData.children.link ? '查看详情' : '敬请期待'}
-              <img
-                className={cx(styles.arrow, !curTabData.children.link ? styles.disable : null)}
-                src={ImgArrow}
-                alt=''
-              />
-            </Button>
-          </Animate>
-          <Animate
-            once={false}
-            animate={{ delay: 100 }}
-            visible={curTab}
-            className={styles.bg}
-            style={{
-              backgroundImage: `url(${curTabData.children.bg})`,
-            }}
-          />
+          {TABS.map((o, i) => {
+            if (curTab !== i) return null;
+            return (
+              <>
+                <Animate animate={{ delay: 0 }} visible={true} className={styles.info}>
+                  <div className={styles.infoTitle}>{o.children.title}</div>
+                  <div className={styles.infoDesc}>{o.children.desc}</div>
+                  <Button
+                    className={styles.btn}
+                    size='large'
+                    type='primary'
+                    disabled={!o.children.link}
+                    onClick={() => {
+                      handleJump(o.children.link, false)
+                    }}
+                  >
+                    {o.children.link ? '查看详情' : '敬请期待'}
+                    <img
+                      className={cx(styles.arrow, !o.children.link ? styles.disable : null)}
+                      src={ImgArrow}
+                      alt=''
+                    />
+                  </Button>
+                </Animate>
+                <Animate
+                  animate={{ delay: 100 }}
+                  visible={true}
+                  className={styles.bg}
+                  style={{
+                    backgroundImage: `url(${o.children.bg})`,
+                  }}
+                />
+              </>
+            )
+          })}
         </Animate>
       </Wrapper>
     </div>

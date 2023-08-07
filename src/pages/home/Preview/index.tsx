@@ -35,8 +35,8 @@ const Preview: React.FC<PreviewProps> = (props) => {
     <div className={cx(styles.Preview, className)}>
       <Wrapper className={styles.wrapper}>
         <Animate visible={active}>
-          <div className={styles.title}>工具平台</div>
-          <div className={styles.desc}>提供了基础组件以及多场景富文本的工具试用</div>
+          <div className={styles.title}>灵活易用的工具平台</div>
+          <div className={styles.desc}>组件风格、多场景富文本工具现已开放试用，更多产品体验敬请期待</div>
         </Animate>
 
 
