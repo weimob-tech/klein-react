@@ -4,14 +4,19 @@
 
 桌面端全场景组件库，服务SaaS行业生态
 
-[![CI status][github-action-image]][github-action-url] [![codecov][codecov-image]][codecov-url] [![NPM version][npm-image]][npm-url] [![NPM downloads][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![NPM downloads][download-image]][download-url]
+[![][bundlephobia-image]][bundlephobia-url]
+[![][bundlesize-js-image]][unpkg-js-url]
 
-[![][bundlephobia-image]][bundlephobia-url] [![][bundlesize-js-image]][unpkg-js-url] [![FOSSA Status][fossa-image]][fossa-url]
-
-[![Follow Twitter][twitter-image]][twitter-url] [![Renovate status][renovate-image]][renovate-dashboard-url] [![][issues-helper-image]][issues-helper-url] [![dumi][dumi-image]][dumi-url] [![Issues need help][help-wanted-image]][help-wanted-url]
-
-[npm-image]: http://img.shields.io/npm/v/antd.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/antd
+[npm-image]: https://img.shields.io/npm/v/@klein-design/klein-react
+[npm-url]: https://www.npmjs.com/package/@klein-design/klein-react
+[download-image]: https://img.shields.io/npm/dm/@klein-design/klein-react.svg?style=flat-square
+[download-url]: https://www.npmjs.com/package/@klein-design/klein-react
+[bundlephobia-image]: https://badgen.net/bundlephobia/minzip/@klein-design/klein-react?style=flat-square
+[bundlephobia-url]: https://bundlephobia.com/package/@klein-design/klein-react
+[bundlesize-js-image]: https://img.badgesize.io/https:/unpkg.com/@klein-design/klein-react/dist/@klein-design/klein-react.min.js?label=kleinreact.min.js&compression=gzip&style=flat-square
+[unpkg-js-url]: https://unpkg.com/browse/@klein-design/klein-react/dist/@klein-design/klein-react.min.js
 
 </div>
 
