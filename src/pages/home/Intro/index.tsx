@@ -4,7 +4,6 @@ import cx from 'classnames'
 
 import styles from './index.module.less'
 import Wrapper from '../Wrapper'
-import ImgRightArrow from '@/assets/images/home/rightarrow.svg'
 import { useNavigate } from 'react-router-dom'
 import copy from '@/utils/copy'
 import { NPM_COMMAND } from '@/constant'
@@ -64,7 +63,7 @@ const Intro = React.forwardRef<HTMLDivElement>((_, ref) => {
                 <div className={styles.btns}>
                   <Button className={styles.btn} size='large' type='primary' onClick={handleStart}>
                     开始使用
-                    <img className={styles.arrow} src={ImgRightArrow} alt='' />
+                    <span className={styles.arrowWrap} />
                   </Button>
 
                   <Button

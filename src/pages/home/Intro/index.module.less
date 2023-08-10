@@ -75,10 +75,53 @@
           height: 50px;
           width: 136px;
 
-          .arrow {
-            width: 16px;
-            vertical-align: -2px;
+          &:hover {
+            .arrowWrap {
+              &::before {
+                right: 0;
+                width: 13px;
+              }
+              &::after {
+                right: 0;
+              }
+            }
+          }
+
+          .arrowWrap {
+            display: inline-block;
+            width: 13px;
+            height: 10px;
             margin-left: 8px;
+            position: relative;
+
+            &::before {
+              content: '';
+              width: 0;
+              height: 2px;
+              background: white;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 8px;
+              margin: auto;
+              transition: all 0.6s ease-out;
+            }
+
+            &::after {
+              content: '';
+              width: 8px;
+              height: 8px;
+              border-top: 2px solid #fff;
+              border-left: 2px solid #fff;
+              box-sizing: border-box;
+              transform: rotate(135deg);
+              position: absolute;
+              right: 8px;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              transition: all 0.6s ease-out;
+            }
           }
         }
 
