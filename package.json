@@ -2,6 +2,24 @@
   "name": "klein-design",
   "private": true,
   "version": "1.0.0",
+  "keywords": [
+    "klein",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "bugs": {
+    "url": "https://github.com/weimob-tech/klein-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weimob-tech/klein-react"
+  },
   "license": "MIT",
   "workspaces": [
     "packages/*"
