@@ -2,6 +2,7 @@
   "name": "klein-design",
   "private": true,
   "version": "1.0.0",
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ],

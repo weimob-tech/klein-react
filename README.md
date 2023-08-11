@@ -2,7 +2,7 @@
 
 <div align="center">
 
-桌面端全场景组件库，服务SaaS行业生态
+服务于SaaS行业的设计系统，专注更好的用户体验
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][download-image]][download-url]
