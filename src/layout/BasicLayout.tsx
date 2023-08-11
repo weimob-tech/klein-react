@@ -152,20 +152,22 @@ const BasicLayout: React.FC<BasicLayoutProps> = (props: any) => {
               <div className='right-side-wrapper'></div>
             </div>
 
-            <section className='klein-fix-anchor'>
-              {acfix.map((item) => (
-                <div
-                  onClick={(e) => setSelectItem(item.id)}
-                  className={`klein-fix-anchor-item transition ${
-                    selectItem === item.id ? 'klein-fix-anchor-item-active' : null
-                  }`}
-                >
-                  <a href={'#' + item.id} type='link' onClick={(e) => handleScroll(e, item.id)}>
-                    {item.innerText}
-                  </a>
-                </div>
-              ))}
-            </section>
+            <div className='klein-fix-anchor-wrap'>
+              <section className='klein-fix-anchor'>
+                {acfix.map((item) => (
+                  <div
+                    onClick={(e) => setSelectItem(item.id)}
+                    className={`klein-fix-anchor-item transition ${
+                      selectItem === item.id ? 'klein-fix-anchor-item-active' : null
+                    }`}
+                  >
+                    <a href={'#' + item.id} type='link' onClick={(e) => handleScroll(e, item.id)}>
+                      {item.innerText}
+                    </a>
+                  </div>
+                ))}
+              </section>
+            </div>
 
             <Footer className='klein-footer' isHome={false} />
           </section>

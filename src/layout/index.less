@@ -369,7 +369,7 @@
 
         table td:nth-child(3) {
           // width: 22%;
-          color: #7000FF;
+          color: #7000ff;
           // font-size: 13px;
           span {
             padding: 2px 8px 2px 8px;
@@ -402,17 +402,20 @@
     // overflow: auto;
   }
   &-fix-anchor {
-    position: fixed;
-    z-index: 3;
-    right: 32px;
-    top: 238px;
-    width: 140px;
-    max-height: 55%;
+    &-wrap {
+      position: fixed;
+      z-index: 3;
+      right: 32px;
+      top: 238px;
+      background-color: #fff;
+      max-height: 55%;
+      width: 140px;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
+  &-fix-anchor {
     border-left: 1px solid #eee;
-    overflow: hidden;
-    overflow-y: auto;
-    background-color: #fff;
-    display: block;
 
     a {
       border: none;
@@ -423,7 +426,7 @@
     &-item {
       padding-left: 16px;
       margin: 4px 0;
-      // margin-left: -1px;
+      margin-left: -1px;
       cursor: pointer;
       line-height: 22px;
       border-left: 1px solid transparent;
