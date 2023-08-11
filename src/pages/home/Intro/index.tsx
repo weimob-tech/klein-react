@@ -61,7 +61,7 @@ const Intro = React.forwardRef<HTMLDivElement>((_, ref) => {
                 }}
               >
                 <div className={styles.btns}>
-                  <Button className={styles.btn} size='large' type='primary' onClick={handleStart}>
+                  <Button className={cx(styles.btn, styles.startBtn)} size='large' type='primary' onClick={handleStart}>
                     开始使用
                     <span className={styles.arrowWrap} />
                   </Button>
