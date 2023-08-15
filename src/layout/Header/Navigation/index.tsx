@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { Icon } from '@klein-design/klein-react'
 
 import styles from './index.module.less'
-import { KLEIN_DESIGN_LOGO } from '@/constant'
+import { ASSET_FIGMA, ASSET_FONT, ASSET_ICON, KLEIN_DESIGN_LOGO } from '@/constant'
 import { useNavigate } from 'react-router-dom'
 
 const { DownLine } = Icon
@@ -54,22 +54,22 @@ const DROPDONWS = [
         {
           icon: 'https://image-c.weimobwmc.com/sass-admin/b1035216825e4ec3adaa1775af0c5749.png',
           name: 'Klein - Figma',
-          link: '',
+          link: ASSET_FIGMA,
         },
         {
           icon: 'https://image-c.weimobwmc.com/sass-admin/c8a5b5954d0b4c6e86d76a099c9c8772.png',
           name: 'Klein Font',
-          link: '',
+          link: ASSET_FONT,
         },
-        {
-          icon: 'https://image-c.weimobwmc.com/sass-admin/94a80e031a324fd099f85547c829b695.png',
-          name: 'Klein - Sketch',
-          link: '',
-        },
+        // {
+        //   icon: 'https://image-c.weimobwmc.com/sass-admin/94a80e031a324fd099f85547c829b695.png',
+        //   name: 'Klein - Sketch',
+        //   link: '',
+        // },
         {
           icon: 'https://image-c.weimobwmc.com/sass-admin/39006917e81f4caa8cc4ea0aa350f648.png',
           name: '官方图标库',
-          link: '',
+          link: ASSET_ICON,
         },
       ],
     },
