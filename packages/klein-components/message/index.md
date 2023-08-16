@@ -8,17 +8,17 @@ group:
 ---
 # 全局提示 Message
 
-全局展示操作反馈信息、在不希望用户执行操作时中断用户前提下、显示一条简短的成功消息
+全局展示操作反馈信息、在不希望用户执行操作时中断用户前提下、显示一条简短的成功消息。
 
 ### 基础示例
 
-四种类型的消息提示
+四种类型的消息提示。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 自定义message消失时间
 
-设置message消失时间为10s
+设置message消失时间为10s。
 
 <code src="./demos/duration.tsx"></code>
 
@@ -32,13 +32,13 @@ group:
 
 ### 更新消息内容
 
-可以通过唯一的 key 来更新内容
+可以通过唯一的 key 来更新内容。
 
 <code src="./demos/messageWithKey.tsx"></code>
 
 ### 限制message数量
 
-配置最大显示数, 超过限制时，最早的消息会被自动关闭
+配置最大显示数, 超过限制时，最早的消息会被自动关闭。
 
 <code src="./demos/maxCount.tsx"></code>
 

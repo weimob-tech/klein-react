@@ -9,47 +9,47 @@ group:
 
 # 数字输入框 InputNumber
 
-通过鼠标或键盘，输入范围内的数值、当需要获取标准数值时
+通过鼠标或键盘，输入范围内的数值、当需要获取标准数值时。
 
 ### 基础示例
 
-数字输入框
+数字输入框。
 
 <code src="./demos/basic.tsx"  ></code>
 
 ### 三种大小
 
-组件支持三种尺寸：large | medium | small，可通过 size 属性传入
+组件支持三种尺寸：large | medium | small，可通过 size 属性传入。
 
 <code src="./demos/size.tsx"  ></code>
 
 ### 高精度小数
 
-通过 stringMode 开启高精度小数支持，onChange 事件将返回 string 类型
+通过 stringMode 开启高精度小数支持，onChange 事件将返回 string 类型。
 
 <code src="./demos/stringMode.tsx"  ></code>
 
 ### 格式化展示
 
-通过 formatter 格式化数字，以展示具有具体含义的数据，往往需要配合 parser 一起使用
+通过 formatter 格式化数字，以展示具有具体含义的数据，往往需要配合 parser 一起使用。
 
 <code src="./demos/formatter.tsx"  ></code>
 
 ### 键盘行为
 
-使用 keyboard 属性可以控制键盘行为
+使用 keyboard 属性可以控制键盘行为。
 
 <code src="./demos/keyboard.tsx"  ></code>
 
 ### 超出边界
 
-当通过受控将 value 超出边界时，提供警告样式
+当通过受控将 value 超出边界时，提供警告样式。
 
 <code src="./demos/overstep.tsx"  ></code>
 
 ### 输入框上添加后置复合元素
 
-通过addonAftre添加后置复合元素
+通过addonAftre添加后置复合元素。
 
 <code src="./demos/addonAfter.tsx"  ></code>
 

@@ -9,18 +9,18 @@ group:
 
 # 选择器 Select
 
-从多个选项中选择一个或多个选项，并呈现选择结果，用于表单数据填写和属性选择、超过 5 个选项才使用（低于 5 个建议使用「单选」，提升用户选择效率）
-- 针对国家、金额、年龄这类较多的选项时，支持手输「自动完成」功能
+从多个选项中选择一个或多个选项，并呈现选择结果，用于表单数据填写和属性选择、超过 5 个选项才使用（低于 5 个建议使用「单选」，提升用户选择效率）。
+- 针对国家、金额、年龄这类较多的选项时，支持手输「自动完成」功能。
 
 ### 基本使用
 
-基本使用
+基本使用。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 带搜索框
 
-展开后可对选项进行搜索
+展开后可对选项进行搜索。
 
 <code src="./demos/search.tsx"></code>
 
@@ -32,73 +32,73 @@ group:
 
 ### 搜索远程数据
 
-搜索和远程数据结合
+搜索和远程数据结合。
 
 <code src="./demos/fetch.tsx"></code>
 
 ### 下拉加载远程数据
 
-下拉加载远程数据
+下拉加载远程数据。
 
 <code src="./demos/scrollInfinite.tsx"></code>
 
 ### 三种大小
 
-三种大小的选择框，当 size 分别为 large 和 small 时，输入框高度为 40px 和 24px ，默认高度为 32px
+三种大小的选择框，当 size 分别为 large 和 small 时，输入框高度为 40px 和 24px ，默认高度为 32px。
 
 <code src="./demos/size.tsx"></code>
 
 ### 多选
 
-多选，从已有条目中选择
+多选，从已有条目中选择。
 
 <code src="./demos/multiple.tsx"></code>
 
 ### 多选带按钮
 
-多选并包含功能按钮
+多选并包含功能按钮。
 
 <code src="./demos/multipleWithButton.tsx"></code>
 
 ### 响应式 maxTagCount
 
-多选下通过响应式布局让选项自动收缩该功能对性能有所消耗，不推荐在大表单场景下使用
+多选下通过响应式布局让选项自动收缩该功能对性能有所消耗，不推荐在大表单场景下使用。
 
 <code src="./demos/maxTagCount.tsx"></code>
 
 ### 扩展菜单
 
-使用 dropdownRender 对下拉菜单进行自由扩展
+使用 dropdownRender 对下拉菜单进行自由扩展。
 
 <code src="./demos/dropdownRender.tsx"></code>
 
 ### 扩展菜单删除
 
-使用 dropdownRender 对下拉菜单允许删除
+使用 dropdownRender 对下拉菜单允许删除。
 
 <code src="./demos/dropdownRenderRemove.tsx"></code>
 
 ### 前、后缀
 
-自定义的选择框前、后缀图标
+自定义的选择框前、后缀图标。
 
 <code src="./demos/suffixIcon.tsx"></code>
 
 ### 自定义选择标签
 
-允许自定义选择标签的样式
+允许自定义选择标签的样式。
 
 <code src="./demos/tags.tsx"></code>
 
 ### 组合模式
 
-允许不同组件组合
+允许不同组件组合。
 
 <code src="./demos/combination.tsx"></code>
 
 ### 预设长度
 
-允许预设5种长度的select
+允许预设5种长度的select。
 
 <code src="./demos/wSize.tsx"></code>
 

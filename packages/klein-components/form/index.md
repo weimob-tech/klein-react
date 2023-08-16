@@ -8,29 +8,29 @@ group:
 ---
 # 表单 Form
 
-表单组件
+表单组件。
 
 ### 基础示例
 
-表单基础用法、表单的每个formItem默认行高为32px，formItem之间的间距为24px，针对像checkbox这样的元素在formItem内部时不需要32px的行高的情况，可以设置formItem的itemCenter属性为false，使formItem的默认行高为20px
+表单基础用法、表单的每个formItem默认行高为32px，formItem之间的间距为24px，针对像checkbox这样的元素在formItem内部时不需要32px的行高的情况，可以设置formItem的itemCenter属性为false，使formItem的默认行高为20px。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 表单布局
 
-三种布局方式
+三种布局方式。
 
 <code src="./demos/layout.tsx"></code>
 
 ### 自定义表单校验
 
-支持表单自定义校验
+支持表单自定义校验。
 
 <code src="./demos/customValidate.tsx"></code>
 
 ### 内嵌FormItem
 
-这里演示 Form.Item 内有多个元素的使用方式、<Form.Item name="field" /> 只会对它的直接子元素绑定表单功能，例如直接包裹了 Input/Select、如果控件前后还有一些文案或样式装点，或者一个表单项内有多个控件，你可以使用内嵌的 Form.Item 完成；你可以给 Form.Item 自定义 style 进行内联布局，或者添加 noStyle 作为纯粹的无样式绑定组件
+这里演示 Form.Item 内有多个元素的使用方式、<Form.Item name="field" /> 只会对它的直接子元素绑定表单功能，例如直接包裹了 Input/Select、如果控件前后还有一些文案或样式装点，或者一个表单项内有多个控件，你可以使用内嵌的 Form.Item 完成；你可以给 Form.Item 自定义 style 进行内联布局，或者添加 noStyle 作为纯粹的无样式绑定组件。
 
 ```diff
 - <Form.Item label="Field" name="field">
@@ -44,49 +44,49 @@ group:
 
 这里展示了三种典型场景：
 
-- Username：输入框后面有描述文案或其他组件，在 Form.Item 内使用 <Form.Item name="field" noStyle /> 去绑定对应子控件
+- Username：输入框后面有描述文案或其他组件，在 Form.Item 内使用 <Form.Item name="field" noStyle /> 去绑定对应子控件。
 
-- Address：有两个控件，在 Form.Item 内使用两个 <Form.Item name="field" noStyle /> 分别绑定对应控件
+- Address：有两个控件，在 Form.Item 内使用两个 <Form.Item name="field" noStyle /> 分别绑定对应控件。
 
-- BirthDate：有两个内联控件，错误信息展示各自控件下，使用两个 <Form.Item name="field" /> 分别绑定对应控件，并修改 style 使其内联布局
+- BirthDate：有两个内联控件，错误信息展示各自控件下，使用两个 <Form.Item name="field" /> 分别绑定对应控件，并修改 style 使其内联布局。
 
-> 注意，在 label 对应的 Form.Item 上不要在指定 name 属性，这个 Item 只作为布局作用
+> 注意，在 label 对应的 Form.Item 上不要在指定 name 属性，这个 Item 只作为布局作用。
 
 <code src="./demos/nestedFormItem.tsx"></code>
 
 ### 表单方法调用
 
-通过Form.useForm进行表单数据交互
+通过Form.useForm进行表单数据交互。
 
 <code src="./demos/useForm.tsx"></code>
 
 ### classComponent中的表单方法调用
 
-在classComponent可以使用ref获取表单实例进行数据交互
+在classComponent可以使用ref获取表单实例进行数据交互。
 
 <code src="./demos/classComponentUseForm.tsx"></code>
 
 ### 动态增减表单项
 
-动态增加、减少表单项、add 方法参数可用于设置初始值
+动态增加、减少表单项、add 方法参数可用于设置初始值。
 
 <code src="./demos/dynamic-add-item.tsx"></code> 
 
 ### 动态增减嵌套字段
 
-嵌套表单字段需要对 field 进行拓展，将 field.name 和 field.fieldKey 应用于控制字段
+嵌套表单字段需要对 field 进行拓展，将 field.name 和 field.fieldKey 应用于控制字段。
 
 <code src="./demos/dynamic-form-items.tsx"></code> 
 
 ### 多表单联动
 
-通过 Form.Provider 在表单间处理数据
+通过 Form.Provider 在表单间处理数据。
 
 <code src="./demos/form-context.tsx"></code> 
 
 ### 验证提示模板
 
-通过 validateMessages统一提示信息
+通过 validateMessages统一提示信息。
 
 <code src="./demos/validateMessages.tsx"></code> 
 
@@ -139,7 +139,7 @@ group:
 
 ### ValidateMessages
 
-Form 为验证提供了[默认的错误提示信息](https://github.com/react-component/field-form/blob/master/src/utils/messages.ts)，你可以通过配置 `validateMessages` 属性，修改对应的提示模板
+Form 为验证提供了[默认的错误提示信息](https://github.com/react-component/field-form/blob/master/src/utils/messages.ts)，你可以通过配置 `validateMessages` 属性，修改对应的提示模板。
 
 ```js
 const validateMessages = {

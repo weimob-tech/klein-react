@@ -8,59 +8,59 @@ group:
 ---
 # 弹窗 Modal
 
-模态对话框，在浮层中显示，避免打扰用户的操作流程、需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 Modal 在当前页面正中打开一个浮层，承载相应的操作
+模态对话框，在浮层中显示，避免打扰用户的操作流程、需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 Modal 在当前页面正中打开一个浮层，承载相应的操作。
 
 ### 基础示例
 
-提供两种基本类型的弹窗，当弹窗内容十分复杂时请传入modalStyle=“expansion”
+提供两种基本类型的弹窗，当弹窗内容十分复杂时请传入modalStyle=“expansion”。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 弹窗存在最大高度
 
-不希望弹窗超出窗口区域时候请设置弹窗的maxHeight属性
+不希望弹窗超出窗口区域时候请设置弹窗的maxHeight属性。
 
 <code src="./demos/max-height.tsx"></code>
 
 ### 不同尺寸大小的弹窗
 
-提供三种内置宽度大小的弹窗组件，分别为320，400，480
+提供三种内置宽度大小的弹窗组件，分别为320，400，480。
 
 <code src="./demos/size.tsx"></code>
 
 ### title|content为空时的弹窗
 
-设置title|content为空
+设置title|content为空。
 
 <code src="./demos/no-title.tsx"></code>
 
 ### 垂直居中
 
-设置centered为true使弹窗垂直居中
+设置centered为true使弹窗垂直居中。
 
 <code src="./demos/vertical-center.tsx"></code>
 
 ### 通过方法调用弹窗
 
-提供成功，错误，警告，信息提示等四种状态的弹窗
+提供成功，错误，警告，信息提示等四种状态的弹窗。
 
 <code src="./demos/actions.tsx"></code>
 
 ### 手动更新和移除
 
-手动更新和关闭 Modal.method 方式创建的对话框
+手动更新和关闭 Modal.method 方式创建的对话框。
 
 <code src="./demos/updateAndDestroy.tsx"></code>
 
 ### 方法调用且内容居中的弹窗
 
-方法调用且内容居中的弹窗
+方法调用且内容居中的弹窗。
 
 <code src="./demos/actions-center.tsx"></code>
 
 ### promise延迟关闭弹窗
 
-通过onOk或者onCancel返回promise来延迟关闭弹窗
+通过onOk或者onCancel返回promise来延迟关闭弹窗。
 
 <code src="./demos/actions-btnTrigger.tsx"></code>
 
@@ -112,7 +112,7 @@ group:
 
 - Modal.warning
 
-以上函数调用后，会返回一个引用，可以通过该引用更新和关闭弹窗
+以上函数调用后，会返回一个引用，可以通过该引用更新和关闭弹窗。
 
 ```js
 const modal = Modal.info();

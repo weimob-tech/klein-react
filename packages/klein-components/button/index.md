@@ -9,18 +9,18 @@ group:
 
 # 按钮 Button
 
-按钮用于开始一个即时操作、标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑
+按钮用于开始一个即时操作、标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
 
 
 ### 按钮类型
 
-按钮总共有primary，default，dashed，link四种类型
+按钮总共有primary，default，dashed，link四种类型。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 按钮大小
 
-按钮默认有大中小三个尺寸
+按钮默认有大中小三个尺寸。
 
 <code src="./demos/size.tsx"></code>
 
@@ -30,25 +30,25 @@ group:
 
 ### 幽灵按钮
 
-幽灵按钮背景变为透明
+幽灵按钮背景变为透明。
 
 <code src="./demos/ghost.tsx"></code>
 
 ### 不可点击按钮
 
-按钮disabled不可点击
+按钮disabled不可点击。
 
 <code src="./demos/disabled.tsx"></code>
 
 ### 加载状态
 
-设置按钮的加载状态
+设置按钮的加载状态。
 
 <code src="./demos/loading.tsx"></code>
 
 ### 危险按钮
 
-危险按钮
+危险按钮。
 
 <code src="./demos/danger.tsx"></code>
 

@@ -8,30 +8,30 @@ group:
 ---
 # 气泡框 Popconfirm
 
-点击元素，弹出气泡式的确认框、目标元素的操作需要用户进一步的确认时，在目标元素附近弹出浮层提示，询问用户
-和 confirm 弹出的全屏居中弹窗相比，交互形式更轻量
+点击元素，弹出气泡式的确认框、目标元素的操作需要用户进一步的确认时，在目标元素附近弹出浮层提示，询问用户。
+和 confirm 弹出的全屏居中弹窗相比，交互形式更轻量。
 
 ### 基础示例
 
-基本用法
+基本用法。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 自定义图标
 
-带图标
+带图标。
 
 <code src="./demos/popwithIcon.tsx"></code>
 
 ### 异步关闭
 
-点击确定后异步关闭气泡确认框
+点击确定后异步关闭气泡确认框。
 
 <code src="./demos/controlled.tsx"></code>
 
 ### confirm promise方式关闭
 
-点击确定后异步关闭气泡确认框
+点击确定后异步关闭气泡确认框。
 
 <code src="./demos/confirm-with-promise.tsx"></code>
 

@@ -9,11 +9,11 @@ group:
 
 # 滑动条 Slider
 
-滑动型输入器，展示当前值和可选范围、当用户需要在数值区间/自定义区间内进行选择时，可为连续或离散值
+滑动型输入器，展示当前值和可选范围、当用户需要在数值区间/自定义区间内进行选择时，可为连续或离散值。
 
 ### 基础示例
 
-基本滑动条、当 `range` 为 `true` 时，渲染为双滑块；当 `disabled` 为 `true` 时，滑块处于不可用状态
+基本滑动条、当 `range` 为 `true` 时，渲染为双滑块；当 `disabled` 为 `true` 时，滑块处于不可用状态。
 
 <code src="./demos/basic.tsx"></code>
 
@@ -23,49 +23,49 @@ group:
 
 ### 带 icon 的滑块
 
-滑块左右可以设置图标来表达业务含义
+滑块左右可以设置图标来表达业务含义。
 
 <code src="./demos/icon-slider.tsx" ></code>
 
 ### 自定义提示的滑块
 
-使用 `tooltip.formatter` 可以格式化 `Tooltip` 的内容，设置 `tooltip.formatter={null}`，则隐藏 `Tooltip`
+使用 `tooltip.formatter` 可以格式化 `Tooltip` 的内容，设置 `tooltip.formatter={null}`，则隐藏 `Tooltip`。
 
 <code src="./demos/tip-formatter.tsx" ></code>
 
 ### 事件
 
-当 Slider 的值发生改变时，会触发 `onChange` 事件，并把改变后的值作为参数传入在 `onmouseup` 时，会触发 `onAfterChange` 事件，并把当前值作为参数传入
+当 Slider 的值发生改变时，会触发 `onChange` 事件，并把改变后的值作为参数传入在 `onmouseup` 时，会触发 `onAfterChange` 事件，并把当前值作为参数传入。
 
 <code src="./demos/event.tsx"></code>
 
 ### 垂直
 
-垂直方向的 Slider
+垂直方向的 Slider。
 
 <code src="./demos/vertical.tsx"></code>
 
 ### 反向
 
-设置`reverse`可以将滑动条置反
+设置`reverse`可以将滑动条置反。
 
 <code src="./demos/reverse.tsx"></code>
 
 ### 控制 ToolTip 的显示
 
-当 `tooltip.open` 为 `true` 时，将始终显示 ToolTip；反之则始终不显示，即使在拖动、移入时也是如此
+当 `tooltip.open` 为 `true` 时，将始终显示 ToolTip；反之则始终不显示，即使在拖动、移入时也是如此。
 
 <code src="./demos/show-tooltip.tsx"></code>
 
 ### 范围可拖拽
 
-可以设置 `range.draggableTrack`，使得范围刻度整体可拖拽
+可以设置 `range.draggableTrack`，使得范围刻度整体可拖拽。
 
 <code src="./demos/dragableTrack.tsx"></code>
 
 ### 带标签的滑块
 
-使用 `marks` 属性标注分段式滑块，使用 `value` / `defaultValue` 指定滑块位置当 `included=false` 时，表明不同标记间为并列关系当 `step=null` 时，Slider 的可选值仅有 `marks` 标出来的部分
+使用 `marks` 属性标注分段式滑块，使用 `value` / `defaultValue` 指定滑块位置当 `included=false` 时，表明不同标记间为并列关系当 `step=null` 时，Slider 的可选值仅有 `marks` 标出来的部分。
 
 <code src="./demos/mark.tsx"></code>
 

@@ -9,32 +9,32 @@ group:
 
 # 面包屑 Breadcrumb
 
-显示当前页面在系统层级结构中的位置，并能向上返回
+显示当前页面在系统层级结构中的位置，并能向上返回。
 
-当系统拥有超过两级以上的层级结构时；当需要告知用户『你在哪里』时；当需要向上导航的功能时 进行使用
+当系统拥有超过两级以上的层级结构时；当需要告知用户『你在哪里』时；当需要向上导航的功能时 进行使用。
 
 
 ### 基础示例
 
-基础用法
+基础用法。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 自定义分隔符
 
-通过separator属性自定义分隔符
+通过separator属性自定义分隔符。
 
 <code src="./demos/sepatarator.tsx"></code>
 
 ### 分隔符
 
-通过`Breadcrumb.Separator`来使用分隔符
+通过`Breadcrumb.Separator`来使用分隔符。
 
 <code src="./demos/separatorItem.tsx"></code>
 
 ### 自定义icon
 
-在每一项前添加icon
+在每一项前添加icon。
 
 <code src="./demos/icon.tsx"></code>
 ### Breadcrumb Props

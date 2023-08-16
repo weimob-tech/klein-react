@@ -9,11 +9,11 @@ group:
 
 # 加载中 Spin
 
-用于页面和区块的加载中状态、页面局部处于等待异步数据或正在渲染过程时，合适的加载动效会有效缓解用户的焦虑，提高用户体验
+用于页面和区块的加载中状态、页面局部处于等待异步数据或正在渲染过程时，合适的加载动效会有效缓解用户的焦虑，提高用户体验。
 
 ### 基础示例
 
-这里填写示例说明
+这里填写示例说明。
 
 <!-- <code src="./demos/basic.tsx"></code> -->
 <!-- <code src="./demos/size.tsx"></code> -->
@@ -23,7 +23,7 @@ group:
 
 ### loading 状态
 
-loading 状态改变
+loading 状态改变。
 
 <code src="./demos/loading.tsx"></code>
 

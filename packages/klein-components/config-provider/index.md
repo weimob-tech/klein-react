@@ -9,7 +9,7 @@ group:
 
 # 全局配置 ConfigProvider
 
-用于全局配置语言，弹出式组件的挂载点，组件前缀等
+用于全局配置语言，弹出式组件的挂载点，组件前缀等。
 
 <!-- ## 何时使用
 
@@ -29,12 +29,3 @@ group:
 | prefix      | 配置所有组件样式前缀 | `string`  | -      |
 | getPopupContainer      | 配置弹出组件挂载点 | `((triggerNode?: HTMLElement) => HTMLElement)`\|` undefined`  | -      |
 | size      | 配置元素大中小 | `"small"`\|` "medium"`\|` "large"`  | -      |
-
-
-### SizeContext Props
-
-| 参数 | 说明 | 类型 | 默认值 |
-| :--- | :--- | :--- | :----- |
-
-
-### 

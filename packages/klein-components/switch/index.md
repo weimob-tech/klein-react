@@ -9,7 +9,7 @@ group:
 
 # 开关 Switch
 
-开关选择器、需要表示开关状态的切换时
+开关选择器、需要表示开关状态的切换时。
 
 ### 基本用法
 <code src="./demos/basic.tsx"></code>

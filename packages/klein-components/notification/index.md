@@ -9,47 +9,47 @@ group:
 
 # 通知提醒框 Notification
 
-全局消息通知、需要通知全局消息时使用
+全局消息通知、需要通知全局消息时使用。
 
 ### 基础示例
 
-基本用法，弹窗将在4.5s后自动关闭
+基本用法，弹窗将在4.5s后自动关闭。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 带有图标的通知
 
-通知左侧带有图标
+通知左侧带有图标。
 
 <code src="./demos/noti-type.tsx"></code>
 
 ### 带有边框颜色的通知
 
-通知左侧带有边框颜色
+通知左侧带有边框颜色。
 
 <code src="./demos/noti-withBorder.tsx"></code>
 
 ### 带有默认按钮的通知
 
-通知右下方带有按钮
+通知右下方带有按钮。
 
 <code src="./demos/noti-withBtn.tsx"></code>
 
 ### 自定义按钮的通知
 
-自定义通知右下方的按钮
+自定义通知右下方的按钮。
 
 <code src="./demos/noti-customBtn.tsx"></code>
 
 ### 更新消息内容
 
-通知弹窗的唯一标识key 来更新当前弹窗的内容
+通知弹窗的唯一标识key 来更新当前弹窗的内容。
 
 <code src="./demos/noti-withKey.tsx"></code>
 
 ### 不同方向弹出通知框
 
-通过设置placement属性来控制通知框弹出位置
+通过设置placement属性来控制通知框弹出位置。
 
 <code src="./demos/noti-withPlacement.tsx"></code>
 

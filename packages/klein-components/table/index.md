@@ -9,55 +9,55 @@ group:
 
 # 表格 Table
 
-表格组件用于展示多条结构类似的数据，可对数据进行排序、筛选、对比或其他自定义操作等复杂行为时
+表格组件用于展示多条结构类似的数据，可对数据进行排序、筛选、对比或其他自定义操作等复杂行为时。
 ### 基础示例
 
-基本用法
+基本用法。
 
 <code src="./demos/editCell.tsx"></code>
 
 ### 表格无数据
 
-基本用法
+基本用法。
 
 <code src="./demos/empty.tsx"></code>
 
 ### 选择和操作
 
-基本用法
+基本用法。
 
 <code src="./demos/row-selection-and-operation.tsx"></code>
 
 ### 自定义选择项
 
-通过 `rowSelection.selections` 自定义选择项，默认不显示下拉选项，设为 `true` 时显示默认选择项
+通过 `rowSelection.selections` 自定义选择项，默认不显示下拉选项，设为 `true` 时显示默认选择项。
 
 <code src="./demos/row-selection-custom.tsx"></code>
 
 ### 筛选和排序
 
-对某一列数据进行筛选，使用列的 `filters` 属性来指定需要筛选菜单的列，`onFilter` 用于筛选当前数据，`filterMultiple` 用于指定多选和单选
-- 对某一列数据进行排序，通过指定列的 `sorter` 函数即可启动排序按钮`sorter: function(rowA, rowB) { ... }`， rowA、rowB 为比较的两个行数据
-- sortDirections: ['ascend' | 'descend']改变每列可用的排序方式，切换排序时按数组内容依次切换，设置在 table props 上时对所有列生效你可以通过设置 `['ascend', 'descend', 'ascend']` 禁止排序恢复到默认状态
-- 使用 `defaultSortOrder` 属性，设置列的默认排序顺序
+对某一列数据进行筛选，使用列的 `filters` 属性来指定需要筛选菜单的列，`onFilter` 用于筛选当前数据，`filterMultiple` 用于指定多选和单选。
+- 对某一列数据进行排序，通过指定列的 `sorter` 函数即可启动排序按钮`sorter: function(rowA, rowB) { ... }`， rowA、rowB 为比较的两个行数据。
+- sortDirections: ['ascend' | 'descend']改变每列可用的排序方式，切换排序时按数组内容依次切换，设置在 table props 上时对所有列生效你可以通过设置 `['ascend', 'descend', 'ascend']` 禁止排序恢复到默认状态。
+- 使用 `defaultSortOrder` 属性，设置列的默认排序顺序。
 
 <code src="./demos/head.tsx"></code>
 
 ### 展开行
 
-当表格内容较多不能一次性完全展示时
+当表格内容较多不能一次性完全展示时。
 
 <code src="./demos/expand.tsx"></code>
 
 ### 表格行/列合并
 
-表头只支持列合并，使用 column 里的 colSpan 进行设置表格支持行/列合并，使用render里的单元格属性colSpan或者rowSpan设值为0时，设置的表格不会渲染
+表头只支持列合并，使用 column 里的 colSpan 进行设置表格支持行/列合并，使用render里的单元格属性colSpan或者rowSpan设值为0时，设置的表格不会渲染。
 
 <code src="./demos/colspan-rowspan.tsx"></code>
 
 ###  带边框
 
-添加表格边框线，页头和页脚
+添加表格边框线，页头和页脚。
 
 <code src="./demos/bordered.tsx"></code>
 
@@ -69,74 +69,74 @@ group:
 
 ### 拖拽排序
 
-使用自定义元素，我们可以集成 react-dnd 来实现拖拽排序
+使用自定义元素，我们可以集成 react-dnd 来实现拖拽排序。
 
 <code src="./demos/drag-sorting.tsx"></code>
 
 ### 拖拽手柄列
 
-拖拽手柄列
+拖拽手柄列。
 
 <code src="./demos/drag-sorting-handler.tsx"></code>
 
 ### 固定头和列
 
-适合同时展示有大量数据和数据列
+适合同时展示有大量数据和数据列。
 
 <code src="./demos/fixed-columns-header.tsx"></code>
 
 ### 固定列
 
-对于列数很多的数据，可以固定前后的列，横向滚动查看其它数据，需要和 `scroll.x` 配合使用
+对于列数很多的数据，可以固定前后的列，横向滚动查看其它数据，需要和 `scroll.x` 配合使用。
 
 <code src="./demos/fixed-columns.tsx"></code>
 
 ### 固定表头
 
-方便一页内展示大量数据
+方便一页内展示大量数据。
 
 <code src="./demos/fixed-header.tsx"></code>
 
 ### 表头分组
 
-使用 `columns[n]` 可以内嵌 `children`，以渲染分组表头
+使用 `columns[n]` 可以内嵌 `children`，以渲染分组表头。
 
 <code src="./demos/grouping-columns.tsx"></code>
 
 ### 可伸缩列
 
-可伸缩列
+可伸缩列。
 
 <code src="./demos/resizable-column.tsx"></code>
 
 ### 开启选择
 
-第一列是联动的选择框可以通过 `rowSelection.type` 属性指定选择类型，默认为 `checkbox`
+第一列是联动的选择框可以通过 `rowSelection.type` 属性指定选择类型，默认为 `checkbox`。
 
 <code src="./demos/row-selection.tsx"></code>
 
 ### 紧凑型
 
-两种紧凑型的列表，小型列表只用于对话框内
+两种紧凑型的列表，小型列表只用于对话框内。
 
 <code src="./demos/size.tsx"></code>
 
 ### 随页面滚动的固定表头和滚动条
 
-对于长表格，需要滚动才能查看表头和滚动条，那么现在可以设置跟随页面固定表头和滚动条
+对于长表格，需要滚动才能查看表头和滚动条，那么现在可以设置跟随页面固定表头和滚动条。
 
 <code src="./demos/sticky.tsx"></code>
 
 ### 单元格自动省略
 
-设置 `column.ellipsis` 可以让单元格内容根据宽度自动省略
+设置 `column.ellipsis` 可以让单元格内容根据宽度自动省略。
 
 <code src="./demos/ellipsis.tsx"></code>
 
 ### 树形数据展示
 
-表格支持树形数据的展示，当数据中有 children 字段时会自动展示为树形表格，如果不需要或配置为其他字段可以用 childrenColumnName 进行配置
-可以通过设置 indentSize 以控制每一层的缩进宽度
+表格支持树形数据的展示，当数据中有 children 字段时会自动展示为树形表格，如果不需要或配置为其他字段可以用 childrenColumnName 进行配置。
+可以通过设置 indentSize 以控制每一层的缩进宽度。
 
 <code src="./demos/tree-data.tsx"></code>
 
@@ -174,7 +174,7 @@ group:
 
 ### onRow 用法
 
-适用于onRow、onHeaderRow、onCell、onHeaderCell
+适用于onRow、onHeaderRow、onCell、onHeaderCell。
 
 ```js
 <Table
@@ -198,7 +198,7 @@ group:
 
 ### Column
 
-列描述数据对象，是 Columns 中的一项，Column 使用相同的 API
+列描述数据对象，是 Columns 中的一项，Column 使用相同的 API。
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | :--- | :-------- | :-------- | :--- | :--- |
@@ -241,7 +241,7 @@ group:
 
 ### pagination
 
-分页的配置项
+分页的配置项。
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :---- |
@@ -251,7 +251,7 @@ group:
 
 ### expandable
 
-展开功能的配置
+展开功能的配置。
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :---- |
@@ -272,7 +272,7 @@ group:
 
 ### rowSelection
 
-选择功能的配置
+选择功能的配置。
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | :--- | :--- | :--- | :--- | :--- |

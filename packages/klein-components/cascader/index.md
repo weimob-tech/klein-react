@@ -9,65 +9,65 @@ group:
 
 # 级联选择 Cascader
 
-级联选择框
+级联选择框。
 
-需要从一组相关联的数据集合进行选择，例如省市区，公司层级，事物分类等
+需要从一组相关联的数据集合进行选择，例如省市区，公司层级，事物分类等。
 
-从一个较大的数据集合中进行选择时，用多级分类进行分隔，方便选择
+从一个较大的数据集合中进行选择时，用多级分类进行分隔，方便选择。
 
-比起 Select 组件，可以在同一个浮层中完成选择，有较好的体验
+比起 Select 组件，可以在同一个浮层中完成选择，有较好的体验。
 
 ### 基础示例
 
-基础用法
+基础用法。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 支持搜索
 
-通过配置showSearch属性支持数据搜索
+通过配置showSearch属性支持数据搜索。
 
 <code src="./demos/search.tsx"></code>
 
 ### 禁用选项
 
-通过指定 options 里的 disabled 字段开启禁用功能
+通过指定 options 里的 disabled 字段开启禁用功能。
 
 <code src="./demos/disabled.tsx"></code>
 
 ### 下拉加载
 
-远程请求下拉加载
+远程请求下拉加载。
 
 <code src="./demos/scrollInfinite.tsx"></code>
 
 ### 动态加载选项
 
-使用 loadData 实现动态加载选项
+使用 loadData 实现动态加载选项。
 
 <code src="./demos/loadData.tsx"></code>
 
 ### 自定义底部
 
-使用 dropdownRender属性实现下拉菜单自由扩展
+使用 dropdownRender属性实现下拉菜单自由扩展。
 
 <code src="./demos/dropdown-render.tsx"></code>
 
 ### 使用默认底部
 
-使用 dropdownFooterContent属性对默认底部内容进行处理
+使用 dropdownFooterContent属性对默认底部内容进行处理。
 
 <code src="./demos/default-dropdownrender.tsx"></code>
 
 ### 下拉多选
 
-支持多项选择
+支持多项选择。
 
 <code src="./demos/mutiple.tsx"></code>
 
 ### 多选 + 动态加载选项
 
-在该模式下点选每级菜单选项值都会发生变化
+在该模式下点选每级菜单选项值都会发生变化。
 
 <code src="./demos/loadDataMutiple.tsx"></code>
 

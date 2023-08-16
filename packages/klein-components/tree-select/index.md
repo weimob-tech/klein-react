@@ -8,42 +8,42 @@ group:
 ---
 # 树选择 TreeSelect
 
-树型选择控件，可以对树形结构数据进行选择
+树型选择控件，可以对树形结构数据进行选择。
 
 
 ### 基础示例
 
-树型选择控件
+树型选择控件。
 
 <code src="./demos/basic.tsx" background="#f0f2f5"></code>
 
 ### 受控
 
-组件受控
+组件受控。
 
 <code src="./demos/controlled.tsx" background="#f0f2f5"></code>
 
 ### 支持多选
 
-多选的树选择
+多选的树选择。
 
 <code src="./demos/multiple.tsx" background="#f0f2f5"></code>
 
 ### 支持勾选
 
-使用勾选框实现多选功能
+使用勾选框实现多选功能。
 
 <code src="./demos/checkable.tsx" background="#f0f2f5"></code>
 
 ### 数据加载
 
-动态加载节点数据
+动态加载节点数据。
 
 <code src="./demos/loadata.tsx" background="#f0f2f5"></code>
 
 ### 支持虚拟滚动
 
-适用于大数据量的情况
+适用于大数据量的情况。
 
 <code src="./demos/virtual.tsx" background="#f0f2f5"></code>
 

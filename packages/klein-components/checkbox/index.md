@@ -9,7 +9,7 @@ group:
 
 # 多选框 Checkbox
 
-多选框、单独使用可以表示两种状态之间的切换，和 switch 类似；区别在于切换 switch 会直接触发状态改变，而 checkbox 一般用于状态标记，需要和提交操作配合
+多选框、单独使用可以表示两种状态之间的切换，和 switch 类似；区别在于切换 switch 会直接触发状态改变，而 checkbox 一般用于状态标记，需要和提交操作配合。
 
 ### 基本用法
 <code src="./demos/basic.tsx"  ></code>

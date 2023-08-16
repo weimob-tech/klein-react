@@ -9,35 +9,35 @@ group:
   
 # 下拉菜单 Dropdown
 
-向下弹出的列表、当页面上的操作命令过多时，用此组件可以收纳操作元素；点击或移入触点，会出现一个下拉菜单、可在列表中进行选择，并执行相应的命令
+向下弹出的列表、当页面上的操作命令过多时，用此组件可以收纳操作元素；点击或移入触点，会出现一个下拉菜单、可在列表中进行选择，并执行相应的命令。
 
 ### 基础示例
 
-点击显示
+点击显示。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 触发方式
 
-通过trigger属性控制弹框触发方式
+通过trigger属性控制弹框触发方式。
 
 <code src="./demos/click.tsx"></code>
 
 ### 多级菜单
 
-传入的菜单里有多个层级
+传入的菜单里有多个层级。
 
 <code src="./demos/moreMenu.tsx"></code>
 
 ### 弹出位置
 
-支持多个位置弹出
+支持多个位置弹出。
 
 <code src="./demos/dir.tsx"></code>
 
 ### 显示受控
 
-通过visible属性控制弹层的显示隐藏
+通过visible属性控制弹层的显示隐藏。
 
 <code src="./demos/visible.tsx"></code>
 

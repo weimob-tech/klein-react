@@ -10,40 +10,40 @@ group:
 # 自动完成 AutoComplete
 
 输入框自动完成功能、一般在以下情况使用：
-- 需要一个输入框而不是选择器
-- 需要输入建议/辅助提示
+- 需要一个输入框而不是选择器。
+- 需要输入建议/辅助提示。
 
 和 Select 的区别是：
-- AutoComplete 是一个带提示的文本输入框，用户可以自由输入，关键词是辅助输入
-- Select 是在限定的可选项中进行选择，关键词是选择
+- AutoComplete 是一个带提示的文本输入框，用户可以自由输入，关键词是辅助输入。
+- Select 是在限定的可选项中进行选择，关键词是选择。
 
 ### 基础示例
 
-基本使用，通过 options 设置自动完成的数据源
+基本使用，通过 options 设置自动完成的数据源。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 自定义选项
 
-也可以直接传 AutoComplete.Option 作为 AutoComplete 的 children，而非使用 options
+也可以直接传 AutoComplete.Option 作为 AutoComplete 的 children，而非使用 options。
 
 <code src="./demos/options.tsx"></code>
 
 ### 自定义组件
 
-自定义输入组件
+自定义输入组件。
 
 <code src="./demos/customComponent.tsx"></code>
 
 ### 查询模式: 确定类目
 
-查询模式: 确定类目 示例
+查询模式: 确定类目 示例。
 
 <code src="./demos/searchWithCategory.tsx"></code>
 
 ### 查询模式: 不确定类目
 
-查询模式: 不确定类目 示例
+查询模式: 不确定类目 示例。
 
 <code src="./demos/searchWithoutCategory.tsx"></code>
 

@@ -11,31 +11,31 @@ group:
 
 ### 基础示例
 
-图片显示方式，支持object-fit所有属性
+图片显示方式，支持object-fit所有属性。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 容错处理
 
-图片加载失败时显示状态，也可以通过 fallback 属性加载自定义图片
+图片加载失败时显示状态，也可以通过 fallback 属性加载自定义图片。
 
 <code src="./demos/error.tsx"></code>
 
 ### 多张图片
 
-显示多张图片并支持切换
+显示多张图片并支持切换。
 
 <code src="./demos/images.tsx"></code>
 
 ### 相册模式
 
-从一张图片点开相册
+从一张图片点开相册。
 
 <code src="./demos/preview.tsx"></code>
 
 ### 功能按钮
 
-支持放大缩小等功能
+支持放大缩小等功能。
 
 <code src="./demos/functions.tsx"></code>
 

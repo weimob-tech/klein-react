@@ -8,17 +8,17 @@ group:
 ---
 # 分割线 Divider
 
-分割线，需要分割两个元素时使用
+分割线，需要分割两个元素时使用。
 
 ### 横向分割线
 
-默认为横向分割线
+默认为横向分割线。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 纵向分割线
 
-设置`direction='col'`表现为纵向分割线
+设置`direction='col'`表现为纵向分割线。
 
 <code src="./demos/col-divider.tsx"></code>
 

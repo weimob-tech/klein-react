@@ -9,23 +9,23 @@ group:
 
 # 提示 ToolTip
 
-文字提示气泡框、主要用于提示一些简单的文本信息，可用于代替浏览器自带的title提示
+文字提示气泡框、主要用于提示一些简单的文本信息，可用于代替浏览器自带的title提示。
 
 ### 基础示例
 
-基本用法
+基本用法。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 箭头指向中心
 
-设置了 arrowPointAtCenter 后，箭头将指向目标元素的中心
+设置了 arrowPointAtCenter 后，箭头将指向目标元素的中心。
 
 <code src="./demos/arrowPointAtCenter.tsx"></code>
 
 ### ToolTip 弹出位置
 
-共有12个方向
+共有12个方向。
 
 <code src="./demos/placement.tsx"></code>
 

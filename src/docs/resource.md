@@ -9,7 +9,7 @@ group:
 
 # 设计资源
 
-提供不同产品设计视觉相关资源下载
+提供不同产品设计视觉相关资源下载。
 
 <DesignResource></DesignResource>
 

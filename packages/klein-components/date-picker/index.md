@@ -8,42 +8,42 @@ group:
 ---
 # 日期选择 DatePicker
 
-输入或选择日期的控件
-当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择
+输入或选择日期的控件。
+当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。
 
 ### 基础示例
 
-最简单的用法，在浮层中可以选择或者输入日期
+最简单的用法，在浮层中可以选择或者输入日期。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 范围选择
 
-通过设置 picker 属性，指定范围选择器类型
+通过设置 picker 属性，指定范围选择器类型。
 
 <code src="./demos/range-picker.tsx"></code>
 
 ### 切换不同的选择器
 
-通过选择器切换不同类型的日期选择器
+通过选择器切换不同类型的日期选择器。
 
 <code src="./demos/switchable.tsx"></code>
 
 ### 自定义日期格式
 
-使用 format 属性，可以自定义日期显示格式
+使用 format 属性，可以自定义日期显示格式。
 
 <code src="./demos/date-format.tsx"></code>
 
 ### 预设时间
 
-可以预设常用的日期范围
+可以预设常用的日期范围。
 
 <code src="./demos/preset.tsx"></code>
 
 ### 共同的 API
 
-以下 API 为 DatePicker、 RangePicker 共享的 API
+以下 API 为 DatePicker、 RangePicker 共享的 API。
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
@@ -161,5 +161,5 @@ group:
 | onChange | 日期范围发生变化的回调 | function(dates: \[moment, moment], dateStrings: \[string, string]) | - |  |
 
 ### FAQ: 日历选择器显示英文问题
-可以先检查下入口文件import 'moment/locale/zh-cn'有没有引入这个代码，另外的话检查下本地momentjs的版本，得用2.29.1版本;
+可以先检查下入口文件import 'moment/locale/zh-cn'有没有引入这个代码，另外的话检查下本地momentjs的版本，得用2.29.1版本。
 

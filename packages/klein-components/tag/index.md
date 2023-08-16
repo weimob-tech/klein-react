@@ -9,54 +9,54 @@ group:
 
 # 标签 Tag
 
-用于标记事物的属性和维度
-进行分类
+用于标记事物的属性和维度。
+进行分类。
 
 ### 基础示例
 
-基础使用
+基础使用。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 省略用法
 
-超出长度省略
+超出长度省略。
 
 <code src="./demos/ellipsis.tsx"></code>
 
 ### 删除标签
 
-支持标签删除功能
+支持标签删除功能。
 
 <code src="./demos/delTag.tsx"></code>
 
 ### 不同类型的标签
 
-通过type属性展示不同类型的标签
+通过type属性展示不同类型的标签。
 
 <code src="./demos/type.tsx"></code>
 
 ### 字号搭配
 
-不同大小标签和字体的搭配建议
+不同大小标签和字体的搭配建议。
 
 <code src="./demos/basicWithText.tsx"></code>
 
 ### 标签可选中
 
-通过checked属性控制选中状态
+通过checked属性控制选中状态。
 
 <code src="./demos/checkAbleTag.tsx"></code>
 
 ### 包含辅助文案
 
-通过help属性定义辅助文案
+通过help属性定义辅助文案。
 
 <code src="./demos/help.tsx"></code>
 
 ### 内容为image
 
-支持背景为图片
+支持背景为图片。
 
 <code src="./demos/image.tsx"></code>
 

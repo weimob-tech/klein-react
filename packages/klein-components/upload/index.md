@@ -8,65 +8,65 @@ group:
 ---
 # 上传 Upload
 
-文件选择和拖拽上传、用于文件上传
+文件选择和拖拽上传、用于文件上传。
 
 ### 基础示例
 
-用户点击按钮弹出文件选择框
+用户点击按钮弹出文件选择框。
 
 <code src="./demos/basic.tsx"></code>
 
 ### 设置头像
 
-上传用户头像
+上传用户头像。
 
 <code src="./demos/avatar.tsx"></code>
 
 ### 禁用上传
 
-禁用上传按钮
+禁用上传按钮。
 
 <code src="./demos/upload-disable.tsx"></code>
 
 ### 拖拽
 
-支持文件拖拽上传
+支持文件拖拽上传。
 
 <code src="./demos/drag.tsx" background="#f0f2f5"></code>
 
 ### 受控支持预览的文件列表
 
-受控模式需要外部更新组件的属性fileList
+受控模式需要外部更新组件的属性fileList。
 
 <code src="./demos/file-list-controlled.tsx"></code>
 
 ### 受控支持替换的文件列表
 
-受控模式需要外部更新组件的属性fileList
+受控模式需要外部更新组件的属性fileList。
 
 <code src="./demos/file-replace.tsx"></code>
 
 ### 最大上传数量
 
-通过 maxCount 限制上传数量当为 1 时，始终用最新上传的代替当前
+通过 maxCount 限制上传数量当为 1 时，始终用最新上传的代替当前。
 
 <code src="./demos/max-count.tsx"></code>
 
 ### 预设图片
 
-属于业务范畴，内部无状态，纯木偶组件
+属于业务范畴，内部无状态，纯木偶组件。
 
 <code src="./demos/preset.tsx"></code>
 
 ### 拖拽排序
 
-可以使用react-dnd实现图片的拖拽排序
+可以使用react-dnd实现图片的拖拽排序。
 
 <code src="./demos/file-drag.tsx"></code>
 
 ### 图片上传最大数量控制
 
-图片上传至限制值时上按钮消失
+图片上传至限制值时上按钮消失。
 
 <code src="./demos/picture-card-maxcount.tsx"></code>
 
