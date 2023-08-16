@@ -62,7 +62,7 @@
     "pub:internal": "git push && npm publish --tag internal",
     "pub:release": "git push && npm publish",
     "site": "kit-doc start --html true --kraken false",
-    "site:deploy": "kit-doc build --html true --kraken false && cp public/favicon.ico dist && cp -r dist ..",
+    "site:deploy": "kit-doc build --html true --kraken false && cp public/favicon.ico dist/static/images && cp -r dist ..",
     "svgComponents": "node ./scripts/generateSvgComponent.js",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
