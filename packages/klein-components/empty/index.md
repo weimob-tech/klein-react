@@ -13,7 +13,7 @@ group:
 
 ### 基础示例
 
-基础示例
+基础示例。
 
 <code src="./demos/basic.tsx"></code>
 
@@ -27,7 +27,7 @@ group:
 
 ### 尺寸大小
 
-尺寸大小，size 分别为 middle 和 small ，默认为 middle
+尺寸大小，size 分别为 middle 和 small ，默认为 middle。
 
 <code src="./demos/size.tsx"></code>
 
