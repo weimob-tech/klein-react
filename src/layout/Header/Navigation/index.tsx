@@ -29,12 +29,6 @@ const DROPDONWS = [
       title: '设计指南',
       data: [
         {
-          icon: KLEIN_DESIGN_LOGO,
-          name: 'Klein Design 简介',
-          link: '/design/intro',
-          // open: false,
-        },
-        {
           icon: 'https://image-c.weimobwmc.com/sass-admin/13969e68915440c9a348c12a84eb427c.png',
           name: '设计原则',
           link: '/design/design',
@@ -81,7 +75,7 @@ const DROPDONWS = [
         {
           icon: 'https://image-c.weimobwmc.com/sass-admin/e28a27793b6e45998d99e0ef1df035c0.png',
           name: 'React',
-          link: '/',
+          link: '/guide/start',
         },
         {
           icon: 'https://image-c.weimobwmc.com/sass-admin/f7f4142f356c4f9aaac0e59b0d41d04a.png',

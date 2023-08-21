@@ -36,7 +36,7 @@ const TABS = [
       title: 'Orion Fonts',
       desc: '一站式素材管理平台，提供了图标、插图、Json动画、APNG动画等丰富类型的素材管理能力。',
       link: '',
-      bg: 'https://image-c.weimobwmc.com/sass-admin/9cba6bb271cc487d99a911f7cd4068b9.png',
+      bg: 'https://image-c.weimobwmc.com/sass-admin/0ee0220644834cd19d9926dd6573241a.png',
     },
   },
   {
@@ -66,7 +66,7 @@ const TABS = [
       title: 'Klein Editor',
       desc: '多场景富文本编辑器，简洁好用的富文本编辑器，在PC端做了多种模式的优化设计，轻松嵌入到各种场景。',
       link: '',
-      bg: 'https://image-c.weimobwmc.com/sass-admin/6daa824d6d054c429a218f54d08c8749.png',
+      bg: 'https://image-c.weimobwmc.com/sass-admin/54aa8b85c80e442696e36ca8f9c62228.png',
     },
   },
 ]
