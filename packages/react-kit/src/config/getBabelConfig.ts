@@ -4,14 +4,9 @@ export default function (
   pkgName: string,
   isDev: boolean,
   cssScope?: boolean | string,
-  antdBabelImport?: boolean,
   kleinBabelImport?: boolean,
 ) {
   const plugins: any = [
-    // [
-    //   resolve('babel-plugin-import'),
-    //   { libraryName: 'antd', libraryDirectory: 'es', style: true },
-    // ],
     // [
     //   resolve('babel-plugin-import'),
     //   { libraryName: '@wemo-ui/klein', libraryDirectory: 'es', style: true },
@@ -44,12 +39,6 @@ export default function (
     ],
     // resolve('@babel/plugin-proposal-class-properties')
   ];
-  if (antdBabelImport) {
-    plugins.push([
-      resolve('babel-plugin-import'),
-      { libraryName: 'antd', libraryDirectory: 'es', style: true },
-    ]);
-  }
   if (kleinBabelImport) {
     plugins.push([
       resolve('babel-plugin-import'),

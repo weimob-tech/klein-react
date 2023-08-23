@@ -25,13 +25,6 @@ cli
     '[boolean | string] 开启样式隔离, 传入string类型自定义scope类名',
   )
   .option(
-    '--antdBabelImport',
-    '[boolean] antd组件样式是否通过babel-import-plugin导入',
-    {
-      default: true,
-    },
-  )
-  .option(
     '--kleinBabelImport',
     '[boolean] klein组件样式是否通过babel-import-plugin导入',
     {
@@ -78,13 +71,6 @@ cli
   .option('--noconsole', '[boolean] 打包是否移除console', {
     default: true,
   })
-  .option(
-    '--antdBabelImport',
-    '[boolean] antd组件样式是否通过babel-import-plugin导入',
-    {
-      default: true,
-    },
-  )
   .option(
     '--kleinBabelImport',
     '[boolean] klein组件样式是否通过babel-import-plugin导入',

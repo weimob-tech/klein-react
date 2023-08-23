@@ -60,7 +60,6 @@ export default function getWebPackBaseConfig(
   function getBabelIncludes() {
     const includes = [
       pathConfig.appSrc,
-      pathConfig.antdSrc,
       pathConfig.kleinSrc,
       pathConfig.portalSrc,
       pathConfig.notifiySrc,
@@ -126,7 +125,6 @@ export default function getWebPackBaseConfig(
         projectPkg.name,
         isDev,
         config.cssScope,
-        config.antdBabelImport,
         config.kleinBabelImport,
       ),
     );

@@ -32,8 +32,6 @@ export interface KrakenKitUserConfig {
   libraryTarget?: string;
   // 是否压缩代码
   compress?: boolean;
-  // 是否开启antd的babel-import-plugin，有些项目直接引入antd.min.css，不需要该插件
-  antdBabelImport?: boolean;
   kleinBabelImport?: boolean;
   babelInclude?: (includes: string[]) => string[];
   // 配合cdn-upload
