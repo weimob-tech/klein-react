@@ -82,11 +82,3 @@ group:
 | onStep      | 点击上下箭头的回调 | `((value: number, info: { offset: number; type: "up"`\|` "down"; }) => void)`  | -      |
 | addonBefore      | 输入框前置复合元素 | `ReactNode`  | -      |
 | addonAfter      | 输入框后置复合元素 | `ReactNode`  | -      |
-
-
-<!-- ## FAQ
-
-#### 为什么 showStepHandler 属性没了？
-这是为了无缝对接 antd ，现在把 showStepHandler 属性替换成了 controls 属性 -->
-
-### 

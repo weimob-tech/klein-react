@@ -70,13 +70,13 @@ const SearchInput = React.forwardRef((props: SearchProps, ref: unknown) => {
     inputProps.addonAfter = renderSearchBtn();
   }
   const enterButtonAsElement = (enterButton || {}) as React.ReactElement;
-  const isAntdButton = enterButtonAsElement.type;
-  if (isAntdButton) {
+  const isButton = enterButtonAsElement.type;
+  if (isButton) {
     inputProps.addonAfter = cloneElement(enterButtonAsElement, {
       onMouseDown: handleSearch,
       // onClick: handleSearch,
       key: 'enterButton',
-      ...(isAntdButton
+      ...(isButton
         ? {
             className: `${inputCls}-btn`,
             size: props.size,
