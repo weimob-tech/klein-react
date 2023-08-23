@@ -153,9 +153,9 @@ const Avatars: React.FC = (props) => {
     <section className='klein-avatars-wrapper'>
       <h3>{avatarsConfig.title}</h3>
       <div className='klein-avatars-box'>
-        {avatarsConfig.items.map((item) => (
-          <Tooltip title={item.tip ? `${item.name}/${item.tip}` : `${item.name}`}>
-            <a className='klein-avatars-avatar-item' href={item.url ? item.url : 'javascript:void(0)'} target={item.openExternal ? '_blank' : undefined}>
+        {avatarsConfig.items.map((item, i) => (
+          <Tooltip title={item.tip ? `${item.name}/${item.tip}` : `${item.name}`} key={i}>
+            <a className='klein-avatars-avatar-item' href={item.url ? item.url : null} target={item.openExternal ? '_blank' : undefined}>
               <img src={item.img} alt='' />
             </a>
           </Tooltip>

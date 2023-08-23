@@ -150,7 +150,7 @@ const Ecology: React.FC<EcologyProps> = (props) => {
           {TABS.map((o, i) => {
             if (curTab !== i) return null;
             return (
-              <>
+              <React.Fragment key={i}>
                 <Animate animate={{ delay: 0 }} visible={true} className={styles.info}>
                   <div className={styles.infoTitle}>{o.children.title}</div>
                   <div className={styles.infoDesc}>{o.children.desc}</div>
@@ -179,7 +179,7 @@ const Ecology: React.FC<EcologyProps> = (props) => {
                     backgroundImage: `url(${o.children.bg})`,
                   }}
                 />
-              </>
+              </React.Fragment>
             )
           })}
         </Animate>

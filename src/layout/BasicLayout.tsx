@@ -154,8 +154,9 @@ const BasicLayout: React.FC<BasicLayoutProps> = (props: any) => {
 
             <div className='klein-fix-anchor-wrap'>
               <section className='klein-fix-anchor'>
-                {acfix.map((item) => (
+                {acfix.map((item, i) => (
                   <div
+                    key={i}
                     onClick={(e) => setSelectItem(item.id)}
                     className={`klein-fix-anchor-item transition ${
                       selectItem === item.id ? 'klein-fix-anchor-item-active' : null
