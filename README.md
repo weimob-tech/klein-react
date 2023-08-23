@@ -64,11 +64,10 @@ const App = () => (
 
 ## 🔗 链接
 
-- [首页](https://klein.weimob.com/)
-- [所有组件](https://klein.weimob.com/components/button)
-- [更新日志](CHANGELOG.zh-CN.md)
-- [常见问题](https://klein.weimob.com/guide/q&a)
-- [设计资源](https://klein.weimob.com/guide/resource)
+- [首页](https://klein.design.weimob.com)
+- [所有组件](https://klein.design.weimob.com/components/button)
+- [常见问题](https://klein.design.weimob.com/guide/q&a)
+- [设计资源](https://klein.design.weimob.com/guide/resource)
 
 ## ⌨️ 本地开发
 
