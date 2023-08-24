@@ -20,6 +20,10 @@
 
 </div>
 
+## 🎯 介绍
+
+从多年深耕SaaS行业实践中，我们抽象出了一套基础组件。在项目中覆盖了95%以上的页面，实现了1500+的前端页面无UI开发，前端交付质量也得到了大幅提升。同时在这些基础组件的设计上提供了细致的配置选项，以便开发者后续的拓展和定制。开发者可以根据具体需求进行灵活的配置，使组件库与开发者自身项目完美匹配，满足各种定制化的需求。
+
 ## ✨ 特性
 
 - 🌈 涵盖了大多数saas业务需求，为开发者提供了丰富的选择。
@@ -51,15 +55,21 @@ yarn add @klein-design/klein-react
 ## 🔨 示例
 
 ```jsx
-import React from 'react';
-import { Button, DatePicker } from '@klein-design/klein-react';
+import { useState } from "react";
+import { Button } from "@klein-design/klein-react";
+import "@klein-design/klein-react/dist/@klein-design/klein-react.min.css";
 
-const App = () => (
-  <>
-    <Button type="primary">Click</Button>
-    <DatePicker />
-  </>
-);
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <Button type="primary" onClick={() => setCount((count) => count + 1)}>
+      count is {count}
+    </Button>
+  );
+}
+
+export default App;
 ```
 
 ## 🔗 链接
@@ -71,16 +81,7 @@ const App = () => (
 
 ## ⌨️ 本地开发
 
-克隆到本地开发:
-
-```bash
-$ git clone https://github.com/weimob-tech/klein-react.git
-$ cd klein-react
-$ npm install
-$ npm start
-```
-
-打开浏览器访问 http://127.0.0.1:3000 
+[开发指南](./dev.md)
 
 ## 👥 社区互助
 
