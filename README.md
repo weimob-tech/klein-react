@@ -1,8 +1,8 @@
-<h1 align="center">Klein Design</h1>
+<h1 align="center">Klein React</h1>
 
 <div align="center">
 
-服务于SaaS行业的设计系统，专注更好的用户体验
+源于SaaS行业的前端组件库，专注更好的用户体验
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][download-image]][download-url]
