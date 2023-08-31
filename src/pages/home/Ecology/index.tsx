@@ -24,7 +24,7 @@ const TABS = [
     name: 'Klein Design',
     children: {
       title: 'Klein Design',
-      desc: 'WEB端基础组件库，微盟送多SaaS业务中磨合诞生的基础组件库，服务于SaaS行业开发者。',
+      desc: 'WEB端基础组件库，从微盟SaaS业务中磨合诞生的基础组件库，服务于SaaS行业开发者。',
       link: '/components/button',
       bg: 'https://image-c.weimobwmc.com/sass-admin/8ff746dfdf6d442d8c2170a5485cf2a3.png',
     },
