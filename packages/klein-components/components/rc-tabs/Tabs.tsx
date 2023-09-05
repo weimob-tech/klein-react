@@ -22,7 +22,7 @@ import {
 import TabContext from './TabContext';
 
 /**
- * Should added antd:
+ * Should added:
  * - type
  *
  * Removed:

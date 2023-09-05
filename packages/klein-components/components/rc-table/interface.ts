@@ -2,7 +2,7 @@
 import type * as React from 'react';
 
 /**
- * ColumnType which applied in antd: https://ant.design/components/table-cn/#Column
+ * ColumnType which applied in table
  * - defaultSortOrder
  * - filterDropdown
  * - filterDropdownVisible

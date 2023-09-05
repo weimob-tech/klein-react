@@ -155,7 +155,7 @@ export interface TableProps<RecordType = unknown>
    *
    * !!! DO NOT USE IN PRODUCTION ENVIRONMENT !!!
    */
-  // Used for antd table transform column with additional column
+  // Used for table transform column with additional column
   transformColumns?: (
     columns: ColumnsType<RecordType>,
   ) => ColumnsType<RecordType>;
